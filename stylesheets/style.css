@@ -1,0 +1,401 @@
+/*CSS-reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+div{
+background-color: rgb(255,0,0,0.1);
+}
+
+.main {
+  width: 1000px;
+  height: 1151px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #000;
+  background-image: url(../images/back_photo.png);
+  background-repeat: no-repeat;
+  background-size: 964px 901px;
+  background-position: 36px 250px;
+}
+
+.content {
+  position: absolute;
+  /*background-color: rgb(250,0,0,0.1);*/
+
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 523px;
+  margin:0;
+  padding:0 0 0 10px;
+}
+
+.logo {
+  font:normal 800 32px/24px 'Neue Machina';
+  color: #FFFFFF;
+  margin:25px 0 0 0;
+}
+
+.content_text{
+  font: normal normal 15px/20px 'Neue Machina';
+  color: #FFFFFF;
+  margin:12px 0 0 0;
+}
+
+.text{
+  margin:100px 0 0 0;
+}
+
+.social_buttons{
+  position: absolute;
+  bottom: 0;
+}
+
+.button {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 5px;
+}
+
+
+a img { 
+  border: none; 
+}
+  
+.fb-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vk-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.inst-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  position: absolute;
+  /*background-color: rgb(0,255,0,0.1); */
+  top: 0;
+  right: 0;
+  width: 760px;
+  height: 513px;
+  margin-top:10px;
+  background-image: url(../images/big_head.svg);
+  background-repeat: no-repeat;
+}
+
+
+.title img {
+  width: 100%;
+  height: 100%;
+}
+
+.school_label {
+  position: absolute;
+  /*background-color: rgb(0,0,255,0.1);;*/
+
+  bottom: 0;
+  right: 0;
+  width: 420px;
+  height: 22px;
+  text-align: right;
+  margin-bottom:10px;  
+  bottom:0;
+
+  padding:0 10px 10px 0;
+}
+
+.school_label_text {
+  font: normal normal 16px/0 'Neue Machina';
+  color:#ffffff;
+}
+
+.school_link:link{
+  text-decoration: underline;
+  color: #FFBE00;
+}
+
+.school_link:visited{
+  color: #FFBE00;
+}
+
+.school_link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.form {
+  position: absolute;
+  width: 270px; /*check html img for form*/
+  height: 471px;
+  /*background-color: rgb(250,120,0,0.1);;*/
+
+  margin-bottom:10px;  
+  bottom:0;
+  left: 0;
+}
+
+.form-caption{
+  font: normal normal 15px/14px 'Neue Machina';
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 10px 0 0 10px;
+}
+
+.form-mail {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+  height: 41px;
+  margin:10px 0 0 10px;
+}
+
+.form-mail input {
+  display: block;
+  font: normal normal 15px/14px 'Neue Machina';
+  text-indent: 5px;
+  width: 190px;
+  height: 41px;
+  border: 0px;
+  padding-right:40px;
+}
+
+.form-mail button {
+  display: block;
+  border:0;
+  background: transparent;
+  margin:0;
+  width: 96px;
+  height: 41px;
+  position: relative;
+  left: -61px;
+}
+
+::-webkit-input-placeholder {color:#cecece;}
+::-moz-placeholder          {color:#cecece;}/* Firefox 19+ */
+:-moz-placeholder           {color:#cecece;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#cecece;}
+
+input::-webkit-input-placeholder       {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
+
+
+
+@media (max-width: 576px) {
+  .main {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../images/back_photo_m.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left bottom;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .logo{
+    font:normal 800 24px/18px 'Neue Machina';
+  }
+
+  .text p{
+    display:none;
+  }
+
+  .content_text{
+   display:none; 
+  }
+  
+  .social_buttons {
+    position: relative;
+    margin: 22px 15px 0 0;
+  }
+  
+  .title {
+    position: relative;
+    width: 100%;
+    height: 262px;
+    margin-bottom: 100px;
+    background-image: url(../images/big_head_m.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+/*  margin-top:10px;
+      margin-bottom: 150px;
+*/
+  }
+
+  .form {
+    position:relative;
+    width:100%;
+    height: auto;
+    bottom: 0;
+    margin-bottom:15px;
+    background: url(../images/dates_m.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .form img{
+    display: none;
+  }
+
+
+
+.form-caption{
+  font: normal normal 24px/23px 'Neue Machina';
+  letter-spacing: -0.02em;
+  margin: 10px 0 0 15px;
+}
+
+.form-mail {
+  width: 100%;
+  height: 38px;
+  margin:10px 0 0 15px;
+}
+
+.form-mail img{
+  display:block;
+}
+
+.form-mail input {
+  font: normal normal 22px/21px 'Neue Machina';
+  text-indent: 8px;
+  width: calc(90% - 20px);
+  height: 38px;
+}
+
+.form-mail button {
+  width: 89px;
+  height: auto;
+  position: relative;
+  left: -61px;
+}
+
+
+  .school_label {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="Access-Control-Allow-Origin" content="*" />
+  <meta name="Access-Control-Allow-Headers" content="*" />
+  <title>Topor</title>
+   <link rel="stylesheet" href="stylesheets/style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="javascripts/scripts.js"></script>
+
+</head>
+
+<body>
+  <div class = "main">
+    <div class = "content">
+      <p class = "logo">Метательные<br>практики</p>
+      <p class = "content_text">Соревнуйтесь с&nbsp;чемпионами из&nbsp;любой точки мира</p>
+      <div class = "text">
+        <p class = "content_text">Участвуйте на&nbsp;домашних площадках&nbsp;— записывайте 
+свой результат на&nbsp;камеру. Метайте с&nbsp;коротких расстояний в&nbsp;3,&nbsp;4 и&nbsp;5&nbsp;м&nbsp;— подойдёт и&nbsp;гараж. 
+Отслеживайте прогресс&nbsp;— определим призёров<br/>среди новичков, любителей и&nbsp;профи. Бесплатно.</p>
+</div>
+      <div class="social_buttons">
+        <a href="https://www.facebook.com/groups/2112192229109121/permalink/2246143712380638/?__xts__[0]=68.ARB09JUa8pxL2gji6p_UunOCAMvB5M6kv3VLJM2PeDP20P7Qjll2Qgm-fDEORGJs6LFhuvdurzPVISTOhEHuh6bWIWWn6dJyCFsFHlWkcikWFUAGUwGdIQ1E5CRIgTeL13G5d4LL92YRdx7YBNXas0y8YOcXpUaXO78dR5JE2DW_VRtTMWbXbAwaNgXZazHNld2qrGINHz__94hdyRCVUmbxKgFLXRq2ownYOQCk4Ydj3drD1pYxDgQKmLkCSORVWeepaIe0N55DkpJeHH1TuUCovmRfmqYQUMFhv4iuq5iChSo85_Eru2l4S8EPNWn9Do4fYsz1ulV_QUo4ZAqFUsIdK9ndHbzV3l0-jpKe4HLm9nVNLuhcQvqAzo2yX0r60097h3x6FzHdUnInK_PmZ49kQSKbnz8XGRoFerhyYAeZnHwOrqVQXjkamvjD6u-Tbo2K87XqJRXD7iVEZCmVa0Q0wRfVu81EN2lx-e3N1A&__tn__=kCH-R" class="button button-fb">
+          <img class="fb-icon" src="images/fb_w.svg" 
+                                onmouseover="this.src='images/fb_y.svg';" 
+                                onmouseout="this.src='images/fb_w.svg';"
+                                onmousedown="this.src='images/fb_yw.svg';" 
+>
+        </a>
+        <a href="https://vk.com/angry_bee" class="button button-vk">
+          <img class="vk-icon" src="images/vk_w.svg"
+                                onmouseover="this.src='images/vk_y.svg';" 
+                                onmouseout="this.src='images/vk_w.svg';"
+                                onmousedown="this.src='images/vk_yw.svg';">
+          </a>
+        <a href="http://instagram.com/angrybeeknife/" class="button button-inst">
+          <img class="inst-icon" src="images/inst_w.svg"
+                                onmouseover="this.src='images/inst_y.svg';" 
+                                onmouseout="this.src='images/inst_w.svg';"
+                                onmousedown="this.src='images/inst_yw.svg';">
+        </a>
+      </div>
+    </div>
+      
+      <div class="title">
+   <!--     <img src="images/big_head.svg" alt="Онлайн турнир метателей топоров и ножей">
+   -->
+      </div>
+
+    <div class="form">
+      <picture>
+        <source media="(max-width: 576px)" srcset="img.svg">
+        <source media="(min-width: 577px)" srcset="images/dates.svg">
+        <img src="images/dates.svg" alt="Второй этап с 20 мая по 2 июня">
+      </picture>
+
+<!--      <img srcset="images/dates_m.svg 375w,
+                   images/dates.svg 270w" 
+            sizes="(max-width: 576px) 375w, (max-width: 2000px) 270px"
+      src="images/dates.svg" alt="Второй этап с 20 мая по 2 июня">  -->
+      <p class="form-caption">
+        Подпишитесь и&nbsp;не&nbsp;пропустите
+      </p>
+      <form class="form-mail" id="email_form" name="email_form">
+
+        <input type="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" 
+               id="input_mail" name="input_mail" placeholder="mail@example.com" />
+        <button>
+          <picture>
+            <source media="(max-width: 576px)" srcset="images/button_send_m.svg">
+            <source media="(min-width: 577px)" srcset="images/button_send.svg">
+            <img src = "images/button_send.svg" alt = "Подписаться">
+      </picture>
+<!--          <img src="images/button_send.svg" alt="Подписаться">
+-->        </button>
+      </form>
+
+     
+
+    </div>
+
+    <div class="school_label">
+      <p class="school_label_text">&copy;&nbsp;2019 <a href="https://bureau.ru/school/27aug2018/" class="school_link">Школа дизайнеров бюро Горбунова</a></p>
+    </div>
+  </div>
+</body>
+</html>
