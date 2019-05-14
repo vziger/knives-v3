@@ -95,6 +95,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
+  color:#ffffff;
 }
 
 div{
@@ -400,4 +401,8 @@ input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: o
     width: 100%;
     height: auto;
   }
+}
+
+.logout {
+  color: #FFFFFF
 }
