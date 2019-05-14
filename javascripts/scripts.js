@@ -1,8 +1,6 @@
 jQuery(document).ready(function() {
     jQuery('#email_form form').submit(function(returnValue) {
         var mail = jQuery("#input_mail").val();
-        // var Phone = jQuery("#Phone").val();
-        // var Quession = jQuery("#Quession").val();
         var http = new XMLHttpRequest();
         var url = "https://script.google.com/macros/s/AKfycbyiy3NvBKgYMSAuQm1ynrlgjUZK21mLN0QXiKbOqS8Qhp_pX3-B/exec";
         var params = "p1=" + mail;
