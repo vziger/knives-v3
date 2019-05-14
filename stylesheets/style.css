@@ -98,19 +98,19 @@ body {
 }
 
 div{
-background-color: rgb(255,0,0,0);
+background-color: rgb(255,0,0,0.1);
 }
 
 .main {
-  width: 1000px;
-  height: 1151px;
+  width: 1000px; /*fix*/
+  height: 980px; /*fix*/
   margin: 0 auto;
   position: relative;
   background-color: #000;
   background-image: url(../images/back_photo.png);
   background-repeat: no-repeat;
-  background-size: 964px 901px;
-  background-position: 36px 250px;
+  background-size: 713px 738px; /*fix*/
+  background-position: 287px 242px; /*fix*/
 }
 
 .content {
@@ -202,7 +202,7 @@ a img {
 
   bottom: 0;
   right: 0;
-  width: 420px;
+  width: 450px;
   height: 22px;
   text-align: right;
   margin-bottom:10px;  
@@ -233,7 +233,7 @@ a img {
 .form {
   position: absolute;
   width: 270px; /*check html img for form*/
-  height: 471px;
+  height: 344px;
   /*background-color: rgb(250,120,0,0.1);;*/
 
   margin-bottom:10px;  
@@ -245,22 +245,22 @@ a img {
   font: normal normal 15px/14px 'Neue Machina';
   letter-spacing: 0.02em;
   color: #FFFFFF;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0px;
 }
 
 .form-mail {
   display: flex;
   justify-content: space-between;
-  width: 204px;
+  width: 270px;
   height: 41px;
-  margin:10px 0 0 10px;
+  margin:10px 0 0 0px;
 }
 
 .form-mail input {
   display: block;
   font: normal normal 15px/14px 'Neue Machina';
   text-indent: 5px;
-  width: 190px;
+  width: 270px;
   height: 41px;
   border: 0px;
   padding-right:40px;
@@ -271,10 +271,10 @@ a img {
   border:0;
   background: transparent;
   margin:0;
-  width: 96px;
+  width: 46px;
   height: 41px;
   position: relative;
-  left: -61px;
+  left: -71px;
 }
 
 ::-webkit-input-placeholder {color:#cecece;}
