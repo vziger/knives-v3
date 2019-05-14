@@ -8,7 +8,7 @@
   <title>Topor</title>
    <link rel="stylesheet" href="stylesheets/style.css">
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-   <!-- <script src="javascripts/scripts.js"></script> -->
+   <script src="javascripts/scripts.js"></script>
 
 </head>
 
@@ -50,11 +50,11 @@
    -->
       </div>
 
-    <div class="form">
+    <div class="div-form">
       <picture>
         <source media="(max-width: 576px)" srcset="img.svg">
         <source media="(min-width: 577px)" srcset="images/dates.svg">
-        <img src="images/dates.svg" alt="Второй этап с 20 мая по 2 июня">
+        <img class="img_dates" src="images/dates.svg" alt="Второй этап с 20 мая по 2 июня">
       </picture>
 
 <!--      <img srcset="images/dates_m.svg 375w,
@@ -62,13 +62,15 @@
             sizes="(max-width: 576px) 375w, (max-width: 2000px) 270px"
       src="images/dates.svg" alt="Второй этап с 20 мая по 2 июня">  -->
       <p class="form-caption">
-        Подпишитесь и&nbsp;не&nbsp;пропустите
+        Подпишитесь, чтобы не пропустить
       </p>
-      <form class="form-mail" id="email_form" name="email_form" action="https://formspree.io/noreply-knifethrowing@yandex.ru" method="POST">
+      
+      <form class="form-mail" id="email_form" name="email_form"> 
+        <!-- action="https://formspree.io/noreply-knifethrowing@yandex.ru" method="POST"> -->
 
         <input type="text" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" 
                id="input_mail" name="input_mail" placeholder="mail@example.com" autocapitalize="off" required="required" spellcheck="false"/>
-        <button>
+        <button onclick="sendEmail()">
           <!-- <picture>
             <source media="(max-width: 576px)" srcset="images/button_send_m.svg">
             <source media="(min-width: 577px)" srcset="images/button_send.svg">
@@ -77,7 +79,6 @@
           <img src="images/button_send.svg" alt="Подписаться">
         </button>
       </form>
-
      
 
     </div>

@@ -103,14 +103,14 @@ background-color: rgb(255,0,0,0.1);
 
 .main {
   width: 1000px; /*fix*/
-  height: 980px; /*fix*/
+  height: 1080px; /*fix*/
   margin: 0 auto;
   position: relative;
   background-color: #000;
   background-image: url(../images/back_photo.png);
   background-repeat: no-repeat;
   background-size: 713px 738px; /*fix*/
-  background-position: 287px 242px; /*fix*/
+  background-position: 287px 342px; /*fix*/
 }
 
 .content {
@@ -230,22 +230,24 @@ a img {
   color: #fff;
 }
 
-.form {
+.div-form {
   position: absolute;
-  width: 270px; /*check html img for form*/
-  height: 344px;
+  width: 303px; /*check html img for form*/
+  height: 323px;
   /*background-color: rgb(250,120,0,0.1);;*/
-
-  margin-bottom:10px;  
+  padding:0;
   bottom:0;
   left: 0;
 }
 
+.img_dates{
+  margin:0px 0 0 10px;
+}
+
 .form-caption{
   font: normal normal 15px/14px 'Neue Machina';
-  letter-spacing: 0.02em;
   color: #FFFFFF;
-  margin: 10px 0 0 0px;
+  margin: 10px 0 0 10px;
 }
 
 .form-mail {
@@ -274,7 +276,7 @@ a img {
   width: 46px;
   height: 41px;
   position: relative;
-  left: -71px;
+  left: 0;
 }
 
 ::-webkit-input-placeholder {color:#cecece;}
