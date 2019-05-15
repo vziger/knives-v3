@@ -95,11 +95,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
-  color:#ffffff;
+  -webkit-text-size-adjust: none;
 }
 
 div{
-background-color: rgb(255,0,0,0.1);
+background-color: rgb(255,0,0,0);
 }
 
 .main {
@@ -132,6 +132,12 @@ background-color: rgb(255,0,0,0.1);
   margin:25px 0 0 0;
 }
 
+.lead_text{
+  font: normal normal 15px/18px 'Neue Machina';
+  color: #FFFFFF;
+  margin:10px 0 0 0;
+}
+
 .content_text{
   font: normal normal 15px/20px 'Neue Machina';
   color: #FFFFFF;
@@ -139,7 +145,7 @@ background-color: rgb(255,0,0,0.1);
 }
 
 .text{
-  margin:100px 0 0 0;
+  margin:104px 0 0 0;
 }
 
 .social_buttons{
@@ -197,6 +203,57 @@ a img {
   height: 100%;
 }
 
+
+.div-form {
+  position: absolute;
+  width: 303px; /*check html img for form*/
+  height: 345px;
+  /*background-color: rgb(250,120,0,0.1);;*/
+  padding:0;
+  margin-left:10px;
+  bottom:0;
+  left: 0;
+}
+
+.img_dates{
+  margin:0;
+}
+
+.form-caption{
+  font: normal normal 15px/17px 'Neue Machina';
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
+.form-mail {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 41px;
+  margin: -4px 0;
+}
+
+.form-mail input {
+  display: block;
+  font: normal normal 18px/17px 'Neue Machina';
+  padding-left: 6px;
+  width: 236px;
+  height: 41px;
+  border: 0px;
+  padding-right:50px;
+}
+
+.form-mail button {
+  display: block;
+  border: 0;
+  background: transparent;
+  margin: 0;
+  width: 46px;
+  height: 41px;
+  position: relative;
+  left: -72px;
+}
+
 .school_label {
   position: absolute;
   /*background-color: rgb(0,0,255,0.1);;*/
@@ -213,71 +270,23 @@ a img {
 }
 
 .school_label_text {
-  font: normal normal 16px/0 'Neue Machina';
+  font: normal normal 16px/14px 'Neue Machina';
   color:#ffffff;
 }
 
 .school_link:link{
-  text-decoration: underline;
+  text-decoration: none;
   color: #FFBE00;
 }
 
 .school_link:visited{
+  text-decoration: none;
   color: #FFBE00;
 }
 
 .school_link:hover{
-  text-decoration: none;
+  text-decoration: underline;
   color: #fff;
-}
-
-.div-form {
-  position: absolute;
-  width: 303px; /*check html img for form*/
-  height: 323px;
-  /*background-color: rgb(250,120,0,0.1);;*/
-  padding:0;
-  bottom:0;
-  left: 0;
-}
-
-.img_dates{
-  margin:0px 0 0 10px;
-}
-
-.form-caption{
-  font: normal normal 15px/14px 'Neue Machina';
-  color: #FFFFFF;
-  margin: 10px 0 0 10px;
-}
-
-.form-mail {
-  display: flex;
-  justify-content: space-between;
-  width: 270px;
-  height: 41px;
-  margin:10px 0 0 0px;
-}
-
-.form-mail input {
-  display: block;
-  font: normal normal 15px/14px 'Neue Machina';
-  text-indent: 5px;
-  width: 270px;
-  height: 41px;
-  border: 0px;
-  padding-right:40px;
-}
-
-.form-mail button {
-  display: block;
-  border:0;
-  background: transparent;
-  margin:0;
-  width: 46px;
-  height: 41px;
-  position: relative;
-  left: 0;
 }
 
 ::-webkit-input-placeholder {color:#cecece;}
@@ -401,8 +410,4 @@ input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: o
     width: 100%;
     height: auto;
   }
-}
-
-.logout {
-  color: #FFFFFF
 }
