@@ -95,6 +95,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
+  color:#ffffff;
   -webkit-text-size-adjust: none;
 }
 
@@ -288,6 +289,10 @@ a img {
   text-decoration: underline;
   color: #fff;
 }
+
+.logout {
+  color: #FFFFFF
+} 
 
 ::-webkit-input-placeholder {color:#cecece;}
 ::-moz-placeholder          {color:#cecece;}/* Firefox 19+ */
