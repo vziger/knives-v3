@@ -100,7 +100,7 @@ body {
 }
 
 div{
-background-color: rgb(255,0,0,0);
+background-color: rgb(255,0,0,0.1);
 }
 
 .main {
@@ -208,20 +208,19 @@ a img {
 .div-form {
   position: absolute;
   width: 303px; /*check html img for form*/
-  height: 345px;
+  height: 358px;
   /*background-color: rgb(250,120,0,0.1);;*/
-  padding:0;
   margin-left:10px;
   bottom:0;
   left: 0;
 }
 
 .img_dates{
-  margin:0;
+  margin:3px 0;
 }
 
 .form-caption{
-  font: normal normal 15px/17px 'Neue Machina';
+  font: normal normal 15px/18px 'Neue Machina';
   color: #FFFFFF;
   margin: 10px 0;
 }
@@ -317,7 +316,7 @@ input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: o
 
     background-image: url(../images/back_photo_m.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: left bottom;
   }
   
@@ -415,4 +414,71 @@ input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: o
     width: 100%;
     height: auto;
   }
+}
+
+
+/******************/
+.admtable {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+line-height: 16px;
+border-radius: 10px;
+border-spacing: 0;
+text-align: center;
+color:#000;
+margin-left: 40px;
+}
+
+.admtable th {
+background: #BCEBDD;
+color: #000;
+padding: 10px 20px;
+}
+
+.admtable th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: rgb(128, 128, 128);
+}
+
+.admtable th:first-child, td:first-child {
+text-align: left;
+}
+
+.admtable th:first-child {
+border-top-left-radius: 10px;
+}
+
+.admtable th:last-child {
+border-top-right-radius: 10px;
+border-right: none;
+}
+
+.admtable tr{
+  height: 40px;
+}
+.admtable td {
+padding: 10px 20px;
+background: #989898;
+}
+.admtable tr:last-child td:first-child {
+border-radius: 0 0 0 10px;
+}
+.admtable tr:last-child td:last-child {
+border-radius: 0 0 10px 0;
+}
+.admtable tr td:last-child {
+border-right: none;
+}
+
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF
+} 
+
+.mails_datas{
+  display: flex;
+  /* justify-content: space-between; */
 }

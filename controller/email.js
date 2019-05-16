@@ -21,11 +21,21 @@ async function mail(recepient) {
 
   // send mail with defined transport object
   const info = await transporter.sendMail({
-    from: '"Метательные практики" <noreply-knifethrowing@yandex.ru>', // sender address
+    from: 'Онлайн-чемпионат <noreply-knifethrowing@yandex.ru>', // sender address
     to: recepient, // list of receivers
-    subject: 'Метательные практики', // Subject line
-    text: 'Спасибо, что подписались на наши новости!', // plain text body
-    html: '<h3> Спасибо, что подписались на наши новости!<h3>', // html body
+    subject: 'Подписка на Метательные практики', // Subject line
+    text: 'Здравствуйте!\n\n\
+    Вы подписались на рассылку онлайн-чемпионата метателей топоров и ножей &laquo;Метательные практики&raquo;.\n\
+    Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации и&nbsp;расскажем о&nbsp;победителях.\n\n\
+    Второй этап пройдёт с&nbsp;20&nbsp;мая по 2&nbsp;июня.\n\n\
+    Метательные практики\n\
+    http://knifethrowing.online', // plain text body
+    html: '<div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:10px 0 0 10px;">\
+    <p>Здравствуйте!</p>\
+    <p>Вы подписались на&nbsp;рассылку онлайн-чемпионата метателей топоров и&nbsp;ножей &laquo;Метательные практики&raquo;. <br/>Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации и&nbsp;расскажем о&nbsp;победителях. </p>\
+    <p>Второй этап пройдёт с&nbsp;20&nbsp;мая по 2&nbsp;июня. </p>\
+    <p>Метательные практики<br/>\
+    <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>', // html body
   });
 
   console.log('Message sent: %s', info.messageId);
