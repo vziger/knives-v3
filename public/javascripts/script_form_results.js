@@ -42,6 +42,7 @@ function result_fields_generate(div_id)
     // input.value="0"
     input.autocomplete = "off";    
     input.disabled = "disabled";  
+    // input.readonly = "readonly";
     div.appendChild(input);
 }
 

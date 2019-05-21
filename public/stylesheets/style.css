@@ -335,7 +335,7 @@ input, textarea, select, button{
 .input_mail {
   display: block;
   /*14px/14px*/
-  font: normal normal 1.4vw/1.4vw 'HelveticaNeueCyr';
+  font: normal normal 1.4vw/1.7vw 'HelveticaNeueCyr';
   /*6px*/
   padding-left: 0.6vw;
   /*236px*/
@@ -422,7 +422,6 @@ input, textarea, select, button{
   border-bottom: 1px solid #fff;
   color: #fff;
 }
-
 
 .logout {
   color: #FFFFFF
@@ -560,6 +559,17 @@ h2{
     background-size: 100% auto;
   }
 
+.link_box a:hover:before {
+    content: "";
+    position: absolute;
+    left: -0.5vw;
+    top: -0.2vw;
+    width: 2.8vw;
+    height: 2.9vw;
+    background: url(../images/i_link_w.svg) left top no-repeat;
+    background-size: auto;
+    background-size: 100% auto;
+  }
 /*label{
   min-height: 7vw;
 }*/
@@ -734,6 +744,7 @@ h2{
   margin:0 0 0 1.5vw;
   height: 3.2vw;
   background-color: #F3F0F0;
+  /*color:#000;*/
   text-align: right !important;
   padding-right: 1.3vw;
 }
@@ -873,7 +884,7 @@ h2{
   position:absolute;
   left:0;
   top:4vw;
-  font:normal normal 1.6vw/1.6vw 'HelveticaNeueCyr';
+  font:normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
   color:#000;
   padding-top: 2vw;
   visibility: hidden;
