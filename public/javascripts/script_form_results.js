@@ -270,12 +270,14 @@ function validateAllDigits()
 
 function show_submit_button()
 {
-    // !!! очитсить форму
+    document.getElementById("checkFormTextCorrect").style.visibility="hidden";
+
     document.getElementById("idFormResults").reset();
-    btn=document.getElementById("btnSubmitResults")
+
+    btn=document.getElementById("btnSubmitResults");
     btn.style.visibility="visible";
     btn.style.disabled="false";
 
-    document.getElementById("checkFormTextCorrect").style.visibility="hidden";
+    
 
 }

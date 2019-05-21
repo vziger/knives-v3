@@ -275,9 +275,6 @@ a img {
   background-position:top right;
 }
 
-.title img {
-}
-
 
 .div-form {
   position: absolute;
@@ -329,7 +326,6 @@ input, textarea, select, button{
 .email_box {
   display: flex;
   justify-content: flex-start;
-  backgound-color:#000;
 }
 
 .input_mail, .btn_send{
@@ -349,7 +345,7 @@ input, textarea, select, button{
   /*48px*/
   padding-right:4.8vw;
   letter-spacing: -0.01em;
-  backgound-color:#000;
+  /* backgound-color:#000; */
 }
 
 .btn_send {
@@ -406,27 +402,23 @@ input, textarea, select, button{
 
 .small_text_link{
   text-decoration: none;
-  -webkit-text-decoration-line:none;
   border-bottom: 1px solid #FFBE00;
   color: #FFBE00;
 }
 .small_text_link:link{
   text-decoration: none;
-  -webkit-text-decoration-line:none;
   border-bottom: 1px solid #FFBE00;
   color: #FFBE00;
 }
 
 .small_text_link:visited{
   text-decoration: none;
-  -webkit-text-decoration-line:none;
   border-bottom: 1px solid #FFBE00;
   color: #FFBE00;
 }
 
 .small_text_link:hover{
   text-decoration: none;
-  -webkit-text-decoration-line:none;
   border-bottom: 1px solid #fff;
   color: #fff;
 }
@@ -874,7 +866,7 @@ h2{
   margin: 4vw 0 2vw 2vw;
   color:#ff8888;
   padding-top: 2vw;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .hidden_text_correct{
@@ -884,7 +876,7 @@ h2{
   font:normal normal 1.6vw/1.6vw 'HelveticaNeueCyr';
   color:#000;
   padding-top: 2vw;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .form_results_button{
