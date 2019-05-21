@@ -95,8 +95,8 @@ form.addEventListener('submit', async (event) =>{
         });
           if (response.status = 200) {
             console.log('результаты отправлены');
-            document.getElementById('checkFormTextCorrect').style.visibility='visible';
             btn.style.visibility='hidden';
+            document.getElementById('checkFormTextCorrect').style.visibility='visible';
             btn.disabled = false;
             btn.style.cursor = "pointer";
             //alert('Сохранил!');

@@ -75,7 +75,7 @@ function all_knife_sum()
     var SUM = document.getElementById('text_knife_ALL_SUM');
     var a = parseInt(document.getElementById('text_knife_3m_SUM').value);
     var b = parseInt(document.getElementById('text_knife_4m_SUM').value);
-    var c = parseInt(document.getElementById('text_knife_5m__SUM').value);
+    var c = parseInt(document.getElementById('text_knife_5m_SUM').value);
 
     if(isNaN(a))
     {
