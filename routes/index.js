@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const Emails = require('../models/emails');
 const mail = require('../controller/email');
 
@@ -7,55 +7,12 @@ const Player = require('../models/Player');
 
 const router = express.Router();
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
+// const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Метательные практики' });
-});
-
-
-router.post('/', urlencodedParser, async (req, res, next) => {
-  try {
-    const { email } = req.body;
-    console.log(email);
-    mail(email).catch(console.error);
-
-    const newEmail = new Emails({
-      email,
-      createdAt: Date.now(),
-    });
-    await newEmail.save();
-
-    res.status(200).send();
-
-
-    res.redirect('/');
-  } catch (error) {
-    console.log(error.message);
-    next(error);
-  }
-});
-
-router.post('/subscribe', async (req, res, next) => {
-  try {
-    const { email } = req.body;
-    console.log(email);
-
-    const newEmail = new Emails({
-      email,
-      createdAt: Date.now(),
-    });
-    await newEmail.save();
-
-    mail(email).catch(console.error);
-
-    res.status(200).send();
-  } catch (error) {
-    console.log(error.message);
-    next(error);
-  }
 });
 
 
@@ -161,6 +118,51 @@ router.post('/results', async (req, res, next) => {
     next(error);
   }
 });
+
+
+// router.post('/', urlencodedParser, async (req, res, next) => {
+router.post('/', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    console.log(email);
+    mail(email).catch(console.error);
+
+    const newEmail = new Emails({
+      email,
+      createdAt: Date.now(),
+    });
+    await newEmail.save();
+
+    res.status(200).send();
+
+
+    res.redirect('/');
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+});
+
+router.post('/subscribe', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    console.log(email);
+
+    const newEmail = new Emails({
+      email,
+      createdAt: Date.now(),
+    });
+    await newEmail.save();
+
+    mail(email).catch(console.error);
+
+    res.status(200).send();
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+});
+
 
 router.get('/logout', (req, res, next) => {
   req.session.destroy();
