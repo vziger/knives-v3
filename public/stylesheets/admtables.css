@@ -1,0 +1,65 @@
+/******************/
+.admtable {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+line-height: 16px;
+border-radius: 10px;
+border-spacing: 0;
+text-align: center;
+color:#000;
+margin-left: 40px;
+}
+
+.admtable th {
+background: #BCEBDD;
+color: #000;
+padding: 10px 20px;
+}
+
+.admtable th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: rgb(128, 128, 128);
+}
+
+.admtable th:first-child, td:first-child {
+text-align: left;
+}
+
+.admtable th:first-child {
+border-top-left-radius: 10px;
+}
+
+.admtable th:last-child {
+border-top-right-radius: 10px;
+border-right: none;
+}
+
+.admtable tr{
+  height: 40px;
+}
+.admtable td {
+padding: 10px 20px;
+background: #989898;
+}
+.admtable tr:last-child td:first-child {
+border-radius: 0 0 0 10px;
+}
+.admtable tr:last-child td:last-child {
+border-radius: 0 0 10px 0;
+}
+.admtable tr td:last-child {
+border-right: none;
+}
+
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF
+} 
+
+.mails_datas{
+  display: flex;
+  /* justify-content: space-between; */
+}

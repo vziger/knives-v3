@@ -12,7 +12,11 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-mongoose.connect(process.env.database || 'mongodb+srv://admin:knivesawesome@cluster0-opya2.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
+mongoose.connect(process.env.database, { useNewUrlParser: true });
+// mongoose.connect(process.env.database || 'mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
+
+// mongoose.connect('mongodb+srv://admin:knivesawesome@cluster0-opya2.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
 
 mongoose.Promise = global.Promise;

@@ -1,9 +1,9 @@
 {
-  "name": "vziger.github.io",
+  "name": "knives-work",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "connect-mongo": "^2.0.3",

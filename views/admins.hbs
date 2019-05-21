@@ -1,41 +1,80 @@
-<br/>
-<div class="logout"><a class="logout" href="/logout">Выйти</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Метательные практики</title>
+  </head>
 
-<br/>
-<br/>
+<style type="text/css">
+body{
+	background-color: #fff;
+	color: #000;
+}
+.row{
+	font-family: 'Lucida', 'sans-serif';
+	font-size: 15px;
+	display:flex;
+	justify-content: flex-start;
+	position: relative;
+	width:100%;
+	background-color: #ffc100;
+	padding: 10px 0 10px 50px;
+	margin:0;
+}
+.personal_data{
+	margin-right: 20px;
+}
 
-<div class="mails_datas">
- <table border="0" cellspacing="3" class="admtable">
-        <thead align="left">
-            <tr>
-                <th>Адрес</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each allEmails}}
-            <tr>
-                <td>{{email}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
+</style>
 
-    </table> 
+<body>
+<h2>Присланные результаты</h2>
+{{#each allPlayers}}
+	<div class="row">
+		<div class="personal_data">{{first_name}}</div>
+		<div class="personal_data">{{last_name}}</div>
+		<div class="personal_data">{{gender}}</div>
+		<div class="personal_data">{{club_name}}</div>
+		<div class="personal_data">{{country}}</div>
+		<div class="personal_data">{{email}}</div>
+	</div>
+	<div class="row">
+		<div class="personal_data">Ножи, 3м</div>
+		{{#each knife_3M}}
+		<div class="personal_data">{{this}}</div>
+		{{/each}}
+	</div>
+	<div class="row">
+		<div class="personal_data">Ножи, 4м</div>
+		{{#each knife_4M}}
+		<div class="personal_data">{{this}}</div>
+		{{/each}}
+	</div>
+	<div class="row">
+		<div class="personal_data">Ножи, 5м</div>
+		{{#each knife_5M}}
+		<div class="personal_data">{{this}}</div>
+		{{/each}}
+	</div>
+	<div class="row">
+		<div class="personal_data">Топоры, 4м</div>
+		{{#each axe_4M}}
+		<div class="personal_data">{{this}}</div>
+		{{/each}}
+	</div>
 
-    <table border="0" cellspacing="3" class="admtable">
-        <thead align="left">
-            <tr>
-                <th>Дата регистрации</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each allEmails}}
-            <tr>
-                <td>{{createdAt}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-
-    </table> 
-</div>
-    
+	<div class="row">
+		<div class="personal_data">{{videoLink_1}}</div>
+	</div>
+	<div class="row">
+		<div class="personal_data">{{videoLink_2}}</div>
+	</div>
+	<div class="row">
+		<div class="personal_data">{{videoLink_3}}</div>
+	</div>
+	<div class="row">
+		<div class="personal_data">{{videoLink_4}}</div>
+	</div>
+	{{/each}}
+</body>
+</html>

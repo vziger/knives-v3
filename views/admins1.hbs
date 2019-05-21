@@ -1,0 +1,41 @@
+<br/>
+<div class="logout"><a class="logout" href="/logout">Выйти</a>
+</div>
+
+<br/>
+<br/>
+
+<div class="mails_datas">
+ <table border="0" cellspacing="3" class="admtable">
+        <thead align="left">
+            <tr>
+                <th>Адрес</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each allPlayers}}
+            <tr>
+                <td>{{email}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table> 
+
+    <table border="0" cellspacing="3" class="admtable">
+        <thead align="left">
+            <tr>
+                <th>Дата регистрации</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each allPlayers}}
+            <tr>
+                <td>{{createdAt}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table> 
+</div>
+    

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const emailSchema = mongoose.Schema({
-  email: { type: String, unique: true },
+  email: String,// email: { type: String, unique: true },
   createdAt: Date,
 });
 

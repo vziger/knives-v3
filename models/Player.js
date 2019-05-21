@@ -4,20 +4,35 @@ var Schema = mongoose.Schema;
 
 var PlayerSchema = new Schema(
     {
-      first_name: {type: String, required: true, max: 100},
-      last_name: {type: String, required: true, max: 100},
-      gender: {type: String, required: true},
-      age: {type: Number, required: true},
-      country:{type: String, max:100},
-      club_name: {type: String, max:100},
-      videoLink: {type: String, required: true},
-      knife_3M: [{result: {type: Number, max:60}}],
-      knife_4M: [{result: {type: Number, max:60}}],
-      knife_5M: [{result: {type: Number, max:60}}],
-      axe_4M: [{result: {type: Number, max:20}}],
+      first_name: String, //{type: String},
+      last_name: String, //{type: String},
+      gender: String, //{type: String},
+      
+      club_name: String, //{type: String},
+      country:String,//{type: String},
+      email:String, //{type: String},
 
-      createdAt:{type: Date, required: true}
-      /*ещё нужен массив с результатами*/ 
+      axe_4M: [String],
+      knife_3M:  [String],
+      knife_4M:  [String],
+      knife_5M:  [String],
+
+      // axe_4M: {type : Array , "default" : [] },
+      // knife_3M:  {type : Array , "default" : [] },
+      // knife_4M:  {type : Array , "default" : [] },
+      // knife_5M:  {type : Array , "default" : [] },
+
+      // axe_4M: [{result: {type: Number}}],
+      // knife_3M: [{result: {type: Number}}],
+      // knife_4M: [{result: {type: Number}}],
+      // knife_5M: [{result: {type: Number}}],
+      
+      videoLink_1: String, //{type: String},
+      videoLink_2: String, //{type: String},
+      videoLink_3: String, //{type: String},
+      videoLink_4: String, //{type: String},
+
+      createdAt:Date,//{type: Date}
     }
   );
 
@@ -26,7 +41,7 @@ var PlayerSchema = new Schema(
 PlayerSchema
 .virtual('name')
 .get(function () {
-  return this.family_name; //+ ', ' + this.first_name;
+  return this.first_name; //+ ', ' + this.first_name;
 });
 
 /* Виртуальное свойство - URL автора
