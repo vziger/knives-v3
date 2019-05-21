@@ -1,13 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const Emails = require('../models/emails');
 const mail = require('../controller/email');
 
-const Player = require('../models/Player')
-const bodyParser = require('body-parser')
+const Player = require('../models/Player');
 
 const router = express.Router();
 
-const urlencodedParser = bodyParser.urlencoded({extended: false});
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 /* GET home page. */
@@ -29,8 +29,8 @@ router.post('/', urlencodedParser, async (req, res, next) => {
     await newEmail.save();
 
     res.status(200).send();
-    
-    
+
+
     res.redirect('/');
   } catch (error) {
     console.log(error.message);
@@ -50,9 +50,8 @@ router.post('/subscribe', async (req, res, next) => {
     await newEmail.save();
 
     mail(email).catch(console.error);
-    
-    res.status(200).send();
 
+    res.status(200).send();
   } catch (error) {
     console.log(error.message);
     next(error);
@@ -60,7 +59,7 @@ router.post('/subscribe', async (req, res, next) => {
 });
 
 
-router.post('/send_results', async (req, res, next) => {
+router.post('/results', async (req, res, next) => {
   try {
     console.log('FETCh mufucka');
     console.log(req.body);
@@ -70,7 +69,7 @@ router.post('/send_results', async (req, res, next) => {
     const LastName = req.body.nameLastName;
     const Gender = req.body.gender;
     const Club = req.body.nameClub;
-    
+
     const Country = req.body.nameCountry;
     const EmailRes = req.body.nameEmailResults;
     const link_1 = req.body.nameLink_1;
@@ -83,11 +82,11 @@ router.post('/send_results', async (req, res, next) => {
     // const videoLink_2 = req.body.nameLink_2;
     // const videoLink_3 = req.body.nameLink_3;
     // const videoLink_4 = req.body.nameLink_4;
-    
-    var axes=[];
-    var kn3 = [];
-    var kn4 = [];
-    var kn5 = [];
+
+    const axes = [];
+    const kn3 = [];
+    const kn4 = [];
+    const kn5 = [];
     axes.push(req.body.name_axe_4m_1);
     axes.push(req.body.name_axe_4m_2);
     axes.push(req.body.name_axe_4m_3);
@@ -122,7 +121,6 @@ router.post('/send_results', async (req, res, next) => {
     kn4.push(req.body.name_knife_4m_9);
     kn4.push(req.body.name_knife_4m_10);
 
-    
 
     kn5.push(req.body.name_knife_5m_1);
     kn5.push(req.body.name_knife_5m_2);
@@ -157,8 +155,7 @@ router.post('/send_results', async (req, res, next) => {
     await newPlayer.save();
 
     console.log('-----^^-----');
-  res.status(200).send();
-
+    res.status(200).send();
   } catch (error) {
     console.log(error.message);
     next(error);
@@ -169,7 +166,6 @@ router.get('/logout', (req, res, next) => {
   req.session.destroy();
   res.redirect('/');
 });
-
 
 
 router.get('/login', (req, res) => {
