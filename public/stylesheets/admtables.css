@@ -1,8 +1,10 @@
+body{
+  font-family:'HelveticaNeueCyr';
+  color:#fff;
+}
 /******************/
 .admtable {
-font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-font-size: 14px;
-line-height: 16px;
+font: normal normal 1.5vw/1.97vw 'HelveticaNeueCyr';
 border-radius: 10px;
 border-spacing: 0;
 text-align: center;

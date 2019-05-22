@@ -225,7 +225,18 @@ function show_submit_button() {
   // reset формы — для заполнения нового спортсмена
   document.getElementById('checkFormTextCorrect').style.visibility = 'hidden';
 
+  const club = document.getElementById('textClub').value;
+  const mail = document.getElementById('textEmail').value;
+
   document.getElementById('idFormResults').reset();
+  
+  if (female.classList.contains('activestyle')) {
+    document.getElementById('toggle_male').toggle('activestyle');
+    document.getElementById('toggle_female').toggle('activestyle');
+  }
+
+  document.getElementById('textClub').value = club;
+  document.getElementById('textEmail').value = mail;
 
   btn = document.getElementById('btnSubmitResults');
   btn.style.visibility = 'visible';

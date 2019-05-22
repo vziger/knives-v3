@@ -244,6 +244,10 @@ background-size:14.2vw
 .crop_social:hover:before {
   background-position: -5vw 0vw;
 }
+.crop_social:active:before {
+  background-position: -10vw 0vw;
+}
+
 .button {
   display: inline-block;
   /*44px*/
@@ -584,12 +588,17 @@ h2{
   float: left;
   width: 2.6vw;
   height: 3.2vw;
-  background: url(../images/i_link.svg) -0vw 0.1vw no-repeat;
-  background-size:5.5vw  
+  background: url(../images/i_link.svg) 0vw 0vw no-repeat;
+  background-size:5.5vw;  
 }
 
 .crop-sprite:hover:before {
-  background-position: -3.3vw 0.1vw;
+  content: "";
+  float: left;
+  width: 2.6vw;
+  height: 3.2vw;
+  background-position: -3.3vw 0vw;
+  background-size:5.5vw;  
 }
 
 /* .link_box a:before {
@@ -736,6 +745,10 @@ h2{
   display: flex;
   justify-content: flex-end;
   width: 53.1vw;
+  font-weight:bold;
+}
+.block-discipline-axe-sum{
+  font-weight:bold;
 }
 /**** --- конец div-ы для формы *******/
 
@@ -785,7 +798,7 @@ h2{
   margin:0 0 0 1.5vw;
   height: 3.2vw;
   background-color: #F3F0F0;
-  /*color:#000;*/
+  color:#000;
   text-align: right !important;
   padding-right: 1.3vw;
 }
@@ -1022,3 +1035,5 @@ h2{
     background-position: bottom right;
   }
 }
+
+@media (min-width: 1201px)
