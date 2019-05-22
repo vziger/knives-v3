@@ -204,8 +204,8 @@ function validateAllDigits() {
 
   var bool_axe_all = validateDigitString('text_axe_4m_');
   var bool_kn3_all = validateDigitString('text_knife_3m_');
-  var bool_kn4_all = validateDigitString('text_knife_3m_');
-  var bool_kn5_all = validateDigitString('text_knife_3m_');
+  var bool_kn4_all = validateDigitString('text_knife_4m_');
+  var bool_kn5_all = validateDigitString('text_knife_5m_');
 
   if (bool_axe_all + bool_kn3_all + bool_kn4_all + bool_kn5_all==-4)
   {
@@ -218,67 +218,11 @@ function validateAllDigits() {
   return false;
 
   return true;
-
-
-  // if (axes.length + knives3.length + knives4.length + knives5.length == 0)
-  // { return false; }
-
-
-  
-
-  // for (var i = 1; i < 11; i++) {
-  //   // сколько заполненных элементов в каждой строке чисел
-  //   if (document.getElementById(`${'text_axe_4m' + '_'}${i}`).value !== '') 
-  //   { axes.push(document.getElementById(`${'text_axe_4m' + '_'}${i}`).value); }
-
-  //   if (document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== '') 
-  //   { knives3.push(document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== ''); }
-
-  //   if (document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== '') 
-  //   { knives4.push(document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== ''); }
-
-  //   if (document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== '') 
-  //   { knives5.push(document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== ''); }
-  // }
-
-
-
-
-  // if (knives3.length > 0) {
-  //   for (var i = 1; i < 11; i++) {
-  //     bool_kn3_all = bool_kn3_all*validateDigits(document.getElementById(`${'text_knife_3m' + '_'}${i}`));
-  //   }
-  // }
-  // if(knives3.lenght > 1 && knives3.lenght < 10)
-  // {
-  //   bool_kn3_all = false;
-  // }
-
-  // if (knives4.length > 0) {
-  //   for (var i = 1; i < 11; i++) {
-  //     bool_kn4_all = bool_kn4_all*validateDigits(document.getElementById(`${'text_knife_4m' + '_'}${i}`));
-  //   }
-  // }
-  // if(knives4.lenght > 1 && knives4.lenght < 10)
-  // {
-  //   bool_kn4_all = false;
-  // }
-
-  // if (knives5.length > 0) {
-  //   for (var i = 1; i < 11; i++) {
-  //     bool_kn5_all = bool_kn5_all*validateDigits(document.getElementById(`${'text_knife_5m' + '_'}${i}`));
-  //   }
-  // }
-  // if(knives5.lenght > 1 && knives5.lenght < 10)
-  // {
-  //   bool_kn5_all = false;
-  // }
-
-
 }
 
 
 function show_submit_button() {
+  // reset формы — для заполнения нового спортсмена
   document.getElementById('checkFormTextCorrect').style.visibility = 'hidden';
 
   document.getElementById('idFormResults').reset();
