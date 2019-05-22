@@ -133,24 +133,6 @@ function validateMail(el) {
   return true;
 }
 
-function validateDigits(el) {
-  const val = parseInt(el.value);
-  const axe_id_ptrn = /axe/;
-
-  const right_border = (axe_id_ptrn.test(el.id)) ? 20 : 60;
-
-  if (val >= 0 && val <= right_border && (val % 5) == 0) {
-    el.classList.remove('form_results_border_wrong');
-    el.classList.add('form_results_border_neutral');
-    return true;
-  }
-
-  el.classList.add('form_results_border_wrong');
-  el.classList.remove('form_results_border_neutral');
-  return false;
-}
-
-
 function validateLinks() {
   const links = [];
   let a = 0;
@@ -169,52 +151,130 @@ function validateLinks() {
   return a;
 }
 
+function validateDigits(el) {
+  // проверка одного числа на кратность 5 и на диапазон 0-20 или 0-60
+  const val = parseInt(el.value);
+  const axe_id_ptrn = /axe/;
+
+  const right_border = (axe_id_ptrn.test(el.id)) ? 20 : 60;
+
+  // >=0 сразу проверяет и NaN — пустое значение
+  if (val >= 0 && val <= right_border && (val % 5) == 0) {
+    el.classList.remove('form_results_border_wrong');
+    el.classList.add('form_results_border_neutral');
+    return true;
+  }
+
+  el.classList.add('form_results_border_wrong');
+  el.classList.remove('form_results_border_neutral');
+  return false;
+}
+
+function validateDigitString(begining_id)
+{
+  // begining_id == text_axe_4m_, text_knife_3m_, text_knife_4m_ ,text_knife_5m_
+    
+  const array = [];
+  var bool = 1;
+    for (var i = 1; i < 11; i++) {
+      // сколько заполненных элементов в каждой строке чисел
+      if (document.getElementById(`${begining_id + ''}${i}`).value !== '') 
+      { array.push(document.getElementById(`${begining_id + ''}${i}`).value); }
+    }
+
+    // Если заполнено от 1 до 9 чисел или есть ошибки кратности 5 и диапазона, то false!
+    if (array.length > 0) {
+      for (var i = 1; i < 11; i++) {
+        bool = bool * validateDigits(document.getElementById(`${begining_id + ''}${i}`));
+      }
+    }
+    if(array.lenght > 1 && array.lenght < 10)
+    {
+      bool = 0;
+    }
+
+    if (array.length == 0) bool = -1;
+
+    return bool;
+    // *************************************************************************************
+}
+
 
 function validateAllDigits() {
-  const axes = [];
-  const knives3 = [];
-  const knives4 = [];
-  const knives5 = [];
 
-  for (var i = 1; i < 11; i++) {
-    if (document.getElementById(`${'text_axe_4m' + '_'}${i}`).value !== '') { axes.push(document.getElementById(`${'text_axe_4m' + '_'}${i}`).value); }
+  var bool_axe_all = validateDigitString('text_axe_4m_');
+  var bool_kn3_all = validateDigitString('text_knife_3m_');
+  var bool_kn4_all = validateDigitString('text_knife_3m_');
+  var bool_kn5_all = validateDigitString('text_knife_3m_');
 
-    if (document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== '') { knives3.push(document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== ''); }
-
-    if (document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== '') { knives4.push(document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== ''); }
-
-    if (document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== '') { knives5.push(document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== ''); }
+  if (bool_axe_all + bool_kn3_all + bool_kn4_all + bool_kn5_all==-4)
+  {
+    // нет ни одного числа в результатах
+    validateDigits(document.getElementById('text_axe_4m_1'));
+    validateDigits(document.getElementById('text_knife_3m_1'));
+    return false;
   }
-
-  if (axes.length > 0) {
-    for (var i = 1; i < 11; i++) {
-      validateDigits(document.getElementById(`${'text_axe_4m' + '_'}${i}`));
-    }
-  }
-
-  if (knives3.length > 0) {
-    for (var i = 1; i < 11; i++) {
-      validateDigits(document.getElementById(`${'text_knife_3m' + '_'}${i}`));
-    }
-  }
-
-  if (knives4.length > 0) {
-    for (var i = 1; i < 11; i++) {
-      validateDigits(document.getElementById(`${'text_knife_4m' + '_'}${i}`));
-    }
-  }
-
-  if (knives5.length > 0) {
-    for (var i = 1; i < 11; i++) {
-      validateDigits(document.getElementById(`${'text_knife_5m' + '_'}${i}`));
-    }
-  }
-
-  if (axes.length + knives3.length + knives4.length + knives5.length) { return true; }
-
-  validateDigits(document.getElementById('text_axe_4m_1'));
-  validateDigits(document.getElementById('text_knife_3m_1'));
+  if(bool_axe_all==0 || bool_kn3_all==0 || bool_kn4_all==0 && bool_kn5_all==0)
   return false;
+
+  return true;
+
+
+  // if (axes.length + knives3.length + knives4.length + knives5.length == 0)
+  // { return false; }
+
+
+  
+
+  // for (var i = 1; i < 11; i++) {
+  //   // сколько заполненных элементов в каждой строке чисел
+  //   if (document.getElementById(`${'text_axe_4m' + '_'}${i}`).value !== '') 
+  //   { axes.push(document.getElementById(`${'text_axe_4m' + '_'}${i}`).value); }
+
+  //   if (document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== '') 
+  //   { knives3.push(document.getElementById(`${'text_knife_3m' + '_'}${i}`).value !== ''); }
+
+  //   if (document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== '') 
+  //   { knives4.push(document.getElementById(`${'text_knife_4m' + '_'}${i}`).value !== ''); }
+
+  //   if (document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== '') 
+  //   { knives5.push(document.getElementById(`${'text_knife_5m' + '_'}${i}`).value !== ''); }
+  // }
+
+
+
+
+  // if (knives3.length > 0) {
+  //   for (var i = 1; i < 11; i++) {
+  //     bool_kn3_all = bool_kn3_all*validateDigits(document.getElementById(`${'text_knife_3m' + '_'}${i}`));
+  //   }
+  // }
+  // if(knives3.lenght > 1 && knives3.lenght < 10)
+  // {
+  //   bool_kn3_all = false;
+  // }
+
+  // if (knives4.length > 0) {
+  //   for (var i = 1; i < 11; i++) {
+  //     bool_kn4_all = bool_kn4_all*validateDigits(document.getElementById(`${'text_knife_4m' + '_'}${i}`));
+  //   }
+  // }
+  // if(knives4.lenght > 1 && knives4.lenght < 10)
+  // {
+  //   bool_kn4_all = false;
+  // }
+
+  // if (knives5.length > 0) {
+  //   for (var i = 1; i < 11; i++) {
+  //     bool_kn5_all = bool_kn5_all*validateDigits(document.getElementById(`${'text_knife_5m' + '_'}${i}`));
+  //   }
+  // }
+  // if(knives5.lenght > 1 && knives5.lenght < 10)
+  // {
+  //   bool_kn5_all = false;
+  // }
+
+
 }
 
 

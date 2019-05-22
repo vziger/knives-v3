@@ -43,7 +43,7 @@ form.addEventListener('submit', async (event) => {
   console.log(boolCountry);
   console.log(boolMail);
   console.log(boolLinks);
-  console.log(boolFirstName);
+  console.log(boolDigits);
 
   if (boolFirstName && boolLastName && boolCountry && boolMail && boolLinks && boolDigits) {
     console.log('Валидируем');

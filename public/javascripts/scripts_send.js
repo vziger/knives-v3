@@ -29,8 +29,9 @@ button.addEventListener('click', async (e) => {
 
   e.preventDefault();
   // alert(input_mail.value);
+  const pattern = /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/;
 
-  if (input_mail.value!="")
+  if (input_mail.value!="" && pattern.test(input_mail.trim()))
   {
     button.style.backgroundImage = "url('images/button_send_wait.gif')";
     button.style.cursor = "default";
