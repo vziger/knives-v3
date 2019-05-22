@@ -784,6 +784,15 @@ h2{
   font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
   width:3vw;
   height: 2.4vw;
+  text-align: left;
+  margin-right:1.5vw;
+  border:0;
+}
+
+.form_results_digitsinput_center{
+  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  width:3vw;
+  height: 2.4vw;
   text-align: center;
   margin-right:1.5vw;
   border:0;
@@ -888,20 +897,27 @@ h2{
   text-decoration: none;
   border: 0;
   color: #005bbe;
-  /*border-bottom: 1px solid #005bbe;*/
+  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
 
 }
 .captions_in_form a:visited{
   text-decoration: none;
   border: 0;
   color: #005bbe;
-  /*border-bottom: 1px solid #005bbe;*/
+  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
 }
 
 .captions_in_form a:hover{
   text-decoration: none;
   border: 0;
   color: #005bbe;
+  border-bottom: 1px solid rgb(0, 91, 190, 1);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
 }
 
 .mainpage_text a{
@@ -968,9 +984,14 @@ h2{
 .fill_new_sportsman_link{
   text-decoration: none !important;
   color: #005bbe;
-  border-bottom: 1px dashed #005bbe !important;
+  border-bottom: 1px dashed rgb(0, 91, 190, .3) !important;
   cursor:pointer;
-  /* color: #005bbe; */
+}
+.fill_new_sportsman_link:hover{
+  text-decoration: none !important;
+  color: #005bbe;
+  border-bottom: 1px dashed rgb(0, 91, 190, 1) !important;
+  cursor:pointer;
 }
 /* .fill_new_sportsman_link a:visited{
   text-decoration: none !important;

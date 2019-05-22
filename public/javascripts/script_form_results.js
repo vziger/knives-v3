@@ -7,13 +7,19 @@ function result_fields_generate(div_id) {
   for (let i = 1; i < 11; i += 1) {
     var input = document.createElement('input');
     input.type = 'text';
-    input.className = 'form_results_digitsinput form_results_border_neutral';
+    
     input.id = `text_${div_id}_${i}`;
     input.name = `name_${div_id}_${i}`;
+    
     if (div_id == 'axe_4m') {
       input.max = '20';
-    } else input.max = '60';
-    // input.placeholder = "0";
+      input.className = 'form_results_digitsinput_center form_results_border_neutral';
+    } else {
+      input.max = '60';
+      input.className = 'form_results_digitsinput form_results_border_neutral';
+    }
+
+
     input.autocomplete = 'off';
     input.onchange = function () {
       sum_results(div_id);
@@ -230,9 +236,9 @@ function show_submit_button() {
 
   document.getElementById('idFormResults').reset();
   
-  if (female.classList.contains('activestyle')) {
-    document.getElementById('toggle_male').toggle('activestyle');
-    document.getElementById('toggle_female').toggle('activestyle');
+  if (document.getElementById('toggle_female').classList.contains('activestyle')) {
+    document.getElementById('toggle_male').classList.toggle('activestyle');
+    document.getElementById('toggle_female').classList.toggle('activestyle');
   }
 
   document.getElementById('textClub').value = club;
