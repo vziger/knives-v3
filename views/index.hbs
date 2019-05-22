@@ -126,7 +126,7 @@
         
         <div class = "link_box">
           <p class="mainpage_text">
-            <a href="#">
+            <a class="mainpage_text crop-sprite" href="#">
             Правила участия</a>
           </p>
           
@@ -182,14 +182,14 @@
     <div class="wrap_input_text_1_string">
       <label class = "left_label_text">
         <div class="bblock-1">Клуб </div>
-        <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textClub" name="nameClub" placeholder="" autocomplete="off"/></div>
+        <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textClub" list="club_list" name="nameClub" placeholder="" autocomplete="off"/></div>
       </label>
     </div>
 
     <div class="wrap_input_text_1_string">
       <label class = "left_label_text">
         <div class="bblock-1">Страна </div>
-        <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textCountry" list="countries" name="nameCountry" onblur="validateName(this)" placeholder="" autocomplete="off"/></div>
+        <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textCountry" list="countries_list" name="nameCountry" onblur="validateName(this)" placeholder="" autocomplete="off"/></div>
       </label>
     </div>
 
@@ -309,7 +309,7 @@
 и&nbsp;согласны <a href="#">с условиями участия</a>.</p>
     </div>
 
-      <datalist id="countries">
+      <datalist id="countries_list">
         <option>Австрия</option>
         <option>Австралия</option>
         <option>Республика Беларусь</option>
@@ -317,6 +317,61 @@
         <option>Россия</option>
         <option>Украина</option>
         <option>Чехия</option>
+      </datalist>
+
+
+      <datalist id="club_list">
+        <option>45</option>
+        <option>78 Легион</option>
+        <option>ARMA</option>
+        <option>Freeknife</option>
+        <option>Knife thrower</option>
+        <option>No spin</option>
+        <option>OSA</option>
+        <option>WASP</option>
+        <option>Акела</option>
+        <option>Алтын-Нур</option>
+        <option>Балтийская ассоциация метателей</option>
+        <option>Беркут</option>
+        <option>Волк</option>
+        <option>Вольные клинки</option>
+        <option>Гюрза</option>
+        <option>Джокер</option>
+        <option>Дружина</option>
+        <option>Железный век</option>
+        <option>Живой клинок</option>
+        <option>Злая Пчела</option>
+        <option>К.Л.И.М.</option>
+        <option>Кипчак</option>
+        <option>Клинок</option>
+        <option>Лезо вiтру</option>
+        <option>Лукоборье</option>
+        <option>Мангуст</option>
+        <option>Метатель</option>
+        <option>МОСФМН</option>
+        <option>Пересвет</option>
+        <option>Радогост</option>
+        <option>Сарган</option>
+        <option>Сарнож</option>
+        <option>Сварог</option>
+        <option>Северный клинок</option>
+        <option>Серебряный нож</option>
+        <option>СКИФ</option>
+        <option>Сова</option>
+        <option>Сталкер</option>
+        <option>Стальной лепесток</option>
+        <option>Стриж</option>
+        <option>Таргет</option>
+        <option>Твердая рука</option>
+        <option>ФБСМН СПб ДОСААФ РФ</option>
+        <option>Феникс</option>
+        <option>Форт-Нож</option>
+        <option>Цель</option>
+        <option>Шалены Зубар</option>
+        <option>Шаман</option>
+        <option>Школа Виталия Кима</option>
+        <option>Школа Дмитрия Мельникова</option>
+        <option>Школа Наиля Ахмаду</option>
       </datalist>
     </form>
 

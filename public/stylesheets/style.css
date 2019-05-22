@@ -540,39 +540,58 @@ h2{
   margin:2.4vw 0; /*24px*/
 }
 
-.link_box{
+ .link_box{
   position: relative;
   width:95%;
   height:auto;
   padding-left: 2.46vw;
+} 
+
+.crop-sprite {
+  display: block;
+  position: absolute;
+  left: 0vw;
+  top: -0.5vw;
+  overflow: hidden;
+  margin: 0;
+  color: #ffc100;
 }
 
-.link_box a:before {
-    content: "";
-    position: absolute;
-    left: -0.5vw;
-    top: -0.2vw;
-    width: 2.8vw;
-    height: 2.9vw;
-    background: url(../images/i_link.svg) left top no-repeat;
-    background-size: auto;
-    background-size: 100% auto;
-  }
+.crop-sprite:before {
+  content: "";
+  float: left;
+  width: 2.6vw;
+  height: 3.2vw;
+  background: url(../images/i_link.svg) -0vw 0.1vw no-repeat;
+  background-size:5.5vw  
+}
 
-.link_box a:hover:before {
-    content: "";
+.crop-sprite:hover:before {
+  background-position: -3.3vw 0.1vw;
+}
+
+/* .link_box a:before {
+  content: "";
+  float: left;
+  width: 2.2vw;
+  height: 4.6vw;
+  background: url(../images/i_link.svg) 2vw 0;
+  background-repeat: no-repeat;  
+
+  } */
+
+/* .link_box a:hover:before {
+  background-position: -2.2vw 0 ; */
+  /* content: "";
     position: absolute;
     left: -0.5vw;
     top: -0.2vw;
     width: 2.8vw;
-    height: 2.9vw;
-    background: url(../images/i_link_w.svg) left top no-repeat;
-    background-size: auto;
-    background-size: 100% auto;
-  }
-/*label{
-  min-height: 7vw;
-}*/
+    height: 2.9vw; */
+    /* background: url(../images/i_link_w.svg) left top no-repeat;
+    background-size: 100% auto; */
+  /* } */
+
 
 
 .form_wrapper{
