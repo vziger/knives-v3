@@ -181,7 +181,7 @@
 
   /* высота блока с формой*/
   .third_floor_wrapper{
-    height:1158px; 
+    height:1122px; 
   }
 
   .four_floor_wrapper{
@@ -228,7 +228,7 @@
   .form_wrapper{
     top:-282px;
     width: 876px;
-    height:1440px;
+    height:1404px; /*размер формы*/
     padding-left: 36px;
   }
 
@@ -248,7 +248,7 @@
   .captions_in_form h3{
     font-size: 28px;
     line-height: 28px;
-    margin: 48px 0 24px 0;
+    margin: 48px 0 12px 0;
   }
   
   .captions_in_form p
@@ -378,7 +378,7 @@
     line-height: 38px;
     max-width: 264px;
     min-width: 156px;
-    padding: 0 24px;
+    padding: 0 24px 0;
     font-size: 19px;
 }
 /*****************/
