@@ -794,7 +794,7 @@ h2{
     height: 3.4vw;
     max-width: 22vw;
     min-width: 13vw;
-    padding: 0 2vw 0;
+    padding: 0.1vw 2vw 0;
     cursor: pointer;
     text-align: center;
     color: #282828;
@@ -889,14 +889,12 @@ h2{
   /*color:#D4D4D4;*/
   /*background-color: #F3F0F0;*/
   background-color: #ffc100;
-  /*display: block;*/
   width:23.2vw;
   height: 5.6vw;
   cursor:default;
   border: 0;
   margin-top: 4vw;
   margin-bottom: 2vw;
-  padding-bottom: 0.3vw;
   display:table-cell!important;
 	vertical-align:middle;
 }
