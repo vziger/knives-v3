@@ -204,6 +204,11 @@
     margin-top: -65px;
   }
   
+  .second_floor_img{
+    top: 98px;
+    left:-216px;
+  }
+
   .four_floor_img{
     top: 156px;
     left:444px;
@@ -227,7 +232,7 @@
 
   .form_wrapper{
     top:-282px;
-    width: 876px;
+    width: 912px;
     height:1404px; /*размер формы*/
     padding-left: 36px;
   }
@@ -301,19 +306,19 @@
   }
   
   .container-discipline {
-    width: 830px;
+    width: 876px;
     height: 39px;
   }
   
   .block-discipline-digits{
     line-height: 38px;
     font-size: 19px;
-    width: 680px;/*calc(73vw-11vw);*/
-    margin-right: 12px;
+    width: 750px;/*calc(73vw-11vw);*/
+    /* margin-right: 12px; */
   }
   
   .block-discipline-allsum{
-    width: 637px;
+    width: 697px;
   }
   /**** --- конец div-ы для формы *******/
 
@@ -328,17 +333,17 @@
   .form_results_digitsinput{
     font-size: 19px;
     line-height: 21px;
-    width:36px;
+    width:44px;
     height: 28px;
-    margin-right:18px;
+    margin-right:16px;
   }
   
   .form_results_digitsinput_center{
     font-size: 19px;
     line-height: 21px;
-    width:36px;
+    width:44px;
     height: 29px;
-    margin-right:18px;
+    margin-right:16px;
   }
   
   .form_results_digitsinput_sum{
@@ -400,8 +405,9 @@
   .form_results_button{
     font-size: 24px;
     line-height: 24px;
-    width:278px;
+    width:auto;
     height: 67px;
+    padding: 0 72px 0 72px;
     margin-top: 48px;
     margin-bottom: 24px;
     padding-bottom: 3px;

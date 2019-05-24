@@ -54,7 +54,8 @@ function sum_results(discipline_index) {
   for (let i = 1; i < 11; i++) {
     // нужна проверка на строку
     if (!isNaN(parseInt(document.getElementById(id + i).value))) {
-      sum += parseInt(document.getElementById(id + i).value, 10);
+      if(validateDigits(document.getElementById(id + i)))
+        sum += parseInt(document.getElementById(id + i).value, 10);
     }
   }
 

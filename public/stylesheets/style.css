@@ -139,6 +139,12 @@ div{
 background-color: rgb(255,0,0,0.);
 }
 
+.browser{
+  width:100%;
+  height:auto;
+  position: relative;
+  overflow: hidden;
+}
 
 .main {
   width:98vw;
@@ -296,7 +302,6 @@ a img {
   /*15px/18px*/
   font: normal normal 1.5vw/1.8vw 'HelveticaNeueCyr';
   color: #FFFFFF;
-/*12px     ????? 0.02vw*/
   margin: 0.026vw 0 0.78vw 0;
 }
 
@@ -495,24 +500,27 @@ h2{
   margin-top: -5.3vw;
   height:84%;
   width:auto;
-  /*background-image: url(../images/i.svg);*/
-  /*background-position:bottom right;*/
 }
+
+
+.second_floor_img{
+  overflow: visible;
+  position:absolute;
+  top: 8.2vw;
+  left:-18vw;
+  height:84%;
+  width:auto;
+}
+
 
 .four_floor_img{
   overflow: visible;
   position:absolute;
   top: 13vw;
+  /* right:0; */
   left:37vw;
   height:84%;
   width:auto;
-}
-
-.second_floor_img{
-  background-image: url(../images/ii.svg);
-  background-position-x:left;
-  background-position-y:90%; 
-  /*background-position:bottom left;*/
 }
 
 .mainpage_text
@@ -563,11 +571,11 @@ h2{
 .form_wrapper{
   color: #000;
   position:absolute;
+  background-color: #fff;
   right:0;
   top:-23.5vw;
-  width: 73vw;
+  width: 76vw;
   height:117vw;
-  background-color: #fff;
   padding-left: 3vw;
 }
 
@@ -653,25 +661,28 @@ h2{
 }
 
 .container-discipline {
-  width: 68vw;
+  /* background-color: rgba(38, 0, 255, 0.1); */
+  width: 73vw;
+  /* 70vw; */
   height: 3.25vw;
   margin:0;
   padding:0;
 }
 
 .block-discipline-digits{
+  /* background-color: rgb(255,0,0,0.1); */
   float: left;
   line-height: 3.2vw;
   font-size: 1.6vw;
-  width: calc(73vw-11vw);
-  margin-right: 1vw;
+  width:62vw; 
+  /* calc(73vw-11vw); */
   text-align: left;
 }
 
 .block-discipline-allsum{
   display: flex;
   justify-content: flex-end;
-  width: 53.1vw;
+  width: 58.6vw;
   font-weight:bold;
 }
 .block-discipline-axe-sum{
@@ -694,25 +705,25 @@ h2{
 
 .form_results_digitsinput{
   font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
-  width:3vw;
+  width:3.7vw;
   height: 2.4vw;
   text-align: left;
-  margin-right:1.5vw;
+  margin-right:1.4vw;
   border:0;
 }
 
 .form_results_digitsinput_center{
   font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
-  width:3vw;
+  width:3.7vw;
   height: 2.4vw;
   text-align: center;
-  margin-right:1.5vw;
+  margin-right:1.4vw;
   border:0;
 }
 
 .form_results_digitsinput_sum{
   width:6.6vw;
-  margin:0 0 0 1.5vw;
+  margin:0 0 0 1vw;
   height: 3.2vw;
   background-color: #F3F0F0;
   color:#000;
@@ -736,7 +747,7 @@ h2{
 }
 
 .form_results_border_neutral{
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid rgb(200, 200, 200, 0.5);
 }
 .form_results_border_wrong{
   border-bottom: 1px solid #ff7777;
@@ -889,8 +900,9 @@ h2{
   /*color:#D4D4D4;*/
   /*background-color: #F3F0F0;*/
   background-color: #ffc100;
-  width:23.2vw;
+  width:auto;
   height: 5.6vw;
+  padding:0 6vw 0 6vw;
   cursor:default;
   border: 0;
   margin-top: 4vw;
