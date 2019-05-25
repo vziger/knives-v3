@@ -36,6 +36,9 @@ function result_fields_generate(div_id) {
     };
     div.appendChild(input);
   }
+
+
+  // SUM-element
   var input = document.createElement('input');
   input.type = 'text';
   input.className = 'form_results_digitsinput form_results_digitsinput_sum';
@@ -279,6 +282,10 @@ function loadLocalStorageToInput()
         document.getElementById(key).classList = localStorage.getItem(key);
       }
     }
+    sum_results('axe_4m');
+    sum_results('knife_3m');
+    sum_results('knife_4m');
+    sum_results('knife_5m');
   }
 }
 
