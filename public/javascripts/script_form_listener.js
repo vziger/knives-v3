@@ -92,6 +92,17 @@ form.addEventListener('submit', async (event) => {
         document.getElementById('checkFormTextCorrect').style.visibility = 'visible';
         btn.disabled = false;
         btn.style.cursor = 'pointer';
+        
+        // !!! проверить почтосборник
+        // var value = '';
+        // if(localStorage.getItem('input_mail')){
+        //   value = localStorage.getItem('input_mail')
+        // }
+
+        localStorage.clear();
+
+        // document.getElementById('input_mail').value = value;
+
         // alert('Сохранил!');
         // button.style.backgroundImage = "url('images/button_send_ok.svg')";
         // button_ok=1;      // раздизейблить кнопку !!!
