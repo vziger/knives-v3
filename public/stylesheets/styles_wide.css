@@ -205,7 +205,7 @@
   }
   
   .second_floor_img{
-    top: 98px;
+    top: 99px;
     left:-216px;
   }
 
@@ -243,7 +243,7 @@
   
   .left_label_text{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
   }
   
   .captions_in_form{
@@ -259,7 +259,7 @@
   .captions_in_form p
   {
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     margin-bottom: 24px;
   }
   .captions_in_form_minus_margin{
@@ -301,7 +301,7 @@
   .bblock-links{
     line-height: 38px;
     font-size: 17px;
-    width: 540px; /*Фиксируем ширину блока*/
+    /* width: 540px; Фиксируем ширину блока */
     margin-right: 12px;
   }
   
@@ -324,15 +324,16 @@
 
   .form_results_textinput{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     width:312px;
     height: 29px;
     padding-right:6px;
+    /* padding-bottom: -8px; */
   }
   
   .form_results_digitsinput{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     width:44px;
     height: 28px;
     margin-right:16px;
@@ -340,7 +341,7 @@
   
   .form_results_digitsinput_center{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     width:44px;
     height: 29px;
     margin-right:16px;
@@ -355,9 +356,9 @@
   
   .form_results_linkinput{
     font-size: 19px;
-    line-height: 21px;
-    width:522px;
-    height: 29px;
+    line-height: 24px;
+    width:585px;
+    height:30px;
     border:0;
   }
   
@@ -370,7 +371,7 @@
   }
   
   .form_results_border_neutral{
-    border-bottom: 1px solid #c8c8c8;
+    border-bottom: 1px solid rgb(200, 200, 200,0.5);
   }
   .form_results_border_wrong{
     border-bottom: 1px solid #ff7777;
@@ -390,7 +391,7 @@
 
 .hidden_text_wrong{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     margin: 48px 0 24px 24px;
     padding-top: 24px;
   }
@@ -398,7 +399,7 @@
   .hidden_text_correct{
     top:48px;
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     padding-top: 24px;
   }
   
@@ -416,7 +417,7 @@
 
   .footer_container{
     font-size: 19px;
-    line-height: 21px;
+    line-height: 24px;
     margin-top:180px;
   }
   

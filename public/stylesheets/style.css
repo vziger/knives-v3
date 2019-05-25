@@ -587,7 +587,7 @@ h2{
 }
 
 .left_label_text{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
   /* font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
   color: #000; */
   display: block;
@@ -652,10 +652,11 @@ h2{
 }
 
 .bblock-links{
+  /* background-color: rgb(255, 0, 0, .1); */
   float: left; 
   line-height: 3.2vw;
   font-size: 1.4vw;
-  width: 45vw; /*Фиксируем ширину блока*/
+  width: auto;
   margin-right: 1vw;
   text-align: left; 
 }
@@ -692,7 +693,7 @@ h2{
 
 
 .form_results_textinput{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
   width:26vw;
   height: 2.4vw;
   padding-right:0.5vw;
@@ -704,7 +705,7 @@ h2{
 }
 
 .form_results_digitsinput{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
   width:3.7vw;
   height: 2.4vw;
   text-align: left;
@@ -713,7 +714,7 @@ h2{
 }
 
 .form_results_digitsinput_center{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
   width:3.7vw;
   height: 2.4vw;
   text-align: center;
@@ -732,10 +733,15 @@ h2{
 }
 
 .form_results_linkinput{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
-  width:43.5vw;
-  height: 2.4vw;
-  border:0;
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
+  width: 49.6vw;
+  height: 2.5vw;
+  /* background-color: rgba(233, 233, 233, 0.1); */
+  border: 0;
+}
+
+.form_results_digitsinput_center:focus{
+  border-bottom: 1px solid #ffc100;
 }
 
 .form_results_digitsinput:focus{
@@ -743,6 +749,7 @@ h2{
 }
 
 .form_results_linkinput:focus{
+  /* background-color: rgba(233, 233, 233, 0.3); */
   border-bottom: 1px solid #ffc100;
 }
 
@@ -931,7 +938,7 @@ h2{
 
 
 .footer_container{
-  font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
+  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
   margin-top:15vw;
   position:relative;
   color:#fff;

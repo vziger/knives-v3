@@ -144,14 +144,14 @@
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">Имя</div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textFirstName" name="nameFirstName" autocomplete="off" onblur="validateName(this)"/></div>
+          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textFirstName')" type="text" id="textFirstName" name="nameFirstName" autocomplete="off" onblur="validateName(this)"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">Фамилия </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textLastName" name="nameLastName" onblur="validateName(this)" autocomplete="off"/></div>
+          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLastName')" type="text" id="textLastName" name="nameLastName" onblur="validateName(this)" autocomplete="off"/></div>
         </label>
       </div>
 
@@ -169,21 +169,21 @@
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">Клуб </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textClub" list="club_list" name="nameClub" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textClub')" type="text" id="textClub" list="club_list" name="nameClub" placeholder="" autocomplete="off"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">Страна </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textCountry" list="countries_list" name="nameCountry" onblur="validateName(this)" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textCountry')" type="text" id="textCountry" list="countries_list" name="nameCountry" onblur="validateName(this)" placeholder="" autocomplete="off"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">Эл.&nbsp;почта </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" type="text" id="textEmail" name="nameEmailResults" onblur="validateMail(this)" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textEmail')" type="text" id="textEmail" name="nameEmailResults" onblur="validateMail(this)" placeholder="" autocomplete="off"/></div>
         </label>
       </div>
       
@@ -255,27 +255,27 @@
       <div class="container-discipline">
         <label class = "left_label_text">
           <div class="bblock-1">Ссылки </div>
-          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" type="url" id="textLink_1" name="nameLink_1" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLink_1')" type="url" id="textLink_1" name="nameLink_1" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
 
       <div class="container-discipline">
         <label class = "left_label_text">
           <div class="bblock-1">&nbsp;</div>
-          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" type="url" id="textLink_2" name="nameLink_2" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLink_2')" type="url" id="textLink_2" name="nameLink_2" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
       <div class="container-discipline">
         <label class = "left_label_text">
           <div class="bblock-1">&nbsp;</div>
-          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" type="url" id="textLink_3" name="nameLink_3" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLink_3')" type="url" id="textLink_3" name="nameLink_3" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-1">&nbsp;</div>
-          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" type="url" id="textLink_4" name="nameLink_4" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+          <div class="bblock-links"><input class="form_results_linkinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLink_4')" type="url" id="textLink_4" name="nameLink_4" onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
 
@@ -308,6 +308,7 @@
 
 
         <datalist id="club_list">
+          <option> - Без клуба - </option>
           <option>45</option>
           <option>78 Легион</option>
           <option>ARMA</option>

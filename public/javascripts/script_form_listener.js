@@ -97,6 +97,7 @@ form.addEventListener('submit', async (event) => {
         // button_ok=1;      // раздизейблить кнопку !!!
       } else {
         console.log('результаты не отправлены');
+        // !!! Вывести сообщение, что результаты не отправлены
         // button.disabled = false;
         // input_mail.style.color = 'red';
         // !!!надо показать сообщение, что имейл не отправился

@@ -23,6 +23,7 @@ function result_fields_generate(div_id) {
     input.autocomplete = 'off';
     input.onchange = function () {
       sum_results(div_id);
+      saveInputToLocalStorage(`text_${div_id}_${i}`);
     };
     input.onkeypress = function (event) {
       event = event || window.event;
@@ -101,15 +102,18 @@ function swapStyle_1() {
     el_1.classList.toggle('activestyle');
     el_2.classList.toggle('activestyle');
   }
+  saveInputToLocalStorage('toggle_male');
 }
 
 function swapStyle_2() {
   const el_1 = document.getElementById('toggle_male');
   const el_2 = document.getElementById('toggle_female');
+
   if (!el_2.classList.contains('activestyle')) {
     el_2.classList.toggle('activestyle');
     el_1.classList.toggle('activestyle');
   }
+  saveInputToLocalStorage('toggle_male');
 }
 
 function validateName(el) {
@@ -160,12 +164,12 @@ function validateLinks() {
 
 function validateDigits(el) {
   // проверка одного числа на кратность 5 и на диапазон 0-20 или 0-60
-  const val = parseInt(el.value);
+  const val = isNaN(parseInt(el.value)) ? 0 : parseInt(el.value);
   const axe_id_ptrn = /axe/;
 
   const right_border = (axe_id_ptrn.test(el.id)) ? 20 : 60;
 
-  // >=0 сразу проверяет и NaN — пустое значение
+  // >=0 и NaN — пустое значение
   if (val >= 0 && val <= right_border && (val % 5) == 0) {
     el.classList.remove('form_results_border_wrong');
     el.classList.add('form_results_border_neutral');
@@ -251,3 +255,33 @@ function show_submit_button() {
 }
 
 
+function saveInputToLocalStorage(id)
+{
+  var el = document.getElementById(id);
+  if(id!=='toggle_male'){
+    localStorage.setItem(id, el.value);
+  }
+  else{
+    localStorage.setItem('toggle_male', el.classList);
+    localStorage.setItem('toggle_female', document.getElementById('toggle_female').classList);
+  }
+}
+
+function loadLocalStorageToInput()
+{
+  var lsLen = localStorage.length;
+  if(lsLen > 0){
+    for(var i = 0; i < lsLen; i++){
+      var key = localStorage.key(i);
+      if(!key.includes('toggle'))
+        document.getElementById(key).value = localStorage.getItem(key);
+      else{
+        document.getElementById(key).classList = localStorage.getItem(key);
+      }
+    }
+  }
+}
+
+window.addEventListener('load', function() {
+  loadLocalStorageToInput();
+});
