@@ -1,8 +1,5 @@
 function result_fields_generate(div_id) {
-  // const input = document.getElementById('input');
-  // input.oninput = e => {
-  // e.target.value = ''; }// не важно, что ввели, значение всегда пустое будет
-  // "knife-3m"
+  // "knife_3m"
   const div = document.getElementById(div_id);
   for (let i = 1; i < 11; i += 1) {
     var input = document.createElement('input');
@@ -10,34 +7,54 @@ function result_fields_generate(div_id) {
     
     input.id = `text_${div_id}_${i}`;
     input.name = `name_${div_id}_${i}`;
-    
+    input.className = 'form_results_digitsinput form_results_border_neutral';
+
     if (div_id == 'axe_4m') {
       input.max = '20';
-      input.className = 'form_results_digitsinput_center form_results_border_neutral';
+      // input.className = 'form_results_digitsinput_center form_results_border_neutral';
     } else {
       input.max = '60';
-      input.className = 'form_results_digitsinput form_results_border_neutral';
     }
-
 
     input.autocomplete = 'off';
     input.onchange = function () {
       sum_results(div_id);
       saveInputToLocalStorage(`text_${div_id}_${i}`);
     };
+
     input.onkeypress = function (event) {
       event = event || window.event;
+      // console.log(this.selectionStart);
+      // console.log(this.selectionEnd);
+      if (window.getSelection) {
+        console.log(window.getSelection());
+      }else if (document.getSelection) {
+        console.log(document.getSelection());
+      }else if (document.selection) {
+        console.log(document.selection.createRange().text);
+      }
+      
+      
       if (event.charCode && (event.charCode < 48 || event.charCode > 57))// проверка на event.charCode - чтобы пользователь мог нажать backspace, enter, стрелочку назад...
       { return false; }
-      if (this.value.length == 2) return false;
+      
+      if (this.value.length == 2 && (parseInt(this.selectionEnd - this.selectionStart)==0 )) return false;
     };
     input.onblur = function () {
-      validateDigits(this);
+      validateDigits(this)
+      // if(!)
+      // {
+      //   flag_wrong_digits=1;
+      //   writeAlert(div_id);
+      // };
     };
     div.appendChild(input);
   }
 
-
+function writeAlert(div_id){
+  if(flag_wrong_digits==1 )
+  {}
+}
   // SUM-element
   var input = document.createElement('input');
   input.type = 'text';
@@ -131,6 +148,7 @@ function validateName(el) {
   return false;
 }
 
+
 function validateMail(el) {
   const pattern = /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/;
 
@@ -178,7 +196,6 @@ function validateDigits(el) {
     el.classList.add('form_results_border_neutral');
     return true;
   }
-
   el.classList.add('form_results_border_wrong');
   el.classList.remove('form_results_border_neutral');
   return false;
@@ -252,11 +269,29 @@ function show_submit_button() {
   document.getElementById('textClub').value = club;
   document.getElementById('textEmail').value = mail;
 
+  const allElem = document.forms[1].elements;
+  for(let i=0;i<allElem.length;i++)
+  {
+    if(allElem[i].id!=='btnSubmitResults' && allElem[i].id!=='text_knife_ALL_SUM' && 
+        allElem[i].id!=='text_axe_4m_SUM' && allElem[i].id!=='text_knife_3m_SUM' && 
+        allElem[i].id!=='text_knife_4m_SUM' && allElem[i].id!=='text_knife_5m_SUM'){
+          allElem[i].disabled = false;
+        }
+  }
+
   btn = document.getElementById('btnSubmitResults');
   btn.style.visibility = 'visible';
   btn.style.disabled = 'false';
 }
 
+function show_submit_button_server_mistake()
+{
+  document.getElementById('checkFormTextServerMistake').style.visibility = 'hidden';
+
+  btn = document.getElementById('btnSubmitResults');
+  btn.style.visibility = 'visible';
+  btn.style.disabled = 'false';
+}
 
 function saveInputToLocalStorage(id)
 {
@@ -292,3 +327,20 @@ function loadLocalStorageToInput()
 window.addEventListener('load', function() {
   loadLocalStorageToInput();
 });
+
+
+
+
+// ****************************************************************
+function validateName_2(el) {
+  if ((el.value.trim() !== '') && (el.value.length) < 40) {
+    return true;
+  }
+  return false;
+}
+
+function toggleWrightWrongStyles(el){
+  el.classList.toggle('form_results_border_wrong');
+  el.classList.toggle('form_results_border_neutral');
+}
+// *****************************************************************

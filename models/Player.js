@@ -32,6 +32,7 @@ var PlayerSchema = new Schema(
       videoLink_3: String, //{type: String},
       videoLink_4: String, //{type: String},
 
+      approved: Number,
       createdAt:Date,//{type: Date}
     }
   );

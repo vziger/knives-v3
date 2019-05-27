@@ -102,12 +102,13 @@
     margin: -2px 0;
   }
   
+  .divEmailCaption{
+  margin:0 0 8px 0;
+  }
   .form-caption{
     /*15px/18px*/
     font-size: 18px;
     line-height: 21px;
-  /*12px     ????? 0.02vw*/
-    margin: 0 0 9px 0;
   }
   
   .input_mail {
@@ -232,7 +233,7 @@
 
   .form_wrapper{
     top:-282px;
-    width: 912px;
+    width: 876px;
     height:1404px; /*размер формы*/
     padding-left: 36px;
   }
@@ -268,7 +269,7 @@
 
   /**** div-ы для формы ***/
 .wrap_input_text_1_string {
-    width: 780px;
+    /* width: 780px; */
     height: 38px;
     margin-bottom: 12px;
   }
@@ -277,18 +278,23 @@
     height: 41px;
     margin-bottom: 12px;
   }
-  .bblock-1{
+  .bblock-label{
     line-height: 38px;
     font-size: 19px;
-    width: 110px; 
     margin-right: 12px;
   }
-  .bblock-1-caption{
+  .bblock-label-personal{
+    width: 110px; 
+  }
+  .bblock-label-digits{
+    width: 70px; 
+  }
+
+  .bblock-label-caption{
     line-height: 19px;
     font-size: 19px;
-    width: 110px; 
     margin-right: 12px;
-    margin-top: 18px;
+    /* margin-top: 18px; */
   }
   
   .bblock-2{
@@ -304,12 +310,25 @@
     /* width: 540px; Фиксируем ширину блока */
     margin-right: 12px;
   }
-  
+
+  .text-notes{
+    line-height: 15px;
+    font-size: 12px;
+    margin-right: 12px;
+    /* visibility: hidden; */
+  }
   .container-discipline {
-    width: 876px;
+    /* width: 876px; */
     height: 39px;
   }
-  
+  .container-discipline-caption{
+    height: 19px;
+  }
+
+  .container-discipline-margin {
+    margin-bottom: 12px;
+  }  
+
   .block-discipline-digits{
     line-height: 38px;
     font-size: 19px;
@@ -320,6 +339,12 @@
   .block-discipline-allsum{
     width: 697px;
   }
+
+  .container-notes{
+    height: 24px;
+    padding-left: 82px;
+  }
+
   /**** --- конец div-ы для формы *******/
 
   .form_results_textinput{
@@ -350,14 +375,22 @@
   .form_results_digitsinput_sum{
     width:79px;
     margin:0 0 0 18px;
-    height: 38px;
+    height: 39px;
     padding-right: 15px;
   }
   
+  .sum_background{
+    right:61px;
+    width:79px;
+    height: 284px;
+    padding-right: 15px;
+  }
+
   .form_results_linkinput{
     font-size: 19px;
     line-height: 24px;
     width:585px;
+    margin-right:10px;
     height:30px;
     border:0;
   }
@@ -397,13 +430,19 @@
   }
   
   .hidden_text_correct{
-    top:48px;
+    top:46px;
+    font-size: 19px;
+    line-height: 24px;
+    padding-top: 24px;
+  }
+  .hidden_text_server_mistake{
+    top:46px;
     font-size: 19px;
     line-height: 24px;
     padding-top: 24px;
   }
   
-  .form_results_button{
+  .button_send_results{
     font-size: 24px;
     line-height: 24px;
     width:auto;
@@ -418,7 +457,7 @@
   .footer_container{
     font-size: 19px;
     line-height: 24px;
-    margin-top:180px;
+    margin:180px 0 24px 0;
   }
   
   .footer_link{
@@ -433,7 +472,7 @@
   }
   
   .footer_contacts_2{
-    margin:0 12px 24px 12px;
+    margin:0 12px 0 12px;
   }
   
 }

@@ -1,51 +1,48 @@
-const form = document.querySelector('.form_results');
+const form       = document.querySelector('.form_results');
+const btn        = document.getElementById('btnSubmitResults');
+
+const firstName  = document.getElementById('textFirstName');
+const lastName   = document.getElementById('textLastName');
+const male       = document.getElementById('toggle_male');
+const club       = document.getElementById('textClub');
+const country    = document.getElementById('textCountry');
+const form_email = document.getElementById('textEmail');
+const links      = [];
+for (let i = 1; i < 5; i += 1) {
+  links[i - 1] = document.getElementById(`textLink_${i}`);
+}
+
 
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   console.log('clicked on validate');
 
-
-  const firstName = document.getElementById('textFirstName');
-  const lastName = document.getElementById('textLastName');
-
-  const male = document.getElementById('toggle_male');
   // var female = document.getElementById('toggle_female');
   let gender = '';
-
   if (male.classList.contains('activestyle')) {
     gender = 'мужской';
   } else {
     gender = 'женский';
   }
 
-  const club = document.getElementById('textClub');
-  const country = document.getElementById('textCountry');
-
-  const form_email = document.getElementById('textEmail');
-
-  const links = [];
-
-
-  for (let i = 1; i < 5; i += 1) {
-    links[i - 1] = document.getElementById(`textLink_${i}`);
-  }
-
   const boolFirstName = validateName(firstName);
-  const boolLastName = validateName(lastName);
-  const boolCountry = validateName(country);
-  const boolMail = validateMail(form_email);
-  const boolLinks = validateLinks();
-  const boolDigits = validateAllDigits();
+  const boolLastName =  validateName(lastName);
+  const boolClub =      validateName(club);
+  const boolCountry =   validateName(country);
+  const boolMail =      validateMail(form_email);
+  const boolLinks =     validateLinks();
+  const boolDigits =    validateAllDigits();
 
   console.log(boolFirstName);
   console.log(boolLastName);
+  console.log(boolClub);
   console.log(boolCountry);
   console.log(boolMail);
   console.log(boolLinks);
   console.log(boolDigits);
 
-  if (boolFirstName && boolLastName && boolCountry && boolMail && boolLinks && boolDigits) {
+  if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && boolLinks && boolDigits) {
     console.log('Валидируем');
     document.getElementById('checkFormTextWrong').style.visibility = 'hidden';
 
@@ -61,7 +58,7 @@ form.addEventListener('submit', async (event) => {
       const json = JSON.stringify(object);
       console.log(json);
 
-      const btn = document.getElementById('btnSubmitResults');
+      
       // btn.style.backgroundImage = "url('images/button_send_wait.gif')";
       btn.style.cursor = 'default';
       btn.disabled = true;
@@ -93,6 +90,15 @@ form.addEventListener('submit', async (event) => {
         btn.disabled = false;
         btn.style.cursor = 'pointer';
         
+        const allElem = document.forms[1].elements;
+        for(let i=0;i<allElem.length;i++)
+        {
+          if(allElem[i].id!=='btnSubmitResults' && allElem[i].id!=='text_knife_ALL_SUM' && 
+             allElem[i].id!=='text_axe_4m_SUM' && allElem[i].id!=='text_knife_3m_SUM' && 
+             allElem[i].id!=='text_knife_4m_SUM' && allElem[i].id!=='text_knife_5m_SUM'){
+               allElem[i].disabled=true;
+             }
+        }
         // !!! проверить почтосборник
         // var value = '';
         // if(localStorage.getItem('input_mail')){
@@ -121,4 +127,21 @@ form.addEventListener('submit', async (event) => {
     console.log('НЕ Валидируем');
     document.getElementById('checkFormTextWrong').style.visibility = 'visible';
   }
+});
+
+
+
+document.getElementById('textFirstName').addEventListener('input',function(){
+  const boolFirstName = validateName_2(firstName);
+  const boolLastName =  validateName_2(lastName);
+  const boolClub =      validateName_2(club);
+  const boolCountry =   validateName_2(country);
+  const boolMail =      validateMail(form_email);
+  const boolLinks =     validateLinks();
+  const boolDigits =    validateAllDigits();
+
+  if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && boolLinks && boolDigits){
+
+  }
+
 });

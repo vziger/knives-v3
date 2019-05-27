@@ -2,9 +2,8 @@ const express = require('express');
 // const bodyParser = require('body-parser');
 const Emails = require('../models/emails');
 const mail = require('../controller/email');
-
 const Player = require('../models/Player');
-
+const og = require('open-graph');
 const router = express.Router();
 
 // const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -12,6 +11,9 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
+  // og({ url: 'https://knifethrowing.online' }, // Settings object first
+  //   function(er, res) { console.log(er, res); }  // Callback 
+  // );
   res.render('index', { title: 'Метательные практики' });
 });
 
@@ -33,12 +35,6 @@ router.post('/results', async (req, res, next) => {
     const link_2 = req.body.nameLink_2;
     const link_3 = req.body.nameLink_3;
     const link_4 = req.body.nameLink_4;
-
-    // const createdAt = Date.now();
-    // const videoLink_1 = req.body.nameLink_1;
-    // const videoLink_2 = req.body.nameLink_2;
-    // const videoLink_3 = req.body.nameLink_3;
-    // const videoLink_4 = req.body.nameLink_4;
 
     const axes = [];
     const kn3 = [];
@@ -66,7 +62,6 @@ router.post('/results', async (req, res, next) => {
     kn3.push(req.body.name_knife_3m_9);
     kn3.push(req.body.name_knife_3m_10);
 
-
     kn4.push(req.body.name_knife_4m_1);
     kn4.push(req.body.name_knife_4m_2);
     kn4.push(req.body.name_knife_4m_3);
@@ -78,7 +73,6 @@ router.post('/results', async (req, res, next) => {
     kn4.push(req.body.name_knife_4m_9);
     kn4.push(req.body.name_knife_4m_10);
 
-
     kn5.push(req.body.name_knife_5m_1);
     kn5.push(req.body.name_knife_5m_2);
     kn5.push(req.body.name_knife_5m_3);
@@ -89,7 +83,6 @@ router.post('/results', async (req, res, next) => {
     kn5.push(req.body.name_knife_5m_8);
     kn5.push(req.body.name_knife_5m_9);
     kn5.push(req.body.name_knife_5m_10);
-
 
     const newPlayer = new Player({
       first_name: FirstName,
@@ -107,6 +100,7 @@ router.post('/results', async (req, res, next) => {
       knife_3M: kn3,
       knife_4M: kn4,
       knife_5M: kn5,
+      approved: 0,
       createdAt: Date.now(),
     });
     await newPlayer.save();

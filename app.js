@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo')(session);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+
 const app = express();
 
 // mongoose.connect('mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
