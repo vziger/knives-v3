@@ -17,6 +17,9 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Метательные практики' });
 });
 
+router.get('/rules', (req, res) => {
+  res.render('rules', { title: 'Правила участия', layout: 'layout_rules' });
+});
 
 router.post('/results', async (req, res, next) => {
   try {

@@ -163,9 +163,9 @@
   }
 
   h2{
-    font-size: 48px;
-    line-height: 48px;
-    margin-bottom: -12px;
+    font-size: 72px;
+    line-height: 60px;
+    /* margin-bottom: -12px; */
   }
 
   .floor_wrapper{
@@ -186,35 +186,37 @@
   }
 
   .four_floor_wrapper{
+    margin-top:88px;
     height:685px;
   }
 
   .floor_text{
-    padding-top: 94px; /* 78px*/
+    padding-top: 60px; /*94px 78px*/
   }
 
   .first_floor_text{
     padding-left: 12px; 
   }
   .second_floor_text{
-    padding-right: 24px;
+    padding-left: 24px;
+    padding-right: 48px;
   }
   
-  
   .first_floor_img{
-    margin-top: -65px;
+    margin-top: -68px;
+    /* margin-left:-12px; */
   }
   
   .second_floor_img{
-    top: 99px;
-    left:-216px;
+    top: 62px;
+    left:-288px;
   }
 
   .four_floor_img{
-    top: 156px;
-    left:444px;
+    top: 64px;
+    left:432px;
   }
-  
+ 
   .mainpage_text{
     /*22px/28px*/
     font-size: 26px;
@@ -223,20 +225,25 @@
   }
 
   .link_box{
-    margin-top:-12px;
+    font-size: 26px;
+    line-height: 33px;
+    margin-top:-8px;
   } 
 
   .icon_slash{
     margin-top: -2px;
-    width:26px;
+    margin-right: -5px;
+    width:28px;
   }
 
   .form_wrapper{
     top:-282px;
-    width: 876px;
-    height:1404px; /*размер формы*/
+    width: 896px;
+    height:1480px;
+    /* padding-bottom:96px; */
     padding-left: 36px;
   }
+
 
   .form_wrapper h2{
     padding: 72px 0 40px 0;
@@ -380,7 +387,7 @@
   }
   
   .sum_background{
-    right:61px;
+    right:81px;
     width:79px;
     height: 284px;
     padding-right: 15px;
@@ -457,7 +464,7 @@
   .footer_container{
     font-size: 19px;
     line-height: 24px;
-    margin:180px 0 24px 0;
+    margin:156px 0 24px 0;
   }
   
   .footer_link{
