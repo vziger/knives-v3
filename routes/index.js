@@ -3,23 +3,10 @@ const express = require('express');
 const Emails = require('../models/emails');
 const mail = require('../controller/email');
 const Player = require('../models/Player');
-const og = require('open-graph');
 const router = express.Router();
 
 // const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-
-/* GET home page. */
-router.get('/', (req, res, next) => {
-  // og({ url: 'https://knifethrowing.online' }, // Settings object first
-  //   function(er, res) { console.log(er, res); }  // Callback 
-  // );
-  res.render('index', { title: 'Метательные практики' });
-});
-
-router.get('/rules', (req, res) => {
-  res.render('rules', { title: 'Правила участия', layout: 'layout_rules' });
-});
 
 router.post('/results', async (req, res, next) => {
   try {
@@ -118,27 +105,7 @@ router.post('/results', async (req, res, next) => {
 
 
 // router.post('/', urlencodedParser, async (req, res, next) => {
-router.post('/', async (req, res, next) => {
-  try {
-    const { email } = req.body;
-    console.log(email);
-    mail(email).catch(console.error);
 
-    const newEmail = new Emails({
-      email,
-      createdAt: Date.now(),
-    });
-    await newEmail.save();
-
-    res.status(200).send();
-
-
-    res.redirect('/');
-  } catch (error) {
-    console.log(error.message);
-    next(error);
-  }
-});
 
 router.post('/subscribe', async (req, res, next) => {
   try {
@@ -200,6 +167,34 @@ router.get('/all_results', async (req, res) => {
     res.render('admins', { allPlayers });
   } else {
     res.redirect('/login');
+  }
+});
+
+
+/* GET home page. */
+router.get('/', (req, res, next) => {
+  res.render('index', { title: 'Метательные практики' });
+});
+
+router.post('/', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    console.log(email);
+    mail(email).catch(console.error);
+
+    const newEmail = new Emails({
+      email,
+      createdAt: Date.now(),
+    });
+    await newEmail.save();
+
+    res.status(200).send();
+
+
+    res.redirect('/');
+  } catch (error) {
+    console.log(error.message);
+    next(error);
   }
 });
 
