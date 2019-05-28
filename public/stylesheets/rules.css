@@ -73,6 +73,12 @@ background-color: rgb(255,0,0,0.);
   height: auto;
 }
 
+.dowload_mishen
+{
+  width: 22.8vw;
+  height:auto;
+}
+
 .targets_container{
   margin:2vw 0 3.5vw 0;
 }
@@ -121,7 +127,7 @@ p{
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin:0 1vw 0vw 1vw;
+  margin:0;
 }
 
 .small_text_link{
@@ -148,3 +154,88 @@ p{
   font:normal normal 2.4vw/3vw 'HelveticaNeueCyr';
   margin:0;
 }*/
+
+@media (min-width: 1201px)
+{ 
+  body{
+    font-size: 29px;
+    line-height: 36px;
+  }
+  
+  .main {
+    width:1200px;
+    height:auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .logo {
+    /*32px/24px*/
+    font-size: 37px;
+    line-height: 27px;
+    width:360px;
+    /*25px*/
+  }
+  
+  .head_container{
+    margin:96px 0 60px 0;
+  }
+  .h1_rules{
+    font-size: 100px;
+    line-height: 100px;
+    margin:0 0 24px 0;
+  }
+  
+  .h2_head_container{
+    margin:0 0 48px 0;
+  }
+  
+  .floor_container{
+    margin:0 0 36px 0;
+  }
+  
+  .h2_rules{
+    font-size: 48px;
+    line-height: 48px;
+    margin:0 -4px 18px 0;
+  }
+  .h3_rules{
+    font-size: 30px;
+    line-height: 30px;
+    margin:0 0 12px 0;
+  }
+  
+  .targets_container{
+    margin:24px 0 42px 0;
+  }
+  
+  p{
+    margin-bottom: 12px;
+  }
+  .first_image{
+    margin-right: 24px;
+  }
+  .image_caption{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .button_rules{
+    font-size: 26px;
+    line-height: 31px;
+    height: 67px;
+    padding:0 48px 0 48px;
+    margin-top: 24px;
+  }
+  
+  .footer_container{
+    font-size: 19px;
+    line-height: 24px;
+    margin:120px 0 24px 0;
+  }
+  
+  /* .footer_contacts_2{
+    margin:0 1vw 0vw 1vw;
+  } */
+  
+}
