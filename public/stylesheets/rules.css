@@ -13,7 +13,7 @@ body{
   box-sizing: border-box;
  }
  
- div{
+div{
 background-color: rgb(255,0,0,0.);
 }
 
@@ -21,18 +21,18 @@ background-color: rgb(255,0,0,0.);
   width:98vw;
   height:auto;
   margin: 0 auto;
+  margin-bottom: 0;
   padding-left: 1vw;
-  padding-right: 1vw;
+  padding-right: 5.3vw;
   position: relative;
-  overflow: visible; /*!@!@*/
 }
 
 .logo {
   /*32px/24px*/
-  font:normal 900 3.1vw/2.3vw 'HelveticaNeueCyr';
+  font:normal 900 2.3vw/2.3vw 'HelveticaNeueCyr';
   margin:2.5vw 0;
   padding: 0;
-  width:30vw;
+  width:24vw;
   /*25px*/
 }
 
@@ -53,6 +53,19 @@ background-color: rgb(255,0,0,0.);
   margin:0 0 3vw 0;
 }
 
+.floor_overflow{
+  background-color: #000;
+  width:100%;
+  margin:-1.8vw 0 3vw 0; /*3vw - 1.2vw p-marg*/
+  padding: 2.5vw 0 0.1vw 0;
+}
+
+.img_dates{
+  width: 56vw;
+  height: auto;
+  margin-left: 1.8vw;
+}
+
 .h2_rules{
   font:normal 900 4vw/4vw 'HelveticaNeueCyr';
   margin:0 -0.4vw 1.5vw 0;
@@ -61,6 +74,20 @@ background-color: rgb(255,0,0,0.);
   font:normal 900 2.5vw/2.5vw 'HelveticaNeueCyr';
   margin:0 0 1vw 0;
 }
+
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+  padding-left: 3vw;
+  margin-bottom: 1.2vw;
+  
+ }
+ ul {
+  margin-top: -1vw;
+  margin-left: 0; 
+  padding-left: 0; 
+ }
+
 
 .div_flex_option{
   display: flex;
@@ -73,10 +100,36 @@ background-color: rgb(255,0,0,0.);
   height: auto;
 }
 
-.dowload_mishen
+.download_mishen
 {
+  margin-top:4vw;
+  margin-left:4vw;
   width: 22.8vw;
   height:auto;
+}
+
+.mishen_img{
+  width: 22.8vw;
+  height:auto;
+}
+
+.download_button_link{
+  text-decoration: none;
+  border: 0;
+  color:#000;
+  transition:all 100ms linear;
+}
+
+.download_button_link:hover{
+  text-decoration: none;
+  border: 0;
+  color:#000;
+}
+
+.download_button_link:visited{
+  text-decoration: none;
+  border: 0;
+  color:#000;
 }
 
 .targets_container{
@@ -84,8 +137,38 @@ background-color: rgb(255,0,0,0.);
 }
 
 p{
-  margin-bottom: 1vw;
+  margin-bottom: 1.2vw;
 }
+
+.links_in_text{
+  text-decoration: none;
+  border: 0;
+  color: rgb(0, 91, 190);
+  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+  transition:all 100ms linear;
+
+}
+.links_in_text:visited{
+  text-decoration: none;
+  border: 0;
+  color: rgb(0, 91, 190);
+  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+.links_in_text:hover{
+  text-decoration: none;
+  border: 0;
+  color: rgb(0, 91, 190);
+  border-bottom: 1px solid rgb(0, 91, 190, 1);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+  transition:all 10ms linear;
+}
+
 .first_image{
   margin-right: 2vw;
 }
@@ -94,14 +177,9 @@ p{
 }
 
 .button_rules{
-  font:normal 900 2.2vw/2.6vw 'HelveticaNeueCyr';
-  width:auto;
-  height: 5.6vw;
-  padding:0 4vw 0 4vw;
+  font:normal 900 2.1vw/2.6vw 'HelveticaNeueCyr';
   cursor:default;
   border: 0;
-  margin-top: 2vw;
-  /*margin-bottom: 2vw;*/
   display:table-cell!important;
   vertical-align:middle;
 }
@@ -113,6 +191,18 @@ p{
 .button_rules_ok:hover{
   background-color: #FFCB2B;
   cursor:pointer;
+}
+
+.button_download{
+  height: 5.6vw;
+  margin-top: 1vw;
+  width:100%;
+  padding:0 1vw 0 1vw;
+}
+.button_participate{
+  height: 6.7vw;
+  width:auto;
+  padding:0 4vw 0 4vw;
 }
 
 .footer_container{
@@ -145,10 +235,9 @@ p{
 
 .small_text_link:hover{
   text-decoration: none;
-  /* border-bottom: 1px solid #fff;
-  color: #fff; */
   border-bottom: 1px solid rgb(0, 102, 255);
   color: rgb(0, 102, 255);
+  transition:all 10ms linear;
 }
 /*.rules_plain_text{
   font:normal normal 2.4vw/3vw 'HelveticaNeueCyr';
@@ -166,7 +255,7 @@ p{
     width:1200px;
     height:auto;
     padding-left: 12px;
-    padding-right: 12px;
+    padding-right: 64px;
   }
   
   .logo {
@@ -194,6 +283,16 @@ p{
     margin:0 0 36px 0;
   }
   
+  .floor_overflow{
+    margin:-22px 0 36px 0; /*3vw - 1.2vw p-marg*/
+    padding: 30px 0 1px 0;
+  }
+  
+  .img_dates{
+    width: 672px;
+    margin-left: 26px;
+  }
+
   .h2_rules{
     font-size: 48px;
     line-height: 48px;
@@ -205,29 +304,56 @@ p{
     margin:0 0 12px 0;
   }
   
+  li {
+    padding-left: 36px;
+    margin-bottom: 14px;
+    
+   }
+   ul {
+    margin-top: -12px;
+   }
+
+  .download_mishen{
+    margin-top:48px;
+    margin-left:48px;
+    width: 274px;
+  }
+
+  .mishen_img{
+    width: 274px;
+  }
+
   .targets_container{
     margin:24px 0 42px 0;
   }
   
   p{
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   .first_image{
     margin-right: 24px;
   }
+
   .image_caption{
     font-size: 18px;
     line-height: 22px;
   }
   
   .button_rules{
-    font-size: 26px;
+    font-size: 25px;
     line-height: 31px;
-    height: 67px;
-    padding:0 48px 0 48px;
-    margin-top: 24px;
   }
   
+  .button_download{
+    height: 67px;
+    margin-top: 12px;
+    padding:0 12px 0 12px;
+  }
+  .button_participate{
+    height: 79px;
+    padding:0 48px 0 48px;
+  }
+
   .footer_container{
     font-size: 19px;
     line-height: 24px;
