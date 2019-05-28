@@ -1,0 +1,141 @@
+@media (min-width: 1201px)
+{ 
+  body{
+    font-size: 29px;
+    line-height: 36px;
+  }
+  
+  .main {
+    width:1200px;
+    height:auto;
+    padding-left: 12px;
+    padding-right: 64px;
+  }
+  
+  .logo {
+    /*32px/24px*/
+    font-size: 29px;
+    line-height: 26px;
+    width:360px;
+    /*25px*/
+  }
+  
+  .head_container{
+    margin:96px 0 60px 0;
+  }
+  .h1_rules{
+    font-size: 156px;
+    line-height: 98px;
+    margin:0 0 72px 0;
+  }
+
+  .h2_rules{
+    font-size: 96px;
+    line-height: 96px;
+    margin:0 -4px 36px 0;
+  }
+  .h3_rules{
+    font-size: 30px;
+    line-height: 30px;
+    margin:0 0 12px 0;
+  }
+
+  
+  .lead{
+    font:normal normal 29px/36px 'HelveticaNeueCyr';
+    margin-bottom: 108px;
+  }
+
+  .h2_head_container{
+    margin:0 0 48px 0;
+  }
+  
+  .floor_container{
+    margin:0 0 72px 0;
+  }
+  
+  .floor_container_overflow
+{
+  margin:0 0 36px 0;
+}
+
+  .floor_overflow{
+    margin:-45px 0 84px 0; /*3vw - 1.2vw p-marg*/
+    padding: 30px 0 1px 0;
+  }
+  
+  .img_dates{
+    width: 672px;
+    margin-left: 26px;
+  }
+
+  .img_table{
+    width:490px;
+    height: auto;
+  }
+  
+  li {
+    padding-left: 36px;
+    margin-bottom: 14px;
+    
+   }
+   ul {
+    margin-top: -12px;
+   }
+
+  .download_mishen{
+    margin-top:12px;
+    margin-left:48px;
+    width: 274px;
+  }
+
+  .mishen_img{
+    width: 274px;
+  }
+
+  .targets_container{
+    margin:24px 0 42px 0;
+  }
+  
+  p{
+    margin-bottom: 14px;
+  }
+  .first_image{
+    margin-right: 24px;
+    width:446px;
+  }
+
+  .second_image{
+    width:464px;
+  }
+  .image_caption{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .button_rules{
+    font-size: 25px;
+    line-height: 31px;
+  }
+  
+  .button_download{
+    height: 67px;
+    margin-top: 18px;
+    padding:0 12px 0 12px;
+  }
+  .button_participate{
+    height: 79px;
+    padding:0 48px 0 48px;
+  }
+
+  .footer_container{
+    font-size: 19px;
+    line-height: 24px;
+    margin:120px 0 24px 0;
+  }
+  
+  /* .footer_contacts_2{
+    margin:0 1vw 0vw 1vw;
+  } */
+  
+}

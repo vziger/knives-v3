@@ -2,23 +2,28 @@
     <div class = "logo">Метательные практики</div>
     <div class = "head_container">
       <h1 class = "h1_rules">Как участвовать</h1>
-      <p>Турнир проходит онлайн, поэтому метать ножи и&nbsp;топоры можно в&nbsp;любом месте. 
-        Главное — записать процесс на&nbsp;видео. За&nbsp;год мы&nbsp;проводим четыре этапа. 
-        Те,&nbsp;кто покажет лучшие результаты в&nbsp;этапах, станут победителями по&nbsp;итогам года.</p>
+      <p class="lead">Турнир проходит онлайн, 
+        поэтому метать ножи и топоры можно в любом месте. 
+        Главное — записать процесс на видео. За год мы проводим четыре этапа. 
+        Те, кто покажет лучшие результаты в этапах, станут победителями по итогам года. 
+        В турнире четыре дисциплины: топоры с расстояния 4 м и ножи с 3, 4 и 5 м. 
+        Участвовать можно в одной или нескольких дисциплинах на выбор. 
+        У участников нет ограничений по полу и возрасту, но если вы младше 18 лет, получите 
+        согласие родителей.</p>
     </div>
     
-    <div class="h2_head_container">
-      <h2 class="h2_rules">Правила</h2>
+    {{!-- <div class="h2_head_container">
+      <h2 class="h2_rules">Подготовка</h2>
       <p>Онлайн-турнир проходит каждый год в&nbsp;четыре этапа. Метайте в&nbsp;любом месте, 
         главное — записать процесс на&nbsp;видео. Участвовать можно в&nbsp;одной или нескольких 
         дисциплинах на&nbsp;выбор: топоры с&nbsp;расстояния 4&nbsp;м и ножи с&nbsp;3,&nbsp;4 и&nbsp;5&nbsp;м. 
         У&nbsp;участников нет ограничений по&nbsp;полу и&nbsp;возрасту. Но&nbsp;если вы&nbsp;младше 18&nbsp;лет, 
         получите согласие родителей на&nbsp;участие.</p>
-    </div>
+    </div> --}}
     
-    <div class="floor_container div_flex_option">
+    <div class="floor_container_flex div_flex_option">
       <div class="first_part_text">
-        <h3 class="h3_rules">Подготовка</h3>
+        <h3 class="h2_rules">Подготовка</h3>
         <p>Вам понадобятся:</p>
         <ul>
          <li>один топор;</li>
@@ -39,21 +44,23 @@
     </div>
 
   <div class="floor_container">
-    <h3 class="h3_rules">Участие</h3>
+    <h3 class="h2_rules">Участие</h3>
     <p>Отметьте на&nbsp;полу линии на расстоянии 3,&nbsp;4 и&nbsp;5&nbsp;м от&nbsp;стенда. 
       Не&nbsp;заступайте за&nbsp;них при&nbsp;броске. Мишень для топора повесьте любым способом, 
       а&nbsp;для ножей&nbsp;— так, чтобы на&nbsp;любой горизонтальной и&nbsp;вертикальной линии было 
       до&nbsp;двух мишеней.</p>
     <div class="targets_container div_flex_option">
-      <div class="first_image">
-        <img src="images/wrong_targets.png">
-        <p class="image_caption">Неправильная расстановка мишеней. 
-        На&nbsp;горизонтальных и&nbsp;вертикальных линиях по&nbsp;три мишени</p>
+      <div >
+        <img class="first_image" src="images/wrong_targets.png">
+        <p class="image_caption">Неправильная расстановка мишеней.</p> 
+        <p class="image_caption">На&nbsp;горизонтальных и&nbsp;вертикальных линиях</p>
+        <p class="image_caption">по&nbsp;три мишени</p>
       </div>
-      <div class="second_image">
-        <img src="images/correct_targets.png">
-        <p class="image_caption">Правильная расстановка мишеней.
-        На&nbsp;горизонтальных и&nbsp;вертикальных линиях по&nbsp;две мишени</p>
+      <div >
+        <img class="second_image" src="images/correct_targets.png">
+        <p class="image_caption">Правильная расстановка мишеней.</p>
+        <p class="image_caption">На&nbsp;горизонтальных и&nbsp;вертикальных линиях</p>
+        <p class="image_caption">по&nbsp;две мишени</p>
       </div>
     </div>
 
@@ -72,7 +79,7 @@
   
 
   <div class="floor_container">
-    <h3 class="h3_rules">Оценка результатов</h3>
+    <h3 class="h2_rules">Оценка результатов</h3>
     <p>За&nbsp;каждый бросок начисляется столько баллов, сколько указано на&nbsp;мишени, куда попал топор или нож. 
       Если топор или&nbsp;нож попал на&nbsp;границу зачётных зон или перекрывает несколько из&nbsp;них, 
       учитывается зона с&nbsp;наибольшим баллом. Если топор или нож упал на&nbsp;пол до&nbsp;окончания серии, 
@@ -85,19 +92,19 @@
   </div>
 
   <div class="floor_container">
-    <h3 class="h3_rules">Отправка результатов</h3>
+    <h3 class="h2_rules">Отправка результатов</h3>
     <p>Мы принимаем результаты с&nbsp;00:00 20&nbsp;мая до&nbsp;23:59 2&nbsp;июня по&nbsp;Москве. 
       Заполните личные данные, введите результаты бросков и&nbsp;добавьте ссылку на&nbsp;видео. 
       Видео можно загрузить на&nbsp;любой сервис, например, 
-      <a href="https://disk.yandex.ru/client/disk">Яндекс.Диск</a>, 
-      <a href="https://drive.google.com">Гугл&nbsp;Диск</a> или 
-      <a href="https://www.youtube.com/">Ютуб</a>.</p>
+      <a class="links_in_text" href="https://disk.yandex.ru/client/disk">Яндекс.Диск</a>, 
+      <a class="links_in_text" href="https://drive.google.com">Гугл&nbsp;Диск</a> или 
+      <a class="links_in_text" href="https://www.youtube.com/">Ютуб</a>.</p>
   </div>
 </div>
 
 <div class="floor_overflow">
   <div class = "main">
-    <div class="floor_container div_flex_option">
+    <div class="floor_container_overflow div_flex_option">
       <a class = "download_button_link" href="/">
         <button class="button_rules button_participate button_rules_ok">Участвовать в&nbsp;турнире</button>
         </a>
@@ -108,7 +115,7 @@
 
 <div class = "main">
   <div class="floor_container">
-    <h3 class="h3_rules">Объявление победителей</h3>
+    <h3 class="h2_rules">Объявление победителей</h3>
     <p>Через неделю после этапа мы&nbsp;определим победителей по&nbsp;большинству баллов среди 
       мужчин и&nbsp;женщин. В&nbsp;ножах призёры распределятся отдельно по&nbsp;дистанциям 
       в&nbsp;3,&nbsp;4 и&nbsp;5&nbsp;м и&nbsp;лигам среди профессионалов, любителей и&nbsp;новичков. 
@@ -125,14 +132,14 @@
   </div>
 
   <div class="floor_container">
-    <h3 class="h3_rules">Клубный зачёт</h3>
+    <h3 class="h2_rules">Клубный зачёт</h3>
     <p>Призёры турнира приносят баллы клубам, в&nbsp;которых они состоят. Лучшими клубами станут 
       те,&nbsp;кто наберёт больше всего баллов. Баллы присуждаются после этапа за&nbsp;каждого победителя:</p>
 
-    <p>ВСТАВИТЬ ТАБЛИЦУ</p>
+    <img class="img_table" src="images/table.svg">
   </div>
 
-  <div class="h2_head_container">
+  <div class="floor_container">
     <h2 class="h2_rules">Техника безопасности</h2>
     <p>Метайте, если между вами и&nbsp;стендом нет людей и&nbsp;животных. Запрещено имитировать удары 
       или броски в&nbsp;сторону от&nbsp;стенда и&nbsp;фехтовать ножами и&nbsp;топорами. </p>
@@ -143,7 +150,7 @@
       После участия уберите ножи и&nbsp;топоры из&nbsp;открытого доступа.</p>
   </div>
 
-  <div class="h2_head_container">
+  <div class="floor_container">
     <h2 class="h2_rules">Обработка персональных данных</h2>
     <p>Отправляя результаты бросков, вы&nbsp;предоставляете «‎Метательным практикам»‎ и&nbsp;первичному 
       отделению ДОСААФ «Клубу метания ножей „Злая Пчела“» свои персональные данные: фамилию, имя, пол, 
