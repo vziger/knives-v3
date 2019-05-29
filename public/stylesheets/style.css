@@ -923,7 +923,7 @@ h2{
   top:0;
   height:5.6vw;
   color:#000;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .hidden_text_server_mistake{
@@ -965,17 +965,18 @@ h2{
 /* !!! сдедать стиль, когда нажалась */
 
 .fill_new_sportsman_link{
-  width: auto;
-  text-decoration: none !important;
+  position: relative;
+  width: fit-content;
+  text-decoration: none ;
   color: #005bbe;
-  border-bottom: 1px dashed rgb(0, 91, 190, .3) !important;
+  border-bottom: 1px dashed rgb(0, 91, 190, .3) ;
   cursor:pointer;
   transition:all 100ms linear;
 }
 .fill_new_sportsman_link:hover{
-  text-decoration: none !important;
+  text-decoration: none ;
   color: #005bbe;
-  border-bottom: 1px dashed rgb(0, 91, 190, 1) !important;
+  border-bottom: 1px dashed rgb(0, 91, 190, 1) ;
   cursor:pointer;
   transition:all 0ms linear;
 }
