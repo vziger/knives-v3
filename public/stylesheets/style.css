@@ -923,7 +923,7 @@ h2{
   top:0;
   height:5.6vw;
   color:#000;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .hidden_text_server_mistake{
