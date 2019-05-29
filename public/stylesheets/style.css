@@ -603,9 +603,17 @@ h2{
   /* visibility: hidden; */
 }
 
-#notes_axe_4m, #notes_knife_3m, #notes_knife_4m, #notes_knife_5m{
+#notes_knife_3m, #notes_knife_4m, #notes_knife_5m{
   visibility: hidden;
+  color:#E70000;
+  /* visibility: visible; */
 }
+
+#notes_axe_4m{
+  color:#E70000;
+  visibility: visible;
+}
+
 .container-discipline {
   position:relative;
   width: auto;

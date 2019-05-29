@@ -119,14 +119,20 @@
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-personal">Имя</div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textFirstName')" type="text" id="textFirstName" name="nameFirstName" autocomplete="off" onblur="validateName(this)"/></div>
+          <div class="bblock-2">
+            <input class="form_results_textinput form_results_border_neutral" 
+            oninput="saveInputToLocalStorage('textFirstName')" type="text" 
+            id="textFirstName" name="nameFirstName" autocomplete="off"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-personal">Фамилия </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textLastName')" type="text" id="textLastName" name="nameLastName" onblur="validateName(this)" autocomplete="off"/></div>
+          <div class="bblock-2">
+            <input class="form_results_textinput form_results_border_neutral" 
+            oninput="saveInputToLocalStorage('textLastName')" type="text" 
+            id="textLastName" name="nameLastName" autocomplete="off"/></div>
         </label>
       </div>
 
@@ -134,31 +140,38 @@
         <div class="bblock-label bblock-label-personal left_label_text">Пол</div> 
         <div class="bblock-2"> 
           <div class="genderfield">
-    <span id="toggle_male" name="nameToggleMale" class="inactivestyle genderfield activestyle" data-component="Tab" onclick=swapStyle_1()>мужской</span><span id="toggle_female" 
-    name="nameToggleFemale" class="inactivestyle genderfield" data-component="Tab" onclick=swapStyle_2()>женский</span></div>
-            <!-- <div><label ><input type="radio" id="checkMale" name="nameGender" value="Male">Мужской </label></div>
-            <div><label ><input type="radio" id="checkFemale" name="nameGender" value="Female">Женский </label></div> -->
+            <span id="toggle_male" name="nameToggleMale" class="inactivestyle genderfield activestyle" data-component="Tab" onclick=swapStyle_1()>мужской</span><span id="toggle_female" 
+            name="nameToggleFemale" class="inactivestyle genderfield" data-component="Tab" onclick=swapStyle_2()>женский</span></div>
         </div>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-personal">Клуб </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textClub')" type="text" id="textClub" list="club_list" name="nameClub" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2">
+            <input class="form_results_textinput form_results_border_neutral" 
+            oninput="saveInputToLocalStorage('textClub')" type="text" 
+            id="textClub" list="club_list" name="nameClub" autocomplete="off"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-personal">Страна </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textCountry')" type="text" id="textCountry" list="countries_list" name="nameCountry" onblur="validateName(this)" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2">
+            <input class="form_results_textinput form_results_border_neutral" 
+            oninput="saveInputToLocalStorage('textCountry')" type="text" 
+            id="textCountry" list="countries_list" name="nameCountry" autocomplete="on"/></div>
         </label>
       </div>
 
       <div class="wrap_input_text_1_string">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-personal">Эл.&nbsp;почта </div>
-          <div class="bblock-2"><input class="form_results_textinput form_results_border_neutral" oninput="saveInputToLocalStorage('textEmail')" type="text" id="textEmail" name="nameEmailResults" onblur="validateMail(this)" placeholder="" autocomplete="off"/></div>
+          <div class="bblock-2">
+            <input class="form_results_textinput form_results_border_neutral" 
+            oninput="saveInputToLocalStorage('textEmail')" type="text" 
+            id="textEmail" name="nameEmailResults" autocomplete="off"/></div>
         </label>
       </div>
       
@@ -196,13 +209,14 @@
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://"
-              oninput="saveInputToLocalStorage('textLink_1')" type="url" id="textLink_1" name="nameLink_1" 
-              onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              oninput="saveInputToLocalStorage('Link_axe_4m')" type="text" id="Link_axe_4m" name="nameLink_1" 
+              onblur="validateLink('axe_4m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
       <div class="container-notes " id="div_notes_axe_4m">
         <div class="text-notes">
-          <p id="notes_axe_4m">Ведите число от 0 до 20 кратное 5 и укажите ссылку на видео</p>
+          <p id="notes_axe_4m"></p>
+          {{!-- <p id="notes_axe_4m">введите число от 0 до 20 кратное 5, при промахе — 0; вставьте ссылку на видео</p> --}}
         </div>
       </div>
 
@@ -228,15 +242,16 @@
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://"
-              oninput="saveInputToLocalStorage('textLink_2')" type="url" id="textLink_2" name="nameLink_2" 
-              onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+              oninput="saveInputToLocalStorage('Link_knife_3m')" type="text" id="Link_knife_3m" name="nameLink_2" 
+              onblur="validateLink('knife_3m')" autocomplete="off" autocorrect="off" autocapitalize="off"/>
           </div>
         </label>
       </div>
 
       <div class="container-notes " id="div_notes_knife_3m">
         <div class="text-notes">
-          <p id="notes_knife_3m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p>
+          <p id="notes_knife_3m"></p>
+          {{!-- <p id="notes_knife_3m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p> --}}
         </div>
       </div>
 
@@ -255,14 +270,15 @@
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral"  placeholder="http://"
-              oninput="saveInputToLocalStorage('textLink_3')" type="url" id="textLink_3" name="nameLink_3" 
-              onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              oninput="saveInputToLocalStorage('Link_knife_4m')" type="text" id="Link_knife_4m" name="nameLink_3" 
+              onblur="validateLink('knife_4m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
 
       <div class="container-notes " id="div_notes_knife_4m">
         <div class="text-notes">
-          <p id="notes_knife_4m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p>
+          <p id="notes_knife_4m"></p>
+          {{!-- <p id="notes_knife_4m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p> --}}
         </div>
       </div>
 
@@ -281,8 +297,8 @@
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://" 
-              oninput="saveInputToLocalStorage('textLink_4')" type="url" id="textLink_4" name="nameLink_4" 
-              onblur="validateLinks()" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              oninput="saveInputToLocalStorage('Link_knife_5m')" type="text" id="Link_knife_5m" name="nameLink_4" 
+              onblur="validateLink('knife_5m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
       
@@ -291,7 +307,8 @@
           <div class="block-discipline-digits">
             <div class="block-discipline-allsum">
               <div class="text-notes">
-                <p id="notes_knife_5m">Ведите число от 0 до 60 кратное 5 и вставьте ссылку на видео</p>
+                <p id="notes_knife_5m"></p>
+                {{!-- <p id="notes_knife_5m">Ведите число от 0 до 60 кратное 5 и вставьте ссылку на видео</p> --}}
               </div>
               <input type="text" class="form_results_digitsinput form_results_digitsinput_sum block-discipline-axe-sum" id="text_knife_ALL_SUM" name="name_knife_ALL_SUM" placeholder="0" autocomplete="off" disabled="">
             </div>
@@ -396,12 +413,6 @@
           <option> - Без клуба - </option>
           <option>45</option>
           <option>78 Легион</option>
-          <option>ARMA</option>
-          <option>Freeknife</option>
-          <option>Knife thrower</option>
-          <option>No spin</option>
-          <option>OSA</option>
-          <option>WASP</option>
           <option>Акела</option>
           <option>Алтын-Нур</option>
           <option>Балтийская ассоциация метателей</option>
@@ -445,7 +456,13 @@
           <option>Школа Виталия Кима</option>
           <option>Школа Дмитрия Мельникова</option>
           <option>Школа Наиля Ахмаду</option>
+          <option>ARMA</option>
+          <option>Freeknife</option>
+          <option>Knife thrower</option>
           <option>New Zealand Throwing club</option>
+          <option>No spin</option>
+          <option>OSA</option>
+          <option>WASP</option>
         </datalist>
       </form>
 

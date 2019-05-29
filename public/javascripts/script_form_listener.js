@@ -8,9 +8,12 @@ const club       = document.getElementById('textClub');
 const country    = document.getElementById('textCountry');
 const form_email = document.getElementById('textEmail');
 const links      = [];
-for (let i = 1; i < 5; i += 1) {
-  links[i - 1] = document.getElementById(`textLink_${i}`);
-}
+
+links[0] = document.getElementById('Link_axe_4m');
+links[1] = document.getElementById('Link_knife_3m');
+links[2] = document.getElementById('Link_knife_4m');
+links[3] = document.getElementById('Link_knife_5m');
+
 
 
 
@@ -31,18 +34,25 @@ form.addEventListener('submit', async (event) => {
   const boolClub =      validateName(club);
   const boolCountry =   validateName(country);
   const boolMail =      validateMail(form_email);
-  const boolLinks =     validateLinks();
-  const boolDigits =    validateAllDigits();
+  const boolAxe =       validateDiscipline('axe_4m');
+  const boolKn3 =       validateDiscipline('knife_3m');
+  const boolKn4 =       validateDiscipline('knife_4m');
+  const boolKn5 =       validateDiscipline('knife_5m');
+  // const boolLinks =     true; //validateLinks();
+  // const boolDigits =    true; //validateAllDigits();
+
+// !!! нужен новый валидейт
 
   console.log(boolFirstName);
   console.log(boolLastName);
   console.log(boolClub);
   console.log(boolCountry);
   console.log(boolMail);
-  console.log(boolLinks);
-  console.log(boolDigits);
+  // console.log(boolLinks);
+  // console.log(boolDigits);
 
-  if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && boolLinks && boolDigits) {
+  if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && 
+    boolAxe && boolKn3 && boolKn4 && boolKn5) {
     console.log('Валидируем');
     document.getElementById('checkFormTextWrong').style.visibility = 'hidden';
 
@@ -85,6 +95,7 @@ form.addEventListener('submit', async (event) => {
         });
       if (response.status = 200) {
         console.log('результаты отправлены');
+
         btn.style.visibility = 'hidden';
         document.getElementById('checkFormTextCorrect').style.visibility = 'visible';
         btn.disabled = false;
@@ -131,17 +142,3 @@ form.addEventListener('submit', async (event) => {
 
 
 
-document.getElementById('textFirstName').addEventListener('input',function(){
-  const boolFirstName = validateName_2(firstName);
-  const boolLastName =  validateName_2(lastName);
-  const boolClub =      validateName_2(club);
-  const boolCountry =   validateName_2(country);
-  const boolMail =      validateMail(form_email);
-  const boolLinks =     validateLinks();
-  const boolDigits =    validateAllDigits();
-
-  if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && boolLinks && boolDigits){
-
-  }
-
-});

@@ -27,10 +27,10 @@ var PlayerSchema = new Schema(
       // knife_4M: [{result: {type: Number}}],
       // knife_5M: [{result: {type: Number}}],
       
-      videoLink_1: String, //{type: String},
-      videoLink_2: String, //{type: String},
-      videoLink_3: String, //{type: String},
-      videoLink_4: String, //{type: String},
+      videoLink_1: String, //{type: String}, //axe_4m
+      videoLink_2: String, //{type: String}, //knife_3m
+      videoLink_3: String, //{type: String}, //knife_4m
+      videoLink_4: String, //{type: String}, //knife_5m
 
       approved: Number,
       createdAt:Date,//{type: Date}
