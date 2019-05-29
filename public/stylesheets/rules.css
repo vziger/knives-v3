@@ -140,6 +140,7 @@ li {
   text-decoration: none;
   border: 0;
   color:#000;
+  transition:all 10ms linear;
 }
 
 .download_button_link:visited{

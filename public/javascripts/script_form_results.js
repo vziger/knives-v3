@@ -59,7 +59,13 @@ function result_fields_generate(div_id) {
   // SUM-element
   var input = document.createElement('input');
   input.type = 'text';
-  input.className = 'form_results_digitsinput form_results_digitsinput_sum';
+
+  
+  if (div_id == 'axe_4m') {
+    input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color';
+    input.style.fontWeight="bold";
+  }
+  else input.className = 'form_results_digitsinput form_results_digitsinput_sum';
   input.id = `text_${div_id}_SUM`;
   input.name = `name_${div_id}_SUM`;
   input.placeholder = '0';
@@ -266,10 +272,10 @@ function show_submit_button_server_mistake()
 // *****************************************************************
 // *****************************************************************
 
-const hintPatternAxeDigits   = "введите числа от 0 до 20 кратные 5, при промахе — 0; ";
-const hintPatternKnifeDigits = "введите числа от 0 до 60 кратные 5, при промахе — 0; ";
-const hintPatternLinkInsert  = "вставьте ссылку на видео";
-const hintPatternLinkCheck   = "ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
+const hintPatternAxeDigits   = "введите числа от 0 до 20 кратные 5; ";
+const hintPatternKnifeDigits = "введите числа от 0 до 60 кратные 5; ";
+const hintPatternLinkInsert  = ""; //"вставьте ссылку на видео";
+const hintPatternLinkCheck   = "Ссылка не работает. Мы не сможем засчитать ваши результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
 
 function saveInputToLocalStorage(id)
 {

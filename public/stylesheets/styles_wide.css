@@ -186,7 +186,7 @@
   }
 
   .four_floor_wrapper{
-    margin-top:88px;
+    margin-top:58px;
     height:685px;
   }
 
@@ -209,7 +209,7 @@
   
   .second_floor_img{
     top: 62px;
-    left:-288px;
+    left:-300px;
   }
 
   .four_floor_img{
@@ -238,15 +238,15 @@
 
   .form_wrapper{
     top:-282px;
-    width: 896px;
-    height:1480px;
+    width: 936px;
+    height:1450px;
     /* padding-bottom:96px; */
     padding-left: 36px;
   }
 
 
   .form_wrapper h2{
-    padding: 72px 0 40px 0;
+    padding: 60px 0 40px 0;
   }
   
   .left_label_text{
@@ -256,6 +256,7 @@
   
   .captions_in_form{
     width:624px;
+    margin-bottom: 24px;
   }
   
   .captions_in_form h3{
@@ -268,7 +269,7 @@
   {
     font-size: 19px;
     line-height: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 6px;
   }
   .captions_in_form_minus_margin{
     margin-top: -24px !important;
@@ -294,7 +295,7 @@
     width: 110px; 
   }
   .bblock-label-digits{
-    width: 70px; 
+    width: 110px; 
   }
 
   .bblock-label-caption{
@@ -432,34 +433,36 @@
 .hidden_text_wrong{
     font-size: 19px;
     line-height: 24px;
-    margin: 48px 0 24px 24px;
-    padding-top: 24px;
+    height: 67px;
+    margin: 0 0 0 24px;
   }
   
   .hidden_text_correct{
-    top:46px;
     font-size: 19px;
     line-height: 24px;
-    padding-top: 24px;
+    height: 67px;
   }
   .hidden_text_server_mistake{
-    top:46px;
     font-size: 19px;
     line-height: 24px;
-    padding-top: 24px;
+    height: 67px;
   }
-  
+
+  /*  */
+  .submit_btn_floor{
+    display:flex;
+    position:relative;
+    justify-content: flex-start;
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+
   .button_send_results{
     font-size: 24px;
     line-height: 24px;
-    width:auto;
     height: 67px;
     padding: 0 72px 0 72px;
-    margin-top: 48px;
-    margin-bottom: 24px;
-    padding-bottom: 3px;
   }
-
 
   .footer_container{
     font-size: 19px;

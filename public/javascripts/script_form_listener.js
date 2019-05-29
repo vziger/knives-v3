@@ -110,6 +110,8 @@ form.addEventListener('submit', async (event) => {
                allElem[i].disabled=true;
              }
         }
+
+        
         // !!! проверить почтосборник
         // var value = '';
         // if(localStorage.getItem('input_mail')){

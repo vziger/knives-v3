@@ -2,6 +2,7 @@ const express = require('express');
 // const bodyParser = require('body-parser');
 const Emails = require('../models/emails');
 const mail = require('../controller/email');
+const mail_results = require('../controller/email_results');
 const Player = require('../models/Player');
 const router = express.Router();
 
@@ -94,6 +95,8 @@ router.post('/results', async (req, res, next) => {
       createdAt: Date.now(),
     });
     await newPlayer.save();
+
+    mail_results(EmailRes,newPlayer).catch(console.error);
 
     console.log('-----^^-----');
     res.status(200).send();
