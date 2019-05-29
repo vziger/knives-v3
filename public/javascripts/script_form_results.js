@@ -221,6 +221,7 @@ function validateDigits(el) {
 function show_submit_button() {
   // reset формы — для заполнения нового спортсмена
   document.getElementById('checkFormTextCorrect').style.visibility = 'hidden';
+  document.getElementById('rules_accepted').style.visibility = 'visible';
 
   const club = document.getElementById('textClub').value;
   const mail = document.getElementById('textEmail').value;

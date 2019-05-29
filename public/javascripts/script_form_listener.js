@@ -98,6 +98,9 @@ form.addEventListener('submit', async (event) => {
 
         btn.style.visibility = 'hidden';
         document.getElementById('checkFormTextCorrect').style.visibility = 'visible';
+
+        document.getElementById('rules_accepted').style.visibility = 'hidden';
+
         btn.disabled = false;
         btn.style.cursor = 'pointer';
         

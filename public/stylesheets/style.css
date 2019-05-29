@@ -534,10 +534,9 @@ h2{
 
 .captions_in_form p
 {
-  font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
-  /* font: normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
-  color: #000; */
-  margin-bottom: 0.5vw;
+  font: normal normal 1.6vw/2.2vw 'HelveticaNeueCyr';
+  /* color: #000; */
+  margin-bottom: 0.6vw;
 }
 .captions_in_form_minus_margin{
   margin-top: -2vw !important;
