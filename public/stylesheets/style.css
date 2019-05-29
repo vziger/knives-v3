@@ -660,7 +660,8 @@ h2{
 
 .container-notes{
   position:relative;
-  width: auto;
+  /* width: auto; */
+  width: 61vw;
   height: 2vw;
   padding:0 0 0 10.2vw;
   background-color: rgb(0,0,255,0.)

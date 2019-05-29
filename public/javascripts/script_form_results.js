@@ -275,7 +275,7 @@ function show_submit_button_server_mistake()
 const hintPatternAxeDigits   = "введите числа от 0 до 20 кратные 5; ";
 const hintPatternKnifeDigits = "введите числа от 0 до 60 кратные 5; ";
 const hintPatternLinkInsert  = ""; //"вставьте ссылку на видео";
-const hintPatternLinkCheck   = "ссылка не работает, мы не сможем засчитать ваши результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
+const hintPatternLinkCheck   = "ссылка не работает, мы не сможем засчитать результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
 
 function saveInputToLocalStorage(id)
 {
