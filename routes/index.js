@@ -96,7 +96,7 @@ router.post('/results', async (req, res, next) => {
     });
     await newPlayer.save();
 
-    mail_results(EmailRes,newPlayer).catch(console.error);
+    mail_results(EmailRes, newPlayer).catch(console.error);
 
     console.log('-----^^-----');
     res.status(200).send();

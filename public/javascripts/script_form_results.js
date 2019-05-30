@@ -144,7 +144,8 @@ function swapStyle_2() {
 }
 
 function validateName(el) {
-  if ((el.value.trim() !== '') && (el.value.length) < 40) {
+  if ((el.value.trim() !== '')) {
+  // && (el.value.length) < 40) {
     el.classList.remove('form_results_border_wrong');
     el.classList.add('form_results_border_neutral');
     return true;
@@ -154,7 +155,26 @@ function validateName(el) {
   el.classList.remove('form_results_border_neutral');
   return false;
 }
+function validateName_2(el) {
+  if ((el.value.trim() !== '')) {
+  // && (el.value.length) < 40) {
+    el.classList.remove('form_results_border_wrong');
+    el.classList.add('form_results_border_neutral');
+    return true;
+  }
+  return false;
+}
 
+function validateCountry(el) {
+  if ((el.value.trim() !== '')) {
+  // && (el.value.length) < 40) {
+    if(el.value.contains)
+    el.classList.remove('form_results_border_wrong');
+    el.classList.add('form_results_border_neutral');
+    return true;
+  }
+  return false;
+}
 
 function validateMail(el) {
   const pattern = /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/;
@@ -379,8 +399,14 @@ function globalDigitValidate(el, zeroOrNaN)
     }
   }
   else{
-    // Удаление подсказки, если был удалено единственное число
-    changeClassList(el, true);
+    // Удаление всех подчёркиваний и подсказки, если был удалено единственное число
+    for(let i=1;i<11;i++){
+      changeClassList(document.getElementById('text_' + discipline + '_' + i), true);
+    }
+    if( document.getElementById('Link_' + discipline).value.trim()==''){
+      changeClassList(document.getElementById('Link_' + discipline), true);
+    }
+    // changeClassList(el, true);
     document.getElementById(pHTML_id).style.visibility='hidden';
     
   }
@@ -479,7 +505,13 @@ function countDigitsInString(discipline)
 
 function isUrlValid(url)
 {
-  var pattern = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+  // var pattern = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+  const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))'+ // ip (v4) address
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ //port
+            '(\\?[;&amp;a-z\\d%_.~+=-]*)?'+ // query string
+            '(\\#[-a-z\\d_]*)?$','i');
   return pattern.test(url);
 }
 

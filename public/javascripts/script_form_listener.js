@@ -15,8 +15,6 @@ links[2] = document.getElementById('Link_knife_4m');
 links[3] = document.getElementById('Link_knife_5m');
 
 
-
-
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   console.log('clicked on validate');
@@ -30,18 +28,16 @@ form.addEventListener('submit', async (event) => {
   }
 
   const boolFirstName = validateName(firstName);
-  const boolLastName =  validateName(lastName);
-  const boolClub =      validateName(club);
-  const boolCountry =   validateName(country);
-  const boolMail =      validateMail(form_email);
-  const boolAxe =       validateDiscipline('axe_4m');
-  const boolKn3 =       validateDiscipline('knife_3m');
-  const boolKn4 =       validateDiscipline('knife_4m');
-  const boolKn5 =       validateDiscipline('knife_5m');
+  const boolLastName  = validateName(lastName);
+  const boolClub      = validateName(club);
+  const boolCountry   = validateName(country);
+  const boolMail      = validateMail(form_email);
+  const boolAxe       = validateDiscipline('axe_4m');
+  const boolKn3       = validateDiscipline('knife_3m');
+  const boolKn4       = validateDiscipline('knife_4m');
+  const boolKn5       = validateDiscipline('knife_5m');
   // const boolLinks =     true; //validateLinks();
   // const boolDigits =    true; //validateAllDigits();
-
-// !!! нужен новый валидейт
 
   console.log(boolFirstName);
   console.log(boolLastName);
@@ -68,8 +64,6 @@ form.addEventListener('submit', async (event) => {
       const json = JSON.stringify(object);
       console.log(json);
 
-      
-      // btn.style.backgroundImage = "url('images/button_send_wait.gif')";
       btn.style.cursor = 'default';
       btn.disabled = true;
 
@@ -81,12 +75,6 @@ form.addEventListener('submit', async (event) => {
           'Content-Type': 'application/json',
         },
         body: json,
-        //   last_name: lastName.value
-        //   headers: {
-        //     'Accept': 'multipart/form-data',
-        //   	'Content-Type': 'multipart/form-data',
-        //   },
-        // body: formData
       })
         .catch((e) => {
           console.log('Caugth error:');
