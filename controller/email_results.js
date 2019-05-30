@@ -1,4 +1,3 @@
-
 const nodemailer = require('nodemailer');
 const Player = require('../models/Player');
 
@@ -23,65 +22,10 @@ async function mail_results(recepient, Player) {
   console.log('---- send results ----');
   console.log(Player);
 
-  let str_axe = '';
-  let sum = 0;
-  if(Player.axe_4M.length>0){
-    for(let i=0;i<10;i++){
-      str_axe = str_axe + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
-      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + Player.axe_4M[i] + '</div>';
-      sum = sum + parseInt(Player.axe_4M[i]);
-    }
-    str_axe = str_axe + '<div style="padding: 2px 8px 2px 8px;	\
-    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>';
-  }
-  else {
-    str_axe = '—';
-  }
-
-  let str_kn3 = '';
-  sum = 0;
-  if(Player.knife_3M.length>0){
-    for(let i=0;i<10;i++){
-      str_kn3 = str_kn3 + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
-      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + Player.knife_3M[i] + '</div>';
-      sum = sum + parseInt(Player.knife_3M[i]);
-    }
-    str_kn3 = str_kn3 + '<div style="padding: 2px 8px 2px 8px;	\
-    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>';
-  }
-  else {
-    str_kn3 = '—';
-  }
-
-  let str_kn4 = '';
-  sum = 0;
-  if(Player.knife_4M.length>0){
-    for(let i=0;i<10;i++){
-      str_kn4 = str_kn4 + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
-      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + Player.knife_4M[i] + '</div>';
-      sum = sum + parseInt(Player.knife_4M[i]);
-    }
-    str_kn4 = str_kn4 + '<div style="padding: 2px 8px 2px 8px;	\
-    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>';
-  }
-  else {
-    str_kn4 = '—';
-  }
-
-  let str_kn5 = '';
-  sum = 0;
-  if(Player.knife_5M.length>0){
-    for(let i=0;i<10;i++){
-      str_kn5 = str_kn5 + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
-      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + Player.knife_5M[i] + '</div>';
-      sum = sum + parseInt(Player.knife_5M[i]);
-    }
-    str_kn5 = str_kn5 + '<div style="padding: 2px 8px 2px 8px;	\
-    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>';
-  }
-  else {
-    str_kn5 = '—';
-  }
+  let str_axe = digitsToHTML(Player.axe_4M);
+  let str_kn3 = digitsToHTML(Player.knife_3M);
+  let str_kn4 = digitsToHTML(Player.knife_4M);
+  let str_kn5 = digitsToHTML(Player.knife_5M);
 
   let letter_body='<head>\
 	<style type="text/css">\
@@ -180,23 +124,23 @@ async function mail_results(recepient, Player) {
       <br/> метателей топоров и&nbsp;ножей «Метательные практики»:</p>\
 	  <div style = "display: flex; justify-content: flex-start;">\
 		  <div style="margin-top:2px;	width:120px;">Имя</div>\
-		  <div>' + Player.first_name + '</div>\
-    </div> \
+		  <div>' + capitalizeFirstLetter(Player.first_name) + '</div>\
+    </div>\
     <div style = "display: flex; justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">Фамилия</div>\
-      <div>' + Player.last_name + '</div>\
-    </div> \
+      <div>' + capitalizeFirstLetter(Player.last_name) + '</div>\
+    </div>\
     <div style = "display: flex; justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">Пол</div>\
       <div>' + Player.gender + '</div>\
     </div>\
     <div style = "display: flex; justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">Клуб</div>\
-      <div>' + Player.club_name + '</div>\
+      <div>' + capitalizeFirstLetter(Player.club_name) + '</div>\
     </div>\
     <div style = "display: flex; justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">Страна</div>\
-      <div>' + Player.country + '</div>\
+      <div>' + capitalizeFirstLetter(Player.country) + '</div>\
     </div>\
     <div style = "display: flex; justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">Эл. почта:</div>\
@@ -259,12 +203,14 @@ async function mail_results(recepient, Player) {
     from: 'Метательные практики <noreply.knifethrowing@gmail.com>', // sender address
     to: recepient, // list of receivers
     subject: 'Результаты приняты', // Subject line
-    text: 'Здравствуйте!\n\n\
+    text: `Здравствуйте!\n\n\
     Вы отправили следующие результаты для участия в онлайн-чемпионате метателей топоров и \
-    ножей «Метательные практики»: \n\n Имя ' + Player.first_name + '\n\n Фамилия' + Player.last_name + 
-    '\n\n\ Мы сообщим вам о победителях этапа и пришлём ссылку на турнирную таблицу. \n\n\
+    ножей «Метательные практики»: \n\n Имя ${Player.first_name} \n\n\ 
+    Фамилия ${Player.last_name} \n\n\ Пол ${Player.gender} \n\n Клуб ${Player.club_name} \n\n\
+    Страна ${Player.country} \n\n\ Эл. почта ${Player.email} \n\n\
+    Мы сообщим вам о победителях этапа и пришлём ссылку на турнирную таблицу. \n\n\
     Метательные практики\n\n\
-    http://knifethrowing.online', // plain text body
+    http://knifethrowing.online`, // plain text body
     html: letter_body_2,
   // html: '<div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:10px 0 0 10px; margin:0;">\
   // <p style="margin-bottm:5px;">Здравствуйте!</p>\
@@ -275,10 +221,10 @@ async function mail_results(recepient, Player) {
   // <p style="margin-bottm:5px;">Пол ' + Player.gender + '\
   // <p style="margin-bottm:5px;">Клуб ' + Player.club_name + '\
   // <p style="margin-bottm:5px;">Страна ' + Player.country + '\
-  // <p style="margin-bottm:5px;">Эл. почта ' + Player.country + '<a href="/compose?To=' + Player.email + '" rel="noopener noreferrer">' + Player.email + '</a>\
+  // <p style="margin-bottm:5px;">Эл. почта ' + Player.email + '<a href="/compose?To=' + Player.email + '" rel="noopener noreferrer">' + Player.email + '</a>\
   // <p>Мы пришлём вам ссылку на&nbsp;опубликованные результаты</p>\
   // <p>Метательные практики<br/>\
-  //   <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>'// // html body
+  //   <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>// // html body
    });
 
   console.log('Message sent: %s', info.messageId);
@@ -287,6 +233,32 @@ async function mail_results(recepient, Player) {
   // Preview only available when sending through an Ethereal account
   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+}
+
+function digitsToHTML(myArray){
+  let str = '';
+  let sum = 0;
+  if(myArray[0]!==''){
+    for(let i=0;i<10;i++){
+      str = str + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
+      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + myArray[i] + '</div>';
+      sum = sum + parseInt(myArray[i]);
+    }
+    str = str + '<div style="padding: 2px 8px 2px 8px;	\
+    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>';
+  }
+  else {
+    str = '—';
+  }
+  return str;
+}
+
+
+function capitalizeFirstLetter(str)
+{
+    const uppercaseFirstLetter = str.charAt(0).toUpperCase();
+    const stringWithoutFirstLetter = str.slice(1);
+    return uppercaseFirstLetter+stringWithoutFirstLetter;
 }
 
 

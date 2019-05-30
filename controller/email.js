@@ -23,7 +23,7 @@ async function mail(recepient) {
   const info = await transporter.sendMail({
     from: 'Метательные практики <noreply.knifethrowing@gmail.com>', // sender address
     to: recepient, // list of receivers
-    subject: 'Подписка чемпионата метателей топоров и ножей', // Subject line
+    subject: 'Подписка онлайн-чемпионата метателей топоров и ножей', // Subject line
     text: 'Здравствуйте!\n\n\
     Вы подписались на рассылку онлайн-чемпионата метателей топоров и ножей &laquo;Метательные практики&raquo;.\n\
     Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации и&nbsp;расскажем о&nbsp;победителях.\n\n\

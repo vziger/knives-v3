@@ -14,6 +14,12 @@ links[1] = document.getElementById('Link_knife_3m');
 links[2] = document.getElementById('Link_knife_4m');
 links[3] = document.getElementById('Link_knife_5m');
 
+// function capitalizeFirstLetter(str)
+// {
+//     const uppercaseFirstLetter = str.charAt(0).toUpperCase();
+//     const stringWithoutFirstLetter = str.slice(1);
+//     return uppercaseFirstLetter+stringWithoutFirstLetter;
+// }
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
