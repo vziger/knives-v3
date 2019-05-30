@@ -293,10 +293,17 @@ function show_submit_button_server_mistake()
 // *****************************************************************
 // *****************************************************************
 
-const hintPatternAxeDigits   = "введите числа от 0 до 20 кратные 5; ";
-const hintPatternKnifeDigits = "введите числа от 0 до 60 кратные 5; ";
+function capitalizeFirstLetter(str)
+{
+    const uppercaseFirstLetter = str.charAt(0).toUpperCase();
+    const stringWithoutFirstLetter = str.slice(1);
+    return uppercaseFirstLetter+stringWithoutFirstLetter;
+}
+
+const hintPatternAxeDigits   = "Введите числа от 0 до 20 кратные 5";
+const hintPatternKnifeDigits = "Введите числа от 0 до 60 кратные 5";
 const hintPatternLinkInsert  = ""; //"вставьте ссылку на видео";
-const hintPatternLinkCheck   = "ссылка не работает, мы не сможем засчитать результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
+const hintPatternLinkCheck   = "Ссылка не работает, мы не сможем засчитать результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
 
 function saveInputToLocalStorage(id)
 {
@@ -363,7 +370,7 @@ function globalDigitValidate(el, zeroOrNaN)
   const pHTML_id   = 'notes_' + discipline;
   const ptrn = /axe/;
   const hintPatternDigits = ptrn.test(discipline) ? hintPatternAxeDigits : hintPatternKnifeDigits;
-
+  let myHint='';
   if(countDigitsInString(discipline)>0)
   {
     //const zeroOrNaN = 0; //0 — true для пустой ячейки NaN — для false
@@ -373,10 +380,13 @@ function globalDigitValidate(el, zeroOrNaN)
       changeClassList(el, true);
       if(validateDigitString(discipline, zeroOrNaN)){
         // если все ОК — убрать текст подсказки про числа
-        let myHint = document.getElementById(pHTML_id).textContent;
+        myHint = document.getElementById(pHTML_id).textContent;
         const pos = myHint.indexOf(hintPatternDigits);
-        if (pos!==-1){//-1 = искомого текста нет в полученной строке
+        if (pos!==-1){// = подсказка есть в полученной строке
           myHint = myHint.replace(hintPatternDigits, '');
+          if(myHint.charAt(0)=='.')
+            myHint = myHint.slice(1).trim();
+            
           document.getElementById(pHTML_id).innerHTML = myHint;
           if (myHint==''){//!!! здесь что-то странное
             document.getElementById(pHTML_id).style.visibility='hidden';
@@ -388,10 +398,11 @@ function globalDigitValidate(el, zeroOrNaN)
       if (el.value!=='' || isNaN(zeroOrNaN)){
         changeClassList(el, false);
         // добавить подсказку про числа
-        let myHint = document.getElementById(pHTML_id).textContent;
+        myHint = document.getElementById(pHTML_id).textContent;
         const pos = myHint.indexOf(hintPatternDigits);
         if (pos==-1){
-          myHint = hintPatternDigits.concat(myHint);
+          if(myHint!=='') myHint = hintPatternDigits.concat('. ',myHint);
+          else myHint = hintPatternDigits.concat(myHint);
           document.getElementById(pHTML_id).innerHTML = myHint;
           document.getElementById(pHTML_id).style.visibility='visible';
         }
@@ -539,7 +550,7 @@ function validateLink(discipline) {
           myHint = myHint.replace(hintPatternLinkInsert, "");
           document.getElementById(pHTML_id).innerHTML = myHint;
         }
-        if (myHint.indexOf(hintPatternLinkCheck) !== -1) {
+        if (myHint.indexOf(hintPatternLinkCheck) !== -1) {//удаляем подсказку
           myHint = myHint.replace(hintPatternLinkCheck, "");
           document.getElementById(pHTML_id).innerHTML = myHint;
         }
@@ -566,11 +577,13 @@ function validateLink(discipline) {
         const pos1 = myHint.indexOf(hintPatternLinkInsert);
         const pos2 = myHint.indexOf(hintPatternLinkCheck);
 
-        if (pos1!==-1){//-1 = искомого текста нет в полученной строке
+        if (pos1 !== -1){//-1 = искомого текста нет в полученной строке
           myHint = myHint.replace(hintPatternLinkInsert, "");
         }
-        if(pos2==-1){
-          myHint = myHint.concat(hintPatternLinkCheck);
+        if(pos2 == -1){
+          let tmp='';
+          if(myHint!=='' && myHint.trim().slice(-1)!=='.') tmp='. ';
+          myHint = myHint.concat(tmp, hintPatternLinkCheck);
           document.getElementById(pHTML_id).innerHTML = myHint;
         }
         document.getElementById(pHTML_id).style.visibility='visible';
@@ -581,7 +594,7 @@ function validateLink(discipline) {
     }
     else{
       if(countDigits!==0){
-        //если ссылка пустая, а числа нет, то убираем старые подсказки про ссылку и ставим новую
+        //если ссылка пустая, то убираем старые подсказки про ссылку и ставим новую
         const pos1 = myHint.indexOf(hintPatternLinkInsert);
         const pos2 = myHint.indexOf(hintPatternLinkCheck);
         if (pos2!==-1){//-1 = искомого текста нет в полученной строке
