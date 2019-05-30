@@ -923,8 +923,13 @@ h2{
   left:0;
   top:0;
   height:5.6vw;
+  width:62vw;
   color:#000;
   visibility: hidden;
+}
+
+.spasibo_otpravleno{
+  font: normal normal 2.4vw/2.8vw 'HelveticaNeueCyr';
 }
 
 .hidden_text_server_mistake{

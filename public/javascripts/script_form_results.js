@@ -319,22 +319,28 @@ function saveInputToLocalStorage(id)
 
 function loadLocalStorageToInput()
 {
-  var lsLen = localStorage.length;
+  const lsLen = localStorage.length;
   if(lsLen > 0){
-    for(var i = 0; i < lsLen; i++){
-      var key = localStorage.key(i);
+    for(let i = 0; i < lsLen; i++){
+      let key = localStorage.key(i);
+      let element = document.getElementById(key);
       if(!key.includes('toggle')){
-        document.getElementById(key).value = localStorage.getItem(key);
+        element.value = localStorage.getItem(key);
         if (key.includes('text_axe_4m_') || key.includes('text_knife_3m_') || 
             key.includes('text_knife_4m_') || key.includes('text_knife_5m_'))
         {
-          changeClassList(document.getElementById(key), 
-              checkDigitInterval(document.getElementById(key), 0));
+          globalDigitValidate(element, 0)
+          //changeClassList(element, checkDigitInterval(element, 0));
               // !!! показать подсказки 
+        }
+        if(key.includes('Link_axe_4m') || key.includes('Link_knife_3m') || 
+        key.includes('Link_knife_4m') || key.includes('Link_knife_5m'))
+        {
+          validateLink(el2discipline(element));
         }
       }
       else{
-        document.getElementById(key).classList = localStorage.getItem(key);
+        element.classList = localStorage.getItem(key);
       }
     }
     sum_results('axe_4m');
