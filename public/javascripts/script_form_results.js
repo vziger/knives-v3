@@ -463,7 +463,7 @@ function validateDiscipline(discipline){
   if(countDigitsInString(discipline)==0 && LINK=='')
     return true;
   else{
-    let id_dgt = 'text_' + discipline + '_'; 
+    let id_dgt = `text_${discipline}_`; 
     for (let i=1;i<11;i++)
     {
       globalDigitValidate(document.getElementById(`${id_dgt + ''}${i}`), NaN);
@@ -474,6 +474,26 @@ function validateDiscipline(discipline){
   }
 }
 
+function validateAllDisciplines(flag)
+{
+  const a = countDigitsInString('axe_4m');
+  const b = countDigitsInString('knife_3m');
+  const c = countDigitsInString('knife_4m');
+  const d = countDigitsInString('knife_5m');
+
+  const l1 = document.getElementById('Link_axe_4m').value;
+  const l2 = document.getElementById('Link_knife_3m').value;
+  const l3 = document.getElementById('Link_knife_4m').value;
+  const l4 = document.getElementById('Link_knife_5m').value;
+
+  if(a==0 && b==0 && c==0 & d==0 && l1=='' && l2=='' && l3=='' && l4=='')
+  {
+    if(flag==1){ //нажали кнопку Отправить
+      changeClassList('text_axe_4m_1',false);
+      changeClassList('text_knife_3m_1',false);
+    }
+  }
+}
 
 function validateDigitString(discipline, zeroOrNaN)
 {// discipline == axe_4m, knife_3m, knife_4m , knife_5m

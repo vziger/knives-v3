@@ -929,7 +929,7 @@ h2{
 }
 
 .spasibo_otpravleno{
-  font: normal normal 2.4vw/2.8vw 'HelveticaNeueCyr';
+  font: normal normal 2vw/2.4vw 'HelveticaNeueCyr';
 }
 
 .hidden_text_server_mistake{
@@ -971,6 +971,7 @@ h2{
 /* !!! сдедать стиль, когда нажалась */
 
 .fill_new_sportsman_link{
+  margin-top:0.2vw;
   position: relative;
   width: fit-content;
   text-decoration: none ;
