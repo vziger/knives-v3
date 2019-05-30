@@ -21,9 +21,9 @@ async function mail(recepient) {
 
   // send mail with defined transport object
   const info = await transporter.sendMail({
-    from: 'Онлайн-чемпионат <noreply.knifethrowing@gmail.com>', // sender address
+    from: 'Метательные практики <noreply.knifethrowing@gmail.com>', // sender address
     to: recepient, // list of receivers
-    subject: 'Подписка на Метательные практики', // Subject line
+    subject: 'Подписка чемпионата метателей топоров и ножей', // Subject line
     text: 'Здравствуйте!\n\n\
     Вы подписались на рассылку онлайн-чемпионата метателей топоров и ножей &laquo;Метательные практики&raquo;.\n\
     Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации и&nbsp;расскажем о&nbsp;победителях.\n\n\
