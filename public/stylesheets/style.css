@@ -257,6 +257,13 @@ input, textarea, select, button{
   /* backgound-color:#000; */
 }
 
+.btn_send_container{
+  width: 4.6vw;
+  /*39px*/
+  height: 4.1vw;
+}
+
+
 .btn_send {
   display: block;
   background: transparent;
@@ -270,11 +277,18 @@ input, textarea, select, button{
   left: -4.5vw; /* calc !!!*/
   cursor: pointer;
   outline: none;
-  background-image: url(../images/button_send.svg);
+  /* background-image: url(../images/button_send.svg);
   background-repeat: no-repeat;
   background-position:top left;
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
 }
+
+.btn_send_svg_b{
+  fill:#000;
+} 
+.btn_send_svg_y{
+  fill:#ffc100;
+} 
 
 .img_arrow{
   margin: 0;
@@ -721,14 +735,23 @@ h2{
   border:0;
   z-index: 1;
 }
+
+.form_results_digitsinput_sum::-webkit-input-placeholder {color:#000;}
+.form_results_digitsinput_sum::-moz-placeholder          {color:#000;}/* Firefox 19+ */
+.form_results_digitsinput_sum:-moz-placeholder           {color:#000;}/* Firefox 18- */
+.form_results_digitsinput_sum:-ms-input-placeholder      {color:#000;}
+
 .form_results_digitsinput_sum:disabled{
+  color:#000;
   background-color: transparent;
   /* background-color: #F3F0F0; */
 }
 .form_results_digitsinput_sum_color{
+  color:#000;
   background-color: #F3F0F0;
 }
 .form_results_digitsinput_sum_color:disabled{
+  color:#000;
   background-color: #F3F0F0;
 }
 
@@ -971,7 +994,7 @@ h2{
 /* !!! сдедать стиль, когда нажалась */
 
 .fill_new_sportsman_link{
-  margin-top:0.2vw;
+  margin-top:1.2vw;
   position: relative;
   width: fit-content;
   text-decoration: none ;

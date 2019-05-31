@@ -127,6 +127,11 @@
     /* backgound-color:#000; */
   }
   
+  .btn_send_container{
+    width: 55px;
+    height: 49px;
+  }
+
   .btn_send {
     /*46px*/
     width: 55px;
@@ -432,7 +437,7 @@
 }
 /*****************/
 .fill_new_sportsman_link{
-  margin-top:2px;
+  margin-top:14px;
 }
 .hidden_text_wrong{
     font-size: 19px;

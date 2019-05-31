@@ -119,9 +119,15 @@ router.post('/subscribe', async (req, res, next) => {
       email,
       createdAt: Date.now(),
     });
-    await newEmail.save();
+    const tmp = await Emails.find({email:email});
 
-    mail(email).catch(console.error);
+    if (tmp.length==0)
+      await newEmail.save();
+    else
+    {
+      await Emails.updateOne({email:email}, {createdAt: Date.now()});
+    }
+      mail(email).catch(console.error);
 
     res.status(200).send();
   } catch (error) {

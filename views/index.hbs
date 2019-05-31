@@ -59,11 +59,16 @@
                         pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" 
                         autocapitalize="off" spellcheck="false"/>
                   
-                  <button class="btn_send" id="send" type="submit"> 
-                  <!-- <img class="img_arrrow" src="images/button_send.svg" alt="Подписаться"
-                                          onmouseover="this.src='images/button_send_y.svg';" 
-                                          onmouseout="this.src='images/button_send.svg';"> -->
-                  </button>
+                  <div class="btn_send_container" id="div_btn_send_container">
+                    <button class = "btn_send" id="send" type="submit"> 
+                      <svg class = "btn_send_svg_b" id="btn_send_svg" width="46" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d = "M13 21v-2h16.258l-4.49-4.75L26.014 13 33 20l-6.985 7-1.248-1.25 4.49-4.75H13z"/>
+                      </svg>
+                    <!-- <img class="img_arrrow" src="images/button_send.svg" alt="Подписаться"
+                                            onmouseover="this.src='images/button_send_y.svg';" 
+                                            onmouseout="this.src='images/button_send.svg';"> -->
+                    </button>
+                  </div>
                   <script src="javascripts/scripts_send.js"></script>
               </div>
               </form>
