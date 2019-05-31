@@ -7,70 +7,60 @@ function result_fields_generate(div_id) {
     input.autocapitalize='off';
     input.autocomplete='off';
     input.autocorrect='off';
-    input.auto
-    // autocomplete="off" autocorrect="off" autocapitalize="off"
 
     input.id = `text_${div_id}_${i}`;
     input.name = `name_${div_id}_${i}`;
     input.className = 'form_results_digitsinput form_results_border_neutral';
 
-    if (div_id == 'axe_4m') {
-      input.max = '20';
-      // input.className = 'form_results_digitsinput_center form_results_border_neutral';
-    } else {
-      input.max = '60';
-    }
+    // if (div_id == 'axe_4m') {
+    //   input.max = '20';
+    //   // input.className = 'form_results_digitsinput_center form_results_border_neutral';
+    // } else {
+    //   input.max = '60';
+    // }
 
-    input.autocomplete = 'off';
     input.onchange = function () {
-      // sum_results(div_id);
+      sum_results(div_id);
       saveInputToLocalStorage(`text_${div_id}_${i}`);
     };
 
-    // input.onkeypress = function (event) {
-    //   event = event || window.event;
-    //   // console.log(this.selectionStart);
-    //   // console.log(this.selectionEnd);
-    //   if (window.getSelection) {
-    //     console.log(window.getSelection());
-    //   }else if (document.getSelection) {
-    //     console.log(document.getSelection());
-    //   }else if (document.selection) {
-    //     console.log(document.selection.createRange().text);
-    //   }
-      
-      
+    input.onkeypress = function (event) {
+      event = event || window.event;
+      // // console.log(this.selectionStart);
+      // // console.log(this.selectionEnd);
+      // if (window.getSelection) {
+      //   console.log(window.getSelection());
+      // }else if (document.getSelection) {
+      //   console.log(document.getSelection());
+      // }else if (document.selection) {
+      //   console.log(document.selection.createRange().text);
+      // }
       if (event.charCode && (event.charCode < 48 || event.charCode > 57))// проверка на event.charCode - чтобы пользователь мог нажать backspace, enter, стрелочку назад...
       { return false; }
       
       if (this.value.length == 2 && (parseInt(this.selectionEnd - this.selectionStart)==0 )) return false;
     };
+
     input.onblur = function () {
       globalDigitValidate(this, 0);
-      // validateDigits(this)
-      // if(!)
-      // {
-      //   flag_wrong_digits=1;
-      //   writeAlert(div_id);
-      // };
+
     };
     div.appendChild(input);
   }
 
-// function writeAlert(div_id){
-//   if(flag_wrong_digits==1 )
-//   {}
-// }
   // SUM-element
   var input = document.createElement('input');
   input.type = 'text';
+  input.autocapitalize='off';
+  input.autocomplete='off';
+  input.autocorrect='off';
 
-  
   if (div_id == 'axe_4m') {
     input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color';
     input.style.fontWeight="bold";
   }
   else input.className = 'form_results_digitsinput form_results_digitsinput_sum';
+
   input.id = `text_${div_id}_SUM`;
   input.name = `name_${div_id}_SUM`;
   input.placeholder = '0';
@@ -348,10 +338,10 @@ function loadLocalStorageToInput()
         element.classList = localStorage.getItem(key);
       }
     }
-    // sum_results('axe_4m');
-    // sum_results('knife_3m');
-    // sum_results('knife_4m');
-    // sum_results('knife_5m');
+    sum_results('axe_4m');
+    sum_results('knife_3m');
+    sum_results('knife_4m');
+    sum_results('knife_5m');
   }
 }
 
