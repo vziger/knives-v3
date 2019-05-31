@@ -4,7 +4,12 @@ function result_fields_generate(div_id) {
   for (let i = 1; i < 11; i += 1) {
     var input = document.createElement('input');
     input.type = 'text';
-    
+    input.autocapitalize='off';
+    input.autocomplete='off';
+    input.autocorrect='off';
+    input.auto
+    // autocomplete="off" autocorrect="off" autocapitalize="off"
+
     input.id = `text_${div_id}_${i}`;
     input.name = `name_${div_id}_${i}`;
     input.className = 'form_results_digitsinput form_results_border_neutral';
