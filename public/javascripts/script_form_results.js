@@ -23,21 +23,21 @@ function result_fields_generate(div_id) {
 
     input.autocomplete = 'off';
     input.onchange = function () {
-      sum_results(div_id);
+      // sum_results(div_id);
       saveInputToLocalStorage(`text_${div_id}_${i}`);
     };
 
-    input.onkeypress = function (event) {
-      event = event || window.event;
-      // console.log(this.selectionStart);
-      // console.log(this.selectionEnd);
-      if (window.getSelection) {
-        console.log(window.getSelection());
-      }else if (document.getSelection) {
-        console.log(document.getSelection());
-      }else if (document.selection) {
-        console.log(document.selection.createRange().text);
-      }
+    // input.onkeypress = function (event) {
+    //   event = event || window.event;
+    //   // console.log(this.selectionStart);
+    //   // console.log(this.selectionEnd);
+    //   if (window.getSelection) {
+    //     console.log(window.getSelection());
+    //   }else if (document.getSelection) {
+    //     console.log(document.getSelection());
+    //   }else if (document.selection) {
+    //     console.log(document.selection.createRange().text);
+    //   }
       
       
       if (event.charCode && (event.charCode < 48 || event.charCode > 57))// проверка на event.charCode - чтобы пользователь мог нажать backspace, enter, стрелочку назад...
@@ -348,10 +348,10 @@ function loadLocalStorageToInput()
         element.classList = localStorage.getItem(key);
       }
     }
-    sum_results('axe_4m');
-    sum_results('knife_3m');
-    sum_results('knife_4m');
-    sum_results('knife_5m');
+    // sum_results('axe_4m');
+    // sum_results('knife_3m');
+    // sum_results('knife_4m');
+    // sum_results('knife_5m');
   }
 }
 
