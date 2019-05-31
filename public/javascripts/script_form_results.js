@@ -20,7 +20,7 @@ function result_fields_generate(div_id) {
     // }
 
     input.onchange = function () {
-      // sum_results(div_id);
+      sum_results(div_id);
       saveInputToLocalStorage(`text_${div_id}_${i}`);
     };
 
@@ -338,10 +338,10 @@ function loadLocalStorageToInput()
         element.classList = localStorage.getItem(key);
       }
     }
-    // sum_results('axe_4m');
-    // sum_results('knife_3m');
-    // sum_results('knife_4m');
-    // sum_results('knife_5m');
+    sum_results('axe_4m');
+    sum_results('knife_3m');
+    sum_results('knife_4m');
+    sum_results('knife_5m');
   }
 }
 
