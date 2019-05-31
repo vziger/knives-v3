@@ -329,6 +329,10 @@
     width: 114px;
   }
   
+  .page-section__table-row_first-cell{
+    padding-top: 8px;
+  }
+
   .page-section__table-cell_first-col {
     width: 205px;
   }
@@ -342,12 +346,13 @@
   }
   
   .page-section__table-cell_fourth-col {
-    width: 73px;
+    width: 78px;
   }
   
   .page-section__table-row_first {
     border-bottom: 1px solid #000;
     margin-bottom: 28px;
+    padding-bottom: 2px;
   }
   
   .page-section__table-row_second {

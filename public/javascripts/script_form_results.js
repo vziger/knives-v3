@@ -295,8 +295,8 @@ function capitalizeFirstLetter(str)
     return uppercaseFirstLetter+stringWithoutFirstLetter;
 }
 
-const hintPatternAxeDigits   = "Введите числа от 0 до 20 кратные 5";
-const hintPatternKnifeDigits = "Введите числа от 0 до 60 кратные 5";
+const hintPatternAxeDigits   = "Введите числа, кратные 5. Максимальный балл за серию — 20";
+const hintPatternKnifeDigits = "Введите числа, кратные 5. Максимальный балл за серию — 60";
 const hintPatternLinkInsert  = ""; //"вставьте ссылку на видео";
 const hintPatternLinkCheck   = "Ссылка не работает, мы не сможем засчитать результаты без видео"; //"ссылка может содержать английские буквы, цифры, точку, дефис, тильду, слеши"
 

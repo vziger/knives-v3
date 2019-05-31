@@ -18,7 +18,7 @@ button::-moz-focus-inner {
 }
 
 div{
-  background-color: rgb(255, 0, 0,)
+  background-color: rgb(255, 0, 0, 0)
 }
 header {
   margin-bottom: 10.4vw;
@@ -386,6 +386,10 @@ header {
   width: 9.5vw;
 }
 
+.page-section__table-row_first-cell{
+  padding-top:0.7vw;
+}
+
 .page-section__table-cell_first-col {
   width: 17vw;
 }
@@ -399,12 +403,13 @@ header {
 }
 
 .page-section__table-cell_fourth-col {
-  width: 6.1vw;
+  width: 6.5vw;
 }
 
 .page-section__table-row_first {
   border-bottom: 1px solid #000;
   font-weight: 600;
+  padding-bottom: 0.2vw;
   margin-bottom: 2.3vw;
 }
 
