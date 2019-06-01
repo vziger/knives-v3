@@ -23,6 +23,17 @@ div{
 header {
   margin-bottom: 10.4vw;
 }
+h1 span{
+  display:block;
+}
+
+h2 span{
+  display:block;
+}
+h3 span{
+  display:block;
+}
+
 
 .main-title {
   max-width: 98vw;
@@ -32,6 +43,34 @@ header {
   line-height: 2.2vw;
   padding: 3.2vw 0 0 0.9vw;
 }
+
+.main-title_link{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #000000;
+ -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+.main-title_link:visited{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #000000;
+ -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+.main-title_hover{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #000000;
+ -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
 
 .page-header {
   max-width: 98vw;
@@ -303,6 +342,9 @@ header {
   line-height: 1.4vw;
 }
 
+.page-section-image__caption span{
+  display: block;
+}
 /* .page-section-image__left .page-section-image__caption {
   margin-left: 0.1vw;
 }
@@ -452,7 +494,7 @@ footer {
 }
 
 .footer-content {
-  width: 98vw;
+  /* width: 98vw; */
   margin: 0 auto;
   padding-left: 1.6vw;
 }
