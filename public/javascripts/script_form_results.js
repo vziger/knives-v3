@@ -39,7 +39,32 @@ function result_fields_generate(div_id) {
       { return false; }
       
       if (this.value.length == 2 && (parseInt(this.selectionEnd - this.selectionStart)==0 )) return false;
+
     };
+
+    input.onkeyup = function(event){
+      event = event || window.event;
+      
+      // if (event.keyCode == 39){
+      //   const pos = getCaretPosition (this);
+      //   const prev_pos = localStorage.getItem('previous_pos');
+      //   if(i<10 && pos.end==this.value.length && pos.end == prev_pos){
+      //     document.getElementById(`text_${div_id}_${i+1}`).focus();
+      //   }
+      //   // alert('start:' + pos.start + ', end: ' + pos.end);
+      //   localStorage.setItem('previous_pos', pos.end);
+      // }
+
+      // if (event.keyCode == 37){
+      //   const pos = getCaretPosition (this);
+      //   const prev_pos = localStorage.getItem('previous_pos');
+      //   if(i>1 && pos.end==0 && pos.end == prev_pos){
+      //     document.getElementById(`text_${div_id}_${i-1}`).focus();
+      //   }
+      //   // alert('start:' + pos.start + ', end: ' + pos.end);
+      //   localStorage.setItem('previous_pos', pos.end);
+      // }
+    }
 
     input.onblur = function () {
       globalDigitValidate(this, 0);
@@ -90,6 +115,23 @@ function sum_results(discipline_index) {
   all_knife_sum();
 }
 
+function getCaretPosition (ctrl) {
+  // IE < 9 Support 
+  if (document.selection) { 
+    ctrl.focus(); 
+    var range = document.selection.createRange(); 
+    var rangelen = range.text.length; 
+    range.moveStart ('character', -ctrl.value.length); 
+    var start = range.text.length - rangelen; 
+    return {'start': start, 'end': start + rangelen }; 
+  } 
+  // IE >=9 and other browsers
+  else if (ctrl.selectionStart || ctrl.selectionStart == '0') {
+    return {'start': ctrl.selectionStart, 'end': ctrl.selectionEnd };
+  } else {
+    return {'start': 0, 'end': 0};
+    }
+}
 
 function all_knife_sum() {
   let SUM = document.getElementById('text_knife_ALL_SUM');
