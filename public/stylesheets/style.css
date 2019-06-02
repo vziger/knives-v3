@@ -969,6 +969,9 @@ h2 span{
   font: normal normal 2vw/2.4vw 'HelveticaNeueCyr';
 }
 
+.spasibo_otpravleno span{
+  display: block;
+}
 .hidden_text_server_mistake{
   font:normal normal 1.6vw/1.8vw 'HelveticaNeueCyr';
   position:absolute;
