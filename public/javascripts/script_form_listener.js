@@ -42,6 +42,8 @@ form.addEventListener('submit', async (event) => {
   const boolKn3       = validateDiscipline('knife_3m');
   const boolKn4       = validateDiscipline('knife_4m');
   const boolKn5       = validateDiscipline('knife_5m');
+
+  // validateAllDisciplines(1);
   // const boolLinks =     true; //validateLinks();
   // const boolDigits =    true; //validateAllDigits();
 

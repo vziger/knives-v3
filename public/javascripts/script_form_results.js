@@ -389,9 +389,9 @@ function globalDigitValidate(el, zeroOrNaN)
             myHint = myHint.slice(1).trim();
             
           document.getElementById(pHTML_id).innerHTML = myHint;
-          if (myHint==''){//!!! здесь что-то странное
-            document.getElementById(pHTML_id).style.visibility='hidden';
-          }
+          // if (myHint==''){//!!! здесь что-то странное
+          //   document.getElementById(pHTML_id).style.visibility='hidden';
+          // }
         }
       }
     }
@@ -469,23 +469,23 @@ function validateDiscipline(discipline){
   }
 }
 
-function validateAllDisciplines(flag)
+function validateAllDisciplines(flag_button_send)
 {
   const a = countDigitsInString('axe_4m');
   const b = countDigitsInString('knife_3m');
   const c = countDigitsInString('knife_4m');
   const d = countDigitsInString('knife_5m');
 
-  const l1 = document.getElementById('Link_axe_4m').value;
-  const l2 = document.getElementById('Link_knife_3m').value;
-  const l3 = document.getElementById('Link_knife_4m').value;
-  const l4 = document.getElementById('Link_knife_5m').value;
+  const l1 = document.getElementById('Link_axe_4m').value.trim();
+  const l2 = document.getElementById('Link_knife_3m').value.trim();
+  const l3 = document.getElementById('Link_knife_4m').value.trim();
+  const l4 = document.getElementById('Link_knife_5m').value.trim();
 
   if(a==0 && b==0 && c==0 & d==0 && l1=='' && l2=='' && l3=='' && l4=='')
   {
-    if(flag==1){ //нажали кнопку Отправить
-      changeClassList('text_axe_4m_1',false);
-      changeClassList('text_knife_3m_1',false);
+    if(flag_button_send==1){ //нажали кнопку Отправить
+      changeClassList(document.getElementById('text_axe_4m_1'),false);
+      changeClassList(document.getElementById('text_knife_3m_1'),false);
     }
   }
 }
@@ -500,26 +500,6 @@ function validateDigitString(discipline, zeroOrNaN)
   }
   return bool;
 }
-
-// function validateAllDigits() {
-
-//   var bool_axe_all = countDigitsInString('axe_4m');
-//   var bool_kn3_all = countDigitsInString('knife_3m');
-//   var bool_kn4_all = countDigitsInString('knife_4m');
-//   var bool_kn5_all = countDigitsInString('knife_5m');
-
-//   if (bool_axe_all + bool_kn3_all + bool_kn4_all + bool_kn5_all == 0)
-//   {
-//     // нет ни одного числа в результатах
-//     validateDigits(document.getElementById('text_axe_4m_1'));
-//     validateDigits(document.getElementById('text_knife_3m_1'));
-//     return false;
-//   }
-//   // if(bool_axe_all > 0 || bool_kn3_all > 0 || bool_kn4_all > 0 && bool_kn5_all > 0)
-//   // return false;
-
-//   return true;
-// }
 
 function countDigitsInString(discipline)
 {
@@ -548,7 +528,6 @@ function isUrlValid(url)
 }
 
 function validateLink(discipline) {
-  //!!! сделать Проверка, что уже одна ссылка была
   // axe_4m
   let id            = `Link_${discipline}`;
   const el          = document.getElementById(id)
@@ -614,7 +593,7 @@ function validateLink(discipline) {
       }
     }
     else{
-      if(countDigits!==0){
+      if(countDigits!==0 ){
         //если ссылка пустая, то убираем старые подсказки про ссылку и ставим новую
         const pos1 = myHint.indexOf(hintPatternLinkInsert);
         const pos2 = myHint.indexOf(hintPatternLinkCheck);
@@ -629,7 +608,7 @@ function validateLink(discipline) {
         changeClassList(el, false);
         return false;
       }
-      else{
+      else{// если нет чисел и нет ссылки, то удаляем красное подчёркивание
         document.getElementById(pHTML_id).innerHTML = "";
         changeClassList(el, true);
         const dgt_1 = document.getElementById('text_' + discipline + '_1');
