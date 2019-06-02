@@ -935,9 +935,17 @@ h2{
 .hidden_text_wrong{
   font:normal normal 1.6vw/1.6vw 'HelveticaNeueCyr';
   height:5.6vw;
-  margin: 1.5vw 0 0 2vw;
+  width:34.5vw;
   color:#E70000;
   visibility: hidden;
+}
+
+.hidden_text_wrong_top_margin{
+  margin: -0.1vw 0 0 2vw;
+}
+
+.hidden_text_wrong_center_margin{
+  margin: 1.5vw 0 0 2vw;
 }
 
 .hidden_text_correct{

@@ -145,11 +145,11 @@ function validateName(el) {
     el.classList.add('form_results_border_neutral');
     return true;
   }
-
   el.classList.add('form_results_border_wrong');
   el.classList.remove('form_results_border_neutral');
   return false;
 }
+
 function validateName_2(el) {
   if ((el.value.trim() !== '')) {
   // && (el.value.length) < 40) {
@@ -331,7 +331,7 @@ function loadLocalStorageToInput()
         if(key.includes('Link_axe_4m') || key.includes('Link_knife_3m') || 
         key.includes('Link_knife_4m') || key.includes('Link_knife_5m'))
         {
-          validateLink(el2discipline(element));
+          validateLink(el2discipline(element),0);
         }
       }
       else{
@@ -450,7 +450,7 @@ function checkDigitInterval(el, zeroOrNaN) {
 }
 
 
-function validateDiscipline(discipline){
+function validateDiscipline(discipline, flag_button_send){
   let id            = `Link_${discipline}`;
   const el          = document.getElementById(id)
   const LINK        = el.value.trim();
@@ -464,12 +464,12 @@ function validateDiscipline(discipline){
       globalDigitValidate(document.getElementById(`${id_dgt + ''}${i}`), NaN);
     }
     const boolDigits = validateDigitString(discipline, NaN);
-    const boolLink   = validateLink(discipline);
+    const boolLink   = validateLink(discipline, flag_button_send);
     return boolDigits*boolLink;
   }
 }
 
-function validateAllDisciplines(flag_button_send)
+function validateAllDisciplines()
 {
   const a = countDigitsInString('axe_4m');
   const b = countDigitsInString('knife_3m');
@@ -483,11 +483,13 @@ function validateAllDisciplines(flag_button_send)
 
   if(a==0 && b==0 && c==0 & d==0 && l1=='' && l2=='' && l3=='' && l4=='')
   {
-    if(flag_button_send==1){ //нажали кнопку Отправить
-      changeClassList(document.getElementById('text_axe_4m_1'),false);
-      changeClassList(document.getElementById('text_knife_3m_1'),false);
-    }
+    // if(flag_button_send==1){ //нажали кнопку Отправить
+    //   changeClassList(document.getElementById('text_axe_4m_1'),false);
+    //   changeClassList(document.getElementById('text_knife_3m_1'),false);
+    // }
+    return false;
   }
+  return true;
 }
 
 function validateDigitString(discipline, zeroOrNaN)
@@ -527,7 +529,7 @@ function isUrlValid(url)
   return pattern.test(url);
 }
 
-function validateLink(discipline) {
+function validateLink(discipline, flag_button_send) {
   // axe_4m
   let id            = `Link_${discipline}`;
   const el          = document.getElementById(id)
@@ -592,7 +594,7 @@ function validateLink(discipline) {
         return false;
       }
     }
-    else{
+    else{ // линк пустой
       if(countDigits!==0 ){
         //если ссылка пустая, то убираем старые подсказки про ссылку и ставим новую
         const pos1 = myHint.indexOf(hintPatternLinkInsert);
@@ -605,7 +607,8 @@ function validateLink(discipline) {
           document.getElementById(pHTML_id).innerHTML = myHint;
         }
         document.getElementById(pHTML_id).style.visibility='visible';
-        changeClassList(el, false);
+        if(flag_button_send==1)
+          changeClassList(el, false);
         return false;
       }
       else{// если нет чисел и нет ссылки, то удаляем красное подчёркивание

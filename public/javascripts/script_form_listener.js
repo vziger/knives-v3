@@ -21,6 +21,11 @@ links[3] = document.getElementById('Link_knife_5m');
 //     return uppercaseFirstLetter+stringWithoutFirstLetter;
 // }
 
+
+const hintErrorPersDataResults = 'Введите без&nbsp;ошибок данные о&nbsp;себе и&nbsp;результаты по&nbsp;дисциплинам, в&nbsp;которых вы&nbsp;участвовали';
+const hintErrorPersData        = 'Введите без&nbsp;ошибок данные о&nbsp;себе';
+const hintErrorResults         = 'Введите без&nbsp;ошибок результаты по&nbsp;дисциплинам, в&nbsp;которых вы&nbsp;участвовали';
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   console.log('clicked on validate');
@@ -38,12 +43,12 @@ form.addEventListener('submit', async (event) => {
   const boolClub      = validateName(club);
   const boolCountry   = validateName(country);
   const boolMail      = validateMail(form_email);
-  const boolAxe       = validateDiscipline('axe_4m');
-  const boolKn3       = validateDiscipline('knife_3m');
-  const boolKn4       = validateDiscipline('knife_4m');
-  const boolKn5       = validateDiscipline('knife_5m');
+  const boolAxe       = validateDiscipline('axe_4m', 1);
+  const boolKn3       = validateDiscipline('knife_3m', 1);
+  const boolKn4       = validateDiscipline('knife_4m',1);
+  const boolKn5       = validateDiscipline('knife_5m',1);
 
-  // validateAllDisciplines(1);
+  const boolAllDis    = validateAllDisciplines();
   // const boolLinks =     true; //validateLinks();
   // const boolDigits =    true; //validateAllDigits();
 
@@ -56,7 +61,7 @@ form.addEventListener('submit', async (event) => {
   // console.log(boolDigits);
 
   if (boolFirstName && boolLastName && boolClub && boolCountry && boolMail && 
-    boolAxe && boolKn3 && boolKn4 && boolKn5) {
+    boolAxe && boolKn3 && boolKn4 && boolKn5 && boolAllDis) {
     console.log('Валидируем');
     document.getElementById('checkFormTextWrong').style.visibility = 'hidden';
 
@@ -137,6 +142,33 @@ form.addEventListener('submit', async (event) => {
     }
   } else {
     console.log('НЕ Валидируем');
+
+    if(!boolFirstName || !boolLastName || !boolClub || !boolCountry || !boolMail){
+      if(!boolAllDis) 
+      {
+        document.getElementById('textCheckFormTextWrong').classList.add('hidden_text_wrong_top_margin');
+        document.getElementById('textCheckFormTextWrong').classList.remove('hidden_text_wrong_center_margin');
+        document.getElementById('textCheckFormTextWrong').innerHTML = hintErrorPersDataResults;
+      }
+      
+      else if(!boolAxe || !boolKn3 || !boolKn4 || !boolKn5)
+      {
+        document.getElementById('textCheckFormTextWrong').classList.add('hidden_text_wrong_top_margin');
+        document.getElementById('textCheckFormTextWrong').classList.remove('hidden_text_wrong_center_margin');
+        document.getElementById('textCheckFormTextWrong').innerHTML = hintErrorPersDataResults;
+      }
+
+      else
+      {
+        document.getElementById('textCheckFormTextWrong').classList.remove('hidden_text_wrong_top_margin');
+        document.getElementById('textCheckFormTextWrong').classList.add('hidden_text_wrong_center_margin');
+        document.getElementById('textCheckFormTextWrong').innerHTML = hintErrorPersData;
+      }
+    }
+    
+    if(boolFirstName && boolLastName &&  boolClub && boolCountry && boolMail)
+      document.getElementById('textCheckFormTextWrong').innerHTML = hintErrorResults;
+
     document.getElementById('checkFormTextWrong').style.visibility = 'visible';
   }
 });

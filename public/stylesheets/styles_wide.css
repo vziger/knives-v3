@@ -443,9 +443,17 @@
     font-size: 19px;
     line-height: 24px;
     height: 67px;
-    margin: 24px 0 0 24px;
+    width:403px;
   }
   
+  .hidden_text_wrong_top_margin{
+    margin: -3px 0 0 24px;
+  }
+  
+  .hidden_text_wrong_center_margin{
+    margin: 24px 0 0 24px;
+  }
+
   .hidden_text_correct{
     font-size: 19px;
     line-height: 24px;

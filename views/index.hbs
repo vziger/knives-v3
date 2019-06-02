@@ -85,10 +85,12 @@
     <div class = "floor_wrapper first_floor_wrapper">
       <div class = "floor_text first_floor_text">
           <h2>Запишите броски на&nbsp;видео</h2>
-          <p class = "mainpage_text">В&nbsp;турнире четыре дисциплины: 
-            топор с&nbsp;расстояния 4&nbsp;м, ножи — с&nbsp;3,&nbsp;4 и&nbsp;5&nbsp;м. Снимите&nbsp;броски на&nbsp;видео: по&nbsp;одному 
-  на&nbsp;каждую дисциплину, в&nbsp;которой участвуете. Запись должна быть одним дублем без&nbsp;монтажа. Если вы&nbsp;метаете на&nbsp;площадке клуба, клуб запишет единое видео для&nbsp;всех участников.</p>
-          
+          <p class = "mainpage_text">
+            В&nbsp;турнире четыре дисциплины: топор 
+            с&nbsp;расстояния 4&nbsp;м, ножи — с&nbsp;3,&nbsp;4 и&nbsp;5&nbsp;м. 
+            Снимите&nbsp;броски на&nbsp;видео отдельно в&nbsp;каждой&nbsp;дисциплине, в&nbsp;которой 
+            участвуете.&nbsp;Сделайте запись одним дублем&nbsp;без&nbsp;монтажа. Если вы&nbsp;метаете на&nbsp;площадке клуба, 
+            клуб запишет общее видео&nbsp;для&nbsp;всех участников.
           <div class = "link_box">
               <a class="link_with_slash" href="/rules" target="_blank">
                 <svg class="icon_slash" xmlns="http://www.w3.org/2000/svg" width="26" height="28" fill="none" viewBox="0 0 26 28">
@@ -111,7 +113,7 @@
       <div class="floor_text second_floor_text">
         <h2>Отправьте <br/>результаты</h2>
         <p class = "mainpage_text">За&nbsp;каждый бросок начисляется столько баллов, сколько указано на&nbsp;мишени,
-          куда&nbsp;попал&nbsp;топор или&nbsp;нож. Результаты принимаем с&nbsp;00:00 20&nbsp;мая до&nbsp;23:59 2&nbsp;июня по&nbsp;Москве.</p>
+          куда&nbsp;попал&nbsp;топор или&nbsp;нож. Результаты принимаем с&nbsp;00:00 20&nbsp;мая до&nbsp;23:59 2&nbsp;июня&nbsp;по&nbsp;Москве.</p>
       </div>
     </div>
     
@@ -215,7 +217,7 @@
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://"
               oninput="saveInputToLocalStorage('Link_axe_4m')" type="text" id="Link_axe_4m" name="nameLink_1" 
-              onblur="validateLink('axe_4m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              onblur="validateLink('axe_4m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
       <div class="container-notes " id="div_notes_axe_4m">
@@ -248,7 +250,7 @@
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://"
               oninput="saveInputToLocalStorage('Link_knife_3m')" type="text" id="Link_knife_3m" name="nameLink_2" 
-              onblur="validateLink('knife_3m')" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+              onblur="validateLink('knife_3m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/>
           </div>
         </label>
       </div>
@@ -277,7 +279,7 @@
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral"  placeholder="http://"
               oninput="saveInputToLocalStorage('Link_knife_4m')" type="text" id="Link_knife_4m" name="nameLink_3" 
-              onblur="validateLink('knife_4m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              onblur="validateLink('knife_4m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
 
@@ -305,7 +307,7 @@
           <div class="bblock-links">
               <input class="form_results_linkinput form_results_border_neutral" placeholder="http://" 
               oninput="saveInputToLocalStorage('Link_knife_5m')" type="text" id="Link_knife_5m" name="nameLink_4" 
-              onblur="validateLink('knife_5m')" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
+              onblur="validateLink('knife_5m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
       
@@ -348,7 +350,7 @@
             <p class="fill_new_sportsman_link" onclick="show_submit_button_server_mistake()">Обновите страницу и попробуйте заново. Заполненные данные сохранятся в полях</p>
           </div>
           <div class="hidden_text_wrong" id="checkFormTextWrong">
-            <p>Заполните все поля без ошибок</p>
+            <p id="textCheckFormTextWrong">Заполните все поля без ошибок</p>
             {{!-- <p>и исправьте ошибки</p> --}}
           </div>
       </div>
@@ -487,8 +489,10 @@
     <div class="floor_wrapper four_floor_wrapper">
       <div class="floor_text first_floor_text">
         <h2>Дождитесь<br/>объявления<br/>победителей</h2>
-        <p class = "mainpage_text">Через неделю после этапа мы&nbsp;определим победителей среди 
-          мужчин и&nbsp;женщин. В&nbsp;ножах&nbsp;призёры распределятся отдельно по&nbsp;дистанциям 
+        <p class = "mainpage_text">
+          10&nbsp;июня мы&nbsp;определим победителей 
+          по&nbsp;числу&nbsp;баллов у&nbsp;мужчин и&nbsp;женщин. 
+          В&nbsp;ножах&nbsp;призёры распределятся отдельно по&nbsp;дистанциям 
           в&nbsp;3,&nbsp;4&nbsp;и&nbsp;5&nbsp;м и&nbsp;лигам среди профессионалов, 
           любителей и&nbsp;новичков. В&nbsp;конце года выиграют те, кто наберёт больше&nbsp;всего 
           баллов по&nbsp;итогам трёх самых результативных&nbsp;этапов. </p>
