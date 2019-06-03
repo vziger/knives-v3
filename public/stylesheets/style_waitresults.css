@@ -406,6 +406,7 @@ h2 span{
 .third_floor_wrapper{
   /* height:93.5vw;  */
   height:0vw;
+  display:none;
 }
 /* !!!@@@ */
 .four_floor_wrapper{
