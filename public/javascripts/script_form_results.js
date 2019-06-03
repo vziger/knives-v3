@@ -63,11 +63,11 @@ function result_fields_generate(div_id) {
           {
             if(i<10){
               document.getElementById(`text_${div_id}_${i+1}`).focus();
-              setCursorPosition(document.getElementById(`text_${div_id}_${i+1}`),0);
+              setCaretPosition(document.getElementById(`text_${div_id}_${i+1}`), 0, 0);
             }
             if(i==10){
               document.getElementById(`Link_${div_id}`).focus();
-              setCursorPosition(document.getElementById(`Link_${div_id}`),0);
+              setCaretPosition(document.getElementById(`Link_${div_id}`), 0, 0);
             }
           }
         }
@@ -92,6 +92,12 @@ function result_fields_generate(div_id) {
         }
         // alert('start:' + pos.start + ', end: ' + pos.end);
         // localStorage.setItem('previous_pos', pos.end);
+      }
+
+      if (event.keyCode == 40){
+        localStorage.setItem('previous_digit_field', this.id);
+        document.getElementById(`Link_${div_id}`).focus();
+        setCaretPosition(document.getElementById(`Link_${div_id}`), 0, 0);
       }
     }
 
@@ -162,15 +168,18 @@ function getCaretPosition (ctrl) {
     }
 }
 
-function setCursorPosition(elem, pos) {
+function setCaretPosition(elem, start, end) {
+  // IE >= 9 and other browsers
   if (elem.setSelectionRange) {
-      elem.setSelectionRange(pos, pos);
-  } else if (elem.createTextRange) {
-      var range = elem.createTextRange();
-      range.collapse(true);
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
+      elem.setSelectionRange(start, end);
+  } 
+  // IE < 9 
+  else if (elem.createTextRange) {
+    let range = elem.createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', end);
+    range.moveStart('character', start);
+    range.select();
   }
 }
 
@@ -401,7 +410,7 @@ function loadLocalStorageToInput()
   if(lsLen > 0){
     for(let i = 0; i < lsLen; i++){
       let key = localStorage.key(i);
-      if (!key.includes('previous_pos')){
+      if (!key.includes('previous_pos') && !key.includes('previous_digit_field')){
         let element = document.getElementById(key);
         if(!key.includes('toggle')){
           element.value = localStorage.getItem(key);

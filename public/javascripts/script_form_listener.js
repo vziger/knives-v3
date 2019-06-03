@@ -173,5 +173,76 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
+// for(var i=0;i<headers.length;i++)
+//     (function(i) { 
+//             headers[i].addEventListener("click", function() {
+//             sortByField(i);
+//       })
+//   })(i);
 
+for(let i=0;i<4;i++)
+  (function(i) {
+links[i].addEventListener('keyup', async (event) => {
+      event = event || window.event;
+      
+      if (event.keyCode == 39){
+        
+        const pos = getCaretPosition (links[i]);
+        const prev_pos = localStorage.getItem('previous_pos');
+        localStorage.setItem('previous_pos', pos.end);
+        if(pos.end==links[i].value.length ){
+          if(pos.end == prev_pos || links[i].value.length==0)
+          {
+            if(i==0){
+              document.getElementById('text_knife_3m_1').focus();
+              setCaretPosition(document.getElementById('text_knife_3m_1'), 0, 0);
+            }
+            if(i==1){
+              document.getElementById('text_knife_4m_1').focus();
+              setCaretPosition(document.getElementById('text_knife_4m_1'), 0, 0);
+            }
+            if(i==2){
+              document.getElementById('text_knife_5m_1').focus();
+              setCaretPosition(document.getElementById('text_knife_5m_1'), 0, 0);
+            }
+            
+          }
+        }
+      }
 
+      if (event.keyCode == 37){
+        const pos = getCaretPosition (links[i]);
+        const prev_pos = localStorage.getItem('previous_pos');
+        localStorage.setItem('previous_pos', pos.end);
+        if(pos.end==0 && pos.end == prev_pos){
+          if(i==0){
+            document.getElementById('text_axe_4m_10').focus();
+            setCaretPosition(document.getElementById('text_axe_4m_10'), 0, 0);
+          }
+          if(i==1){
+            document.getElementById('text_knife_3m_10').focus();
+            setCaretPosition(document.getElementById('text_knife_3m_10'), 0, 0);
+          }
+          if(i==2){
+            document.getElementById('text_knife_4m_10').focus();
+            setCaretPosition(document.getElementById('text_knife_4m_10'), 0, 0);
+          }
+          if(i==3){
+            document.getElementById('text_knife_5m_10').focus();
+            setCaretPosition(document.getElementById('text_knife_m_10'), 0, 0);
+          }
+        }
+      }
+      
+      // if (event.keyCode == 40){
+      //   const id = localStorage.getItem('previous_digit_field');
+      //   if (id!==null){
+      //     document.getElementById(id).focus();
+      //     setCaretPosition(document.getElementById(id), 0, 0);
+      //   }
+      //   else{
+
+      //   }
+      // }
+  });
+})(i);
