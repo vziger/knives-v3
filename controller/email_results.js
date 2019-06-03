@@ -98,7 +98,7 @@ async function mail_results(recepient, Player) {
       <div><a href="/compose?To=' + Player.email + '" rel="noopener">' + Player.email + '</a></div>\
     </div>' + str_axe + str_knives + allSumStr +'\
     <p style="margin-bottom:5px;">&nbsp;</p>\
-  	<p style="margin-bottom:5px;">10 июня мы сообщим о победителях этапа и пришлём ссылку на турнирную таблицу.</p>\
+  	<p style="margin-bottom:5px;">10 июня мы сообщим о победителях второго этапа и пришлём ссылку на турнирную таблицу.</p>\
 	  <p style="margin-bottom:5px;">Метательные практики<br/>\
     <a href="http://knifethrowing.online" target="_blank" rel="noopener noreferrer">\
               knifethrowing.online</a></p>\
