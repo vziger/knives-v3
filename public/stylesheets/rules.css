@@ -6,6 +6,9 @@
        url("/fonts/HelveticaNeueCyr-Roman.ttf") format("ttf");
 } */
 
+main{
+  margin-top:0;
+}
 body {
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
