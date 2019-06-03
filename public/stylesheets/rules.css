@@ -6,6 +6,12 @@
        url("/fonts/HelveticaNeueCyr-Roman.ttf") format("ttf");
 } */
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
 main{
   margin-top:0;
 }
@@ -96,7 +102,7 @@ header {
 .page-header {
   max-width: 98vw;
   margin: 0 0 5.7vw;
-  padding: 0 0 0 0.9vw;
+  padding: 0 0 0 1vw;
 }
 
 .page-title {
@@ -110,8 +116,7 @@ header {
   max-width: 86.3vw;
   font-size: 2.4vw;
   line-height: 3.2vw;
-  margin: 0;
-  padding-left: 0.5vw;
+  margin: 0 0 0 0.1vw;
 }
 
 .page-section {
@@ -128,7 +133,7 @@ header {
   font-weight: 900;
   font-size: 4vw;
   line-height: 3.4vw;
-  margin: 0 0 2vw 0.2vw;
+  margin: 0 0 2vw 0.1vw;
 }
 
 .page-section__text-block {
@@ -221,7 +226,7 @@ header {
 
 .carousel {
   width: 73vw;
-  margin: 2.7vw 0 0 0.2vw;
+  margin: 2.7vw 0 0 0.4vw;
 }
 
 .carousel__main-image {
@@ -311,7 +316,7 @@ header {
 
 
 .page-section-image_double{
-  margin:2vw 0 3.5vw 0;
+  margin:2vw 0 3.5vw 0.4vw;
 }
 .div_flex_option{
   display: flex;
@@ -398,7 +403,7 @@ header {
 .page-cta-block {
   background-color: #000;
   margin: 2.8vw 0 6.4vw;
-  padding: 4.2vw 0 5.1vw 1.3vw;
+  padding: 4.2vw 0 5.1vw 0.3vw;
 }
 
 .page-cta-block__content {
@@ -518,7 +523,7 @@ footer {
 .footer-content {
   /* width: 98vw; */
   margin: 0 auto;
-  padding-left: 1.6vw;
+  padding-left: 1.2vw;
 }
 
 .footer-phone {
