@@ -18,10 +18,7 @@ button::-moz-focus-inner {
 }
 
 div{
-  background-color: rgb(255, 0, 0, 0)
-}
-header {
-  margin-bottom: 10.4vw;
+  background-color: rgb(255, 0, 0, 0);
 }
 h1 span{
   display:block;
@@ -34,14 +31,15 @@ h3 span{
   display:block;
 }
 
+header {
+  width: 98vw;
+  margin: 0 auto;
+  margin-bottom: 10.4vw;
+}
 
 .main-title {
-  max-width: 98vw;
-  margin: 0 auto;
-  font-weight: 900;
-  font-size: 2.4vw;
-  line-height: 2.2vw;
-  padding: 3.2vw 0 0 0.9vw;
+  font:normal 900 3.1vw/2.3vw 'HelveticaNeueCyr';
+  margin:2.5vw 0 10.4vw 0;
 }
 
 .main-title_link{
@@ -105,9 +103,9 @@ h3 span{
 
 .page-section__title {
   font-weight: 900;
-  font-size: 6vw;
-  line-height: 5.1vw;
-  margin: 0 0 2.5vw 0.2vw;
+  font-size: 4vw;
+  line-height: 3.4vw;
+  margin: 0 0 2vw 0.2vw;
 }
 
 .page-section__text-block {
