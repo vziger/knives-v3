@@ -42,28 +42,57 @@ function result_fields_generate(div_id) {
 
     };
 
+    input.onkeydown = function(event){
+      event = event || window.event;
+      if (event.keyCode == 37 || event.keyCode == 39){
+        const pos = getCaretPosition (this);
+        console.log('start:' + pos.start + ', end: ' + pos.end);
+        localStorage.setItem('previous_pos', pos.end);
+      }
+    }
+
     input.onkeyup = function(event){
       event = event || window.event;
       
-      // if (event.keyCode == 39){
-      //   const pos = getCaretPosition (this);
-      //   const prev_pos = localStorage.getItem('previous_pos');
-      //   if(i<10 && pos.end==this.value.length && pos.end == prev_pos){
-      //     document.getElementById(`text_${div_id}_${i+1}`).focus();
-      //   }
-      //   // alert('start:' + pos.start + ', end: ' + pos.end);
-      //   localStorage.setItem('previous_pos', pos.end);
-      // }
+      if (event.keyCode == 39){
+        const pos = getCaretPosition (this);
+        const prev_pos = localStorage.getItem('previous_pos');
 
-      // if (event.keyCode == 37){
-      //   const pos = getCaretPosition (this);
-      //   const prev_pos = localStorage.getItem('previous_pos');
-      //   if(i>1 && pos.end==0 && pos.end == prev_pos){
-      //     document.getElementById(`text_${div_id}_${i-1}`).focus();
-      //   }
-      //   // alert('start:' + pos.start + ', end: ' + pos.end);
-      //   localStorage.setItem('previous_pos', pos.end);
-      // }
+        if(pos.end==this.value.length ){
+          if(pos.end == prev_pos || this.value.length==0)
+          {
+            if(i<10){
+              document.getElementById(`text_${div_id}_${i+1}`).focus();
+              setCursorPosition(document.getElementById(`text_${div_id}_${i+1}`),0);
+            }
+            if(i==10){
+              document.getElementById(`Link_${div_id}`).focus();
+              setCursorPosition(document.getElementById(`Link_${div_id}`),0);
+            }
+          }
+        }
+      }
+
+      if (event.keyCode == 37){
+        const pos = getCaretPosition (this);
+        const prev_pos = localStorage.getItem('previous_pos');
+        if(pos.end==0 && pos.end == prev_pos){
+          if(i>1)
+            document.getElementById(`text_${div_id}_${i-1}`).focus();
+          if(i==1){
+            if(div_id=='knife_3m')
+              document.getElementById('Link_axe_4m').focus();
+            
+            if(div_id=='knife_4m')
+              document.getElementById('Link_knife_3m').focus();
+            
+            if(div_id=='knife_5m')
+              document.getElementById('Link_knife_4m').focus();
+          }
+        }
+        // alert('start:' + pos.start + ', end: ' + pos.end);
+        // localStorage.setItem('previous_pos', pos.end);
+      }
     }
 
     input.onblur = function () {
@@ -131,6 +160,18 @@ function getCaretPosition (ctrl) {
   } else {
     return {'start': 0, 'end': 0};
     }
+}
+
+function setCursorPosition(elem, pos) {
+  if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+  } else if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+  }
 }
 
 function all_knife_sum() {
@@ -360,24 +401,26 @@ function loadLocalStorageToInput()
   if(lsLen > 0){
     for(let i = 0; i < lsLen; i++){
       let key = localStorage.key(i);
-      let element = document.getElementById(key);
-      if(!key.includes('toggle')){
-        element.value = localStorage.getItem(key);
-        if (key.includes('text_axe_4m_') || key.includes('text_knife_3m_') || 
-            key.includes('text_knife_4m_') || key.includes('text_knife_5m_'))
-        {
-          globalDigitValidate(element, 0)
-          //changeClassList(element, checkDigitInterval(element, 0));
-              // !!! показать подсказки 
+      if (!key.includes('previous_pos')){
+        let element = document.getElementById(key);
+        if(!key.includes('toggle')){
+          element.value = localStorage.getItem(key);
+          if (key.includes('text_axe_4m_') || key.includes('text_knife_3m_') || 
+              key.includes('text_knife_4m_') || key.includes('text_knife_5m_'))
+          {
+            globalDigitValidate(element, 0)
+            //changeClassList(element, checkDigitInterval(element, 0));
+                // !!! показать подсказки 
+          }
+          if(key.includes('Link_axe_4m') || key.includes('Link_knife_3m') || 
+          key.includes('Link_knife_4m') || key.includes('Link_knife_5m'))
+          {
+            validateLink(el2discipline(element),0);
+          }
         }
-        if(key.includes('Link_axe_4m') || key.includes('Link_knife_3m') || 
-        key.includes('Link_knife_4m') || key.includes('Link_knife_5m'))
-        {
-          validateLink(el2discipline(element),0);
+        else{
+          element.classList = localStorage.getItem(key);
         }
-      }
-      else{
-        element.classList = localStorage.getItem(key);
       }
     }
     sum_results('axe_4m');
