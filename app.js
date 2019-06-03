@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo')(session);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const rulesRouter = require('./routes/rules');
+const waitResultsRouter = require('./routes/wait_results');
 
 
 const app = express();
@@ -62,6 +63,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/rules', rulesRouter);
+app.use('/wait_results',waitResultsRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

@@ -35,15 +35,15 @@
               </svg>
             </a></div>
           </div>
-        </div>
-        
+        </div> {{!-- div content --}}
         <div class="title"></div>
 
       <div class="div-form">
         <!-- <picture>
           <source media="(max-width: 576px)" srcset="img.svg">
           <source media="(min-width: 577px)" srcset="images/dates.svg"> -->
-          <img class="img_dates" src="images/dates_helv.svg" alt="Второй этап с 20 мая по 2 июня">
+          <img class="img_dates" src="{{img_dates_src}}" alt="Второй этап с 20 мая по 2 июня">
+          {{!-- <img class="img_dates" src="images/dates_wait_result.svg" alt="Второй этап с 20 мая по 2 июня"> --}}
         <!-- </picture> -->
 
         <div class="form-container">
@@ -112,8 +112,7 @@
       <div class="floor_text second_floor_text">
         <h2>Отправьте 
           <span>результаты</span></h2>
-        <p class = "mainpage_text">За&nbsp;каждый бросок начисляется столько баллов, сколько указано на&nbsp;мишени,
-          куда&nbsp;попал&nbsp;топор или&nbsp;нож. Результаты принимаем с&nbsp;00:00 20&nbsp;мая до&nbsp;23:59 2&nbsp;июня&nbsp;по&nbsp;Москве.</p>
+        <p class = "mainpage_text">{{text_send_results}}</p>
       </div>
     </div>
     

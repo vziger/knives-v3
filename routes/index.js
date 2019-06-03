@@ -182,8 +182,14 @@ router.get('/all_results', async (req, res) => {
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Метательные практики' });
+  res.render('index', { title: 'Метательные практики',
+  img_dates_src:'/images/dates_helv.svg',
+  text_send_results:'За\u00A0каждый бросок начисляется столько баллов, сколько указано \
+  на\u00A0мишени, куда\u00A0попал\u00A0топор или\u00A0нож. Результаты принимаем \
+  с\u00A000:00 20\u00A0мая \
+      до\u00A023:59 2\u00A0июня\u00A0по\u00A0Москве.' });
 });
+
 
 router.post('/', async (req, res, next) => {
   try {
