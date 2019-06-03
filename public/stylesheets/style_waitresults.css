@@ -410,7 +410,7 @@ h2 span{
 }
 /* !!!@@@ */
 .four_floor_wrapper{
-  margin-top:-1vw;
+  /* margin-top:0vw; */
   overflow: visible;
   background-image: url(../images/back_3a.png);
   background-position:top right;
