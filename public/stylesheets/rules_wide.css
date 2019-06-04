@@ -86,7 +86,10 @@
         font-size: 19px;
         line-height: 25px;
     }
-      
+    .page-section__aside {
+        width: 17.6%;
+      }
+
     .target-image {
         margin: 12px 0 7px 0;
     }
