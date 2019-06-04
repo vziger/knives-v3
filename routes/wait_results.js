@@ -11,7 +11,7 @@ router.get('/', (req, res,next) => {
       Чтобы\u00A0подготовиться, прочитайте правила\u00A0участия, выберите топор и\u00A0три ножа, \
       распечатайте десять мишеней и\u00A0зарядите камеру. Участвуйте во\u00A0всех этапах \
       турнира и\u00A0отслеживайте свой прогресс в\u00A0конце года.',
-      layout: 'layout_counting_results' });
+      layout: 'layout_counting_results'});
     } catch (error) {
       console.log(error.message);
       next(error);
