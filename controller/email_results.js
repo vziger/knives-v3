@@ -72,7 +72,7 @@ async function mail_results(recepient, Player) {
   let letter_body_2='<div style="font-family: Arial, Verdana, sans-serif;font-size:13px;padding:0 0 0 10px;">\
     <p style="margin-bottom:5px;">Здравствуйте!</p>\
     <p style="margin-bottom:5px;">Вы отправили следующие результаты для участия в онлайн-чемпионате\
-      <br/> метателей топоров и&nbsp;ножей «Метательные практики»</p>\
+      <br/> метателей топоров и&nbsp;ножей «Метательные практики»:</p>\
 	  <div style = "display: flex; justify-content: flex-start;">\
 		  <div style="margin-top:2px;	width:120px;">Имя</div>\
 		  <div>' + capitalizeFirstLetter(Player.first_name) + '</div>\
@@ -94,7 +94,7 @@ async function mail_results(recepient, Player) {
       <div>' + capitalizeFirstLetter(Player.country) + '</div>\
     </div>\
     <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Эл. почта:</div>\
+      <div style="margin-top:2px;	width:120px;">Эл. почта</div>\
       <div><a href="/compose?To=' + Player.email + '" rel="noopener">' + Player.email + '</a></div>\
     </div>' + str_axe + str_knives + allSumStr +'\
     <p style="margin-bottom:5px;">&nbsp;</p>\
