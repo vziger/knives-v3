@@ -33,13 +33,13 @@
   window.onresize = function() {
     const imagesEl = document.querySelector('.carousel__images');
     const viewPortWidth = window.innerWidth;
-{{!--
+
     if (viewPortWidth < 1201) {
-      imagesEl.style = `left: ${75 - 75 * currentIndex}%;`;
+      imagesEl.style = `left: ${74 - 74 * currentIndex}vw;`;
     } else {
-      imagesEl.style = `left: ${876 - 876 * currentIndex}px;`;
+      imagesEl.style = `left: ${888 - 888 * currentIndex}px;`;
     }
---}}
+
   };
 
   function setMainImage(index) {
@@ -49,9 +49,9 @@
     currentIndex = index;
 
     if (viewPortWidth < 1200) {
-      imagesEl.style = `left: ${100 - 100 * index}%;`;
+      imagesEl.style = `left: ${74 - 74 * index}vw;`;
     } else {
-      imagesEl.style = `left: ${876 - 876 * index}px;`;
+      imagesEl.style = `left: ${888 - 888 * index}px;`;
     }
 
     const oldActiveEl = document.querySelector('.carousel__menu-button_active');

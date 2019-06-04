@@ -54,6 +54,7 @@
     }
       
     .page-section__main {
+        width: 888px;
         margin-right: 23px;
     }
       
@@ -64,6 +65,7 @@
     }
       
     .page-section__text-block {
+        width: 888px;
         margin: 0 0 18px 0;
         font-size: 19px;
         line-height: 25px;
@@ -96,13 +98,13 @@
     }
         
     .carousel {
-        width: 100%;
+        width: 888px;
         margin: 32px 0 0 0;
     }
     
     .carousel__main-image {
-        width: 100%;
-        height: 646px;
+        width: 888px;
+        height: 654px;
 
     }
       
@@ -115,8 +117,8 @@
         
     .carousel__image {
         display: block;
-        width: 100%;
-        height: 646px;
+        width: 888px;
+        height: 654px;
     }
       
     .carousel__menu {
