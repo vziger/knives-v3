@@ -1,22 +1,35 @@
-<div class = "main_div">
-    
-    <div class="logo">
-        <h1 class = "main-title"><a class="main-title_link" href="/">Метательные практики</a><h1>
+  {{!-- <header>
+    <div class ="header_content">
+      
+    </div>
+  </header> --}}
+  <main>
+
+    <div class = "main-logo">
+      <div class = "content">
+        <div class = "logo">
+          <a class="main-title_link" href="/">Метательные практики</a>
+        </div>
+      </div>
     </div>
 
     <div class="page-header">
-        <h2 class="page-title">
-            Как
-            <span>участвовать</span>
-        </h2>
-        <p class="page-lead">
-            Турнир проходит дистанционно: участники метают топоры и&nbsp;ножи в&nbsp;любом месте и&nbsp;записывают 
-            броски на&nbsp;видео. Участвуйте в&nbsp;одной или нескольких дисциплинах на&nbsp;выбор: метайте топоры
-            с&nbsp;расстояния 4&nbsp;метра и&nbsp;ножи с&nbsp;3,&nbsp;4 или&nbsp;5&nbsp;метров. Мы&nbsp;приглашаем спортсменов 
-            любого пола и&nbsp;возраста. За&nbsp;год мы&nbsp;проводим четыре этапа. Каждый из&nbsp;них&nbsp;— 
-            полноценное соревнование со своими призёрами. Те,&nbsp;кто покажут лучшие результаты в&nbsp;этапах, 
-            станут победителями по&nbsp;итогам года.
-        </p>
+      {{!-- <h1 class="main-title">
+        <a class="main-title_link" href="/"> Метательные
+        <span>практики</span></a>
+      </h1> --}}
+      <h2 class="page-title">
+        Как
+        <span>участвовать</span>
+      </h2>
+      <p class="page-lead">
+        Турнир проходит дистанционно: участники метают топоры и&nbsp;ножи в&nbsp;любом месте и&nbsp;записывают 
+        броски на&nbsp;видео. Участвуйте в&nbsp;одной или нескольких дисциплинах на&nbsp;выбор: метайте топоры
+        с&nbsp;расстояния 4&nbsp;метра и&nbsp;ножи с&nbsp;3,&nbsp;4 или&nbsp;5&nbsp;метров. Мы&nbsp;приглашаем спортсменов 
+        любого пола и&nbsp;возраста. За&nbsp;год мы&nbsp;проводим четыре этапа. Каждый из&nbsp;них&nbsp;— 
+        полноценное соревнование со своими призёрами. Те,&nbsp;кто покажут лучшие результаты в&nbsp;этапах, 
+        станут победителями по&nbsp;итогам года.
+      </p>
     </div>
 
     <div class="page-section page-section_with-aside">
@@ -59,7 +72,7 @@
             Примеры ножей и&nbsp;топоров, которые подходят для участия в&nbsp;турнире
           </p>
         </div>
-      </div> 
+      </div>
       <div class="page-section__aside">
         <img src="images/target.png" class="target-image" alt="Мишень">
         <a href="images/target_A4.pdf" class="target-link" target="_blank" download>
@@ -67,7 +80,7 @@
         </a>
       </div>
     </div>
-    
+
     <div class="page-section">
       <h3 class="page-section__title">
         Как&nbsp;метать,
@@ -81,13 +94,13 @@
 
       <div class="page-section-image_double div_flex_option">
       <div class="first_image">
+     
         <img  src="images/wrong_placing.png">
         <p class="page-section-image__caption">
             Неправильно. На&nbsp;горизонтальных&nbsp;и&nbsp;вертикальных&nbsp;
             <span>линиях по&nbsp;три&nbsp;мишени</span>
           </p>
       </div>
-
       <div class="second_image">
         <img  src="images/right_placing.png">
         <p class="page-section-image__caption">
@@ -96,7 +109,24 @@
           </p>
       </div>
       </div>
-      
+      {{!-- <div class="page-section-image page-section-image_double">
+        <div class="page-section-image__left">
+          <img src="images/wrong_placing.svg" class="page-section-image__image" alt="">
+          <p class="page-section-image__caption">
+            Неправильная расстановка мишеней.<br>
+            На&nbsp;горизонтальных и&nbsp;вертикальных линиях<br>
+            по&nbsp;три&nbsp;мишени
+          </p>
+        </div>
+        <div class="page-section-image__right">
+          <img src="images/right_placing.svg" class="page-section-image__image" alt="">
+          <p class="page-section-image__caption">
+            Правильная расстановка мишеней.<br>
+            На&nbsp;горизонтальных и&nbsp;вертикальных линиях<br>
+            по&nbsp;две мишени
+          </p>
+        </div>
+      </div> --}}
       <p class="page-section__text-block">
         Включите видеозапись и&nbsp;метайте в&nbsp;любой технике. 
         На&nbsp;каждую дисциплину у&nbsp;вас есть по&nbsp;две пробные и&nbsp;десять зачётных серий. 
@@ -149,10 +179,12 @@
         или&nbsp;<a href="https://www.youtube.com/" target="_blank">Ютуб</a>.
       </p>
     </div>
-</div>
 
-<div class="page-cta-block">
-      <div class = "main_div">
+{{!-- <div class="floor_overflow">
+  <div class = "main"> --}}
+    {{!-- <div class="floor_container_overflow div_flex_option"></div> --}}
+    <div class="page-cta-block">
+      <div class = "main-logo">
         <div class="page-cta-block__content">
           <a class="button_link" href="/" target="_blank">
             <button class="page-cta-block__button">Участвовать в&nbsp;турнире</button>
@@ -160,9 +192,9 @@
           <img src="images/dates_rules_i.svg" class="page-cta-block__dates">
         </div>
     </div>
-</div>
-
-<div class = "main_div">
+  </div>
+  {{!-- </div>
+</div> --}}
     <div class="page-section">
       <h3 class="page-section__title">
         Как&nbsp;узнать
@@ -318,18 +350,14 @@
         Если вы&nbsp;младше 18&nbsp;лет, получите согласие родителей на&nbsp;участие.
       </p>
     </div>
-
-
-    <footer>
-        <div class="footer-content">
-            <p class="footer-phone">
-                +7 985 368-83-85
-            </p>
-            <a href="mailto:knifethrowing@yandex.ru" class="footer-email">
-                knifethrowing@yandex.ru
-            </a>
-        </div>
-    </footer>
-
-
-</div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p class="footer-phone">
+        +7 985 368-83-85
+      </p>
+      <a href="mailto:knifethrowing@yandex.ru" class="footer-email">
+        knifethrowing@yandex.ru
+      </a>
+    </div>
+  </footer>
