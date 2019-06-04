@@ -22,10 +22,10 @@ async function mail_results(recepient, Player) {
   console.log('---- send results ----');
   console.log(Player);
 
-  let str_axe = digitsToHTML('Топоры, 4м', Player.axe_4M, Player.videoLink_1);
-  const str_kn3 = digitsToHTML('Ножи, 3м', Player.knife_3M, Player.videoLink_2);
-  const str_kn4 = digitsToHTML('Ножи, 4м', Player.knife_4M, Player.videoLink_3);
-  const str_kn5 = digitsToHTML('Ножи, 5м', Player.knife_5M, Player.videoLink_4);
+  let str_axe = digitsToHTML('Топоры, 4 метра', Player.axe_4M, Player.videoLink_1);
+  const str_kn3 = digitsToHTML('Ножи, 3 метра', Player.knife_3M, Player.videoLink_2);
+  const str_kn4 = digitsToHTML('Ножи, 4 метра', Player.knife_4M, Player.videoLink_3);
+  const str_kn5 = digitsToHTML('Ножи, 5 метров', Player.knife_5M, Player.videoLink_4);
 
   let str_knives = str_kn3 + str_kn4 + str_kn5;
 
@@ -72,7 +72,7 @@ async function mail_results(recepient, Player) {
   let letter_body_2='<div style="font-family: Arial, Verdana, sans-serif;font-size:13px;padding:0 0 0 10px;">\
     <p style="margin-bottom:5px;">Здравствуйте!</p>\
     <p style="margin-bottom:5px;">Вы отправили следующие результаты для участия в онлайн-чемпионате\
-      <br/> метателей топоров и&nbsp;ножей «Метательные практики»:</p>\
+      <br/> метателей топоров и&nbsp;ножей «Метательные практики»</p>\
 	  <div style = "display: flex; justify-content: flex-start;">\
 		  <div style="margin-top:2px;	width:120px;">Имя</div>\
 		  <div>' + capitalizeFirstLetter(Player.first_name) + '</div>\
@@ -102,7 +102,9 @@ async function mail_results(recepient, Player) {
 	  <p style="margin-bottom:5px;">Метательные практики<br/>\
     <a href="http://knifethrowing.online" target="_blank" rel="noopener noreferrer">\
               knifethrowing.online</a></p>\
-  </div>';
+  </div>\
+  <div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:130px 0 0 10px;">\
+    <p>Чтобы отписаться, напишите нам об этом в ответном письме.</p></div>';
 
 
   // // send mail with defined transport object

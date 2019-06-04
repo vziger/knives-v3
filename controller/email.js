@@ -38,7 +38,9 @@ async function mail(recepient) {
     и&nbsp;расскажем о&nbsp;победителях. </p>\
     <p>10 июня мы сообщим о победителях второго этапа и пришлём ссылку на турнирную таблицу.</p>\
     <p>Метательные практики<br/>\
-    <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>', // html body
+    <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>\
+    <div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:130px 0 0 10px;">\
+    <p>Чтобы отписаться, напишите нам об этом в ответном письме.</p></div>', // html body
   });
 
   console.log('Message sent: %s', info.messageId);
