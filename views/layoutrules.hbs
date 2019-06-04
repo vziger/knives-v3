@@ -24,7 +24,7 @@
   {{!-- <link rel="stylesheet" href="/stylesheets/normalize.css"> --}}
   <link rel="stylesheet" href="/stylesheets/fonts.css">
   <link rel="stylesheet" href="/stylesheets/rules.css">
-  {{!-- <link rel="stylesheet" href="/stylesheets/rules_wide.css"> --}}
+  <link rel="stylesheet" href="/stylesheets/rules_wide.css">
 
 </head>
 <script>
@@ -33,12 +33,13 @@
   window.onresize = function() {
     const imagesEl = document.querySelector('.carousel__images');
     const viewPortWidth = window.innerWidth;
-
+{{!--
     if (viewPortWidth < 1201) {
-      imagesEl.style = `left: ${73 - 73 * currentIndex}vw;`;
+      imagesEl.style = `left: ${75 - 75 * currentIndex}%;`;
     } else {
       imagesEl.style = `left: ${876 - 876 * currentIndex}px;`;
     }
+--}}
   };
 
   function setMainImage(index) {
@@ -48,7 +49,7 @@
     currentIndex = index;
 
     if (viewPortWidth < 1200) {
-      imagesEl.style = `left: ${73 - 73 * index}vw;`;
+      imagesEl.style = `left: ${100 - 100 * index}%;`;
     } else {
       imagesEl.style = `left: ${876 - 876 * index}px;`;
     }
