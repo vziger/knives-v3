@@ -58,12 +58,12 @@ async function mail_results(recepient, Player) {
   }
   if (number > 1){
     allSumStr ='<div style="padding: 2px; 	margin:0 0 7px 0;">\
-        <div style="display: flex; justify-content: flex-start;">\
-          <div style="margin-top:2px;	width:120px;">Сумма по ножам </div>\
+        <div style="display: flex; margin-top:2px;justify-content: flex-start;">\
+          <div style="margin-top:0px;	width:120px;">Сумма по ножам </div>\
           <div style = "display: flex; justify-content: flex-start;">\
             <div style="min-width: 250px"></div>\
             <div style="margin-left: 5px; padding: 2px 8px 2px 8px;	\
-            background-color:rgb(200, 200, 200, 0.5);"><strong>' + allSum + '</strong></div>\
+            background-color:rgba(200, 200, 200, 0.5);"><strong>' + allSum + '</strong></div>\
           </div>\
         </div>\
       </div>';
@@ -73,28 +73,28 @@ async function mail_results(recepient, Player) {
     <p style="margin-bottom:5px;">Здравствуйте!</p>\
     <p style="margin-bottom:5px;">Вы отправили следующие результаты для участия в онлайн-чемпионате\
       <br/> метателей топоров и&nbsp;ножей «Метательные практики»:</p>\
-	  <div style = "display: flex; justify-content: flex-start;">\
-		  <div style="margin-top:2px;	width:120px;">Имя</div>\
+	  <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+		  <div style="margin-top:0px;	width:120px;">Имя</div>\
 		  <div>' + capitalizeFirstLetter(Player.first_name) + '</div>\
     </div>\
-    <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Фамилия</div>\
+    <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+      <div style="margin-top:0px;	width:120px;">Фамилия</div>\
       <div>' + capitalizeFirstLetter(Player.last_name) + '</div>\
     </div>\
-    <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Пол</div>\
+    <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+      <div style="margin-top:0px;	width:120px;">Пол</div>\
       <div>' + Player.gender + '</div>\
     </div>\
     <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Клуб</div>\
+      <div style="margin-top:0px;	width:120px;">Клуб</div>\
       <div>' + capitalizeFirstLetter(Player.club_name) + '</div>\
     </div>\
-    <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Страна</div>\
+    <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+      <div style="margin-top:0px;	width:120px;">Страна</div>\
       <div>' + capitalizeFirstLetter(Player.country) + '</div>\
     </div>\
-    <div style = "display: flex; justify-content: flex-start;">\
-      <div style="margin-top:2px;	width:120px;">Эл. почта</div>\
+    <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+      <div style="margin-top:0px;	width:120px;">Эл. почта:</div>\
       <div><a href="/compose?To=' + Player.email + '" rel="noopener">' + Player.email + '</a></div>\
     </div>' + str_axe + str_knives + allSumStr +'\
     <p style="margin-bottom:5px;">&nbsp;</p>\
@@ -156,21 +156,21 @@ function digitsToHTML(pattern, myArray, videoLink){
   //   else 
     str = str + '<div style="padding: 2px; 	margin:5px 0 7px 0;">';
     
-    str = str + '<div style = "display: flex; justify-content: flex-start;">\
+    str = str + '<div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
       <div style="margin-top:2px;	width:120px;">' + pattern + '</div>\
       <div style = "display: flex; justify-content: flex-start;">';
 
     for(let i=0; i<10; i++){
       str = str + '<div style="width:20px; margin-top:2px; margin-right: 5px; \
-      border-bottom: 1px solid rgb(200, 200, 200, 0.5);">' + myArray[i] + '</div>';
+      border-bottom: 1px solid rgba(200, 200, 200, 0.5);">' + myArray[i] + '</div>';
       sum = sum + parseInt(myArray[i]);
     }
     str = str + '<div style="margin-left: 5px; padding: 2px 8px 2px 8px;	\
-    background-color:rgb(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>\
+    background-color:rgba(200, 200, 200, 0.5);"><strong>' + sum + '</strong></div>\
     </div>\
       </div>\
-      <div style = "display: flex; justify-content: flex-start;">\
-        <div style="margin-top:2px;	width:120px;">Ссылка на видео</div>\
+      <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
+        <div style="margin-top:0px;	width:120px;">Ссылка на видео</div>\
         <div><a href="' + videoLink + 'target="_blank" rel="noopener noreferrer">' + 
                           videoLink + '</a></div>\
       </div>\

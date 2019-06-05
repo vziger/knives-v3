@@ -9,6 +9,7 @@ function result_fields_generate(div_id) {
     input.autocorrect='off';
 
     input.id = `text_${div_id}_${i}`;
+    // input.id = 'text_' + div_id + '_' + i;
     input.name = `name_${div_id}_${i}`;
     input.className = 'form_results_digitsinput form_results_border_neutral';
 

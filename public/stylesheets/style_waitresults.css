@@ -51,7 +51,7 @@ body {
 }
 
 div{
-background-color: rgb(255,0,0,0.);
+background-color: rgba(255,0,0,0.);
 }
 
 .browser{
@@ -191,7 +191,7 @@ a img {
   /*303px 367px*/
   width: 30.3vw; /*check html img for form*/
   height: 28.3vw;
-  /*background-color: rgb(250,120,0,0.1);;*/
+  /*background-color: rgba(250,120,0,0.1);;*/
   margin-left:1vw;
   bottom:0;
   left: 0;
@@ -328,14 +328,14 @@ input, textarea, select, button{
 
 .small_text_link{
   text-decoration: none;
-  border-bottom: 1px solid rgb(255, 190, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 190, 0, 0.3);
   color: #FFBE00;
   transition:all 100ms linear;
 }
 
 .small_text_link:visited{
   text-decoration: none;
-  border-bottom: 1px solid rgb(255, 190, 0, .3);
+  border-bottom: 1px solid rgba(255, 190, 0, .3);
   color: rgb(255, 190, 0);
 }
 
@@ -614,7 +614,7 @@ h2 span{
 }
 
 .bblock-links{
-  /* background-color: rgb(255, 0, 0, .1); */
+  /* background-color: rgba(255, 0, 0, .1); */
   float: left; 
   line-height: 3.2vw;
   font-size: 1.4vw;
@@ -664,7 +664,7 @@ h2 span{
 }  
 
 .block-discipline-digits{
-  /* background-color: rgb(255,0,0,0.1); */
+  /* background-color: rgba(255,0,0,0.1); */
   float: left;
   line-height: 3.2vw;
   font-size: 1.6vw;
@@ -689,7 +689,7 @@ h2 span{
   width: 61vw;
   height: 2vw;
   padding:0 0 0 10.2vw;
-  background-color: rgb(0,0,255,0.)
+  background-color: rgba(0,0,255,0.)
 }
 
 /**** --- конец div-ы для формы *******/
@@ -809,7 +809,7 @@ h2 span{
 }
 
 .form_results_border_neutral{
-  border-bottom: 1px solid rgb(200, 200, 200, 0.5);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
 }
 .form_results_border_wrong{
   border-bottom: 1px solid #ff7777;
@@ -849,7 +849,7 @@ h2 span{
     position: relative;
     z-index: 0;
     display:table;
-    /* background:rgb(255,0,0,0.1); */
+    /* background:rgba(255,0,0,0.1); */
 }
 
 .genderfield.inactivestyle.activestyle {
@@ -889,7 +889,7 @@ h2 span{
   text-decoration: none;
   border: 0;
   color: #005bbe;
-  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  border-bottom: 1px solid rgba(0, 91, 190, .3);
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box;
   transition:all 100ms linear;
@@ -899,7 +899,7 @@ h2 span{
   text-decoration: none;
   border: 0;
   color: #005bbe;
-  border-bottom: 1px solid rgb(0, 91, 190, .3);
+  border-bottom: 1px solid rgba(0, 91, 190, .3);
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box;
 }
@@ -908,7 +908,7 @@ h2 span{
   text-decoration: none;
   border: 0;
   color: #005bbe;
-  border-bottom: 1px solid rgb(0, 91, 190, 1);
+  border-bottom: 1px solid rgba(0, 91, 190, 1);
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box;
   transition:all 0ms linear;
@@ -1021,14 +1021,14 @@ h2 span{
   width: fit-content;
   text-decoration: none ;
   color: #005bbe;
-  border-bottom: 1px dashed rgb(0, 91, 190, .3) ;
+  border-bottom: 1px dashed rgba(0, 91, 190, .3) ;
   cursor:pointer;
   transition:all 100ms linear;
 }
 .fill_new_sportsman_link:hover{
   text-decoration: none ;
   color: #005bbe;
-  border-bottom: 1px dashed rgb(0, 91, 190, 1) ;
+  border-bottom: 1px dashed rgba(0, 91, 190, 1) ;
   cursor:pointer;
   transition:all 0ms linear;
 }

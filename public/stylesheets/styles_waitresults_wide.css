@@ -81,7 +81,7 @@
     /*303px 367px*/
     width: 364px; /*check html img for form*/
     height: 340px;
-    /*background-color: rgb(250,120,0,0.1);;*/
+    /*background-color: rgba(250,120,0,0.1);;*/
     margin-left:12px;
   }
   
@@ -423,7 +423,7 @@
   }
   
   .form_results_border_neutral{
-    border-bottom: 1px solid rgb(200, 200, 200,0.5);
+    border-bottom: 1px solid rgba(200, 200, 200,0.5);
   }
   .form_results_border_wrong{
     border-bottom: 1px solid #ff7777;
