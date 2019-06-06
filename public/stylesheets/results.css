@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext');
+
+.results-block {
+  padding: 40px 0 140px;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.results-title-image {
+  margin-bottom: 28px;
+  width: calc(100% - 4px);
+  margin-left: 1px;
+}
+
+.results-section_axes {
+  margin-bottom: 55px;
+}
+
+.results-section__header {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-section__buttons {
+  display: flex;
+  height: 33px;
+  margin-top: 20px;
+}
+
+.results-section__button {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  height: 33px;
+  border: none;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.results-section__button:nth-child(2) {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.results-section__button_active {
+  background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+}
+
+.results-section__title {
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 800;
+}
+
+.results-section_knives {
+  margin-bottom: 9px;
+}
+
+.results-section_knives .results-section__title {
+  position: relative;
+  left: -3px;
+}
+
+.results-section_knives .results-section__row {
+  margin-bottom: 27px;
+}
+
+.results-section_knives .results-section__row:last-child {
+  margin-bottom: 0;
+}
+
+.results-section__row-title {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 800;
+}
+
+.results-section__row-content {
+  padding-left: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-section__col {
+  width: 430px;
+}
+
+.results-section__row:first-child .results-section__col:first-child {
+  background-image: url(/images/icon_female.svg);
+  background-repeat: no-repeat;
+  background-size: 114px 207px;
+  background-position: top 5px right 70px;
+}
+
+.results-section__row:first-child .results-section__col:last-child {
+  background-image: url(/images/icon_male.svg);
+  background-repeat: no-repeat;
+  background-size: 170px 178px;
+  background-position: top 21px right 81px;
+}
+
+.results-item {
+  display: flex;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.results-item__place {
+  width: 30px;
+  font-size: 30px;
+}
+
+.results-item__name-team {
+  width: calc(100% - 85px);
+  padding-left: 3px;
+}
+
+.results-item__name {
+  font-size: 25px;
+  line-height: 33px;
+}
+
+.results-item__team {
+  font-weight: 300;
+}
+
+.results-item__flag {
+  margin-left: 11px;
+  position: relative;
+  top: 3px;
+  width: 26px;
+}
+
+.results-item__score {
+  width: 55px;
+  text-align: right;
+}
+
+.results-all-link {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #ffc100;
+  transition:all 100ms linear;
+  margin-left: 1px;
+  margin-bottom: 192px;
+}
+
+.results-all-link:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0ms linear;
+}
+
+.results-all-link__icon {
+  fill: #ffc100;
+  width: 22px;
+  height: 23px;
+}
+
+.results-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-footer a {
+  color: #ffc100;
+  transition: all 100ms linear;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+}
+
+.results-footer a:hover {
+  color: #fff;
+  transition: all 100ms linear;
+}
+
+.results-footer__school {
+  padding-top: 19px;
+}
