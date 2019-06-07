@@ -3,7 +3,7 @@
 
 .hat_results{
   /* !!! другое значение для index.hbs */
-  height:80vw;
+  height:82vw;
 }
 
 .div-form_results{
@@ -213,7 +213,7 @@ svg{
 @media (min-width: 1200px) {
   .hat_results{
     /* !!! другое значение для index.hbs */
-    height:960px
+    height:984px
   }
   
   .div-form_results{
