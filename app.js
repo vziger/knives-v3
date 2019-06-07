@@ -17,9 +17,9 @@ const unsubscribeRouter = require('./routes/unsubscribe');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
 // mongoose.connect(process.env.database, { useNewUrlParser: true });
-// mongoose.connect(process.env.database || 'mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
+mongoose.connect(process.env.database || 'mongodb://localhost:27017/knivescompetitions', { useNewUrlParser: true });
 
 // mongoose.connect('mongodb+srv://admin:knivesawesome@cluster0-opya2.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
