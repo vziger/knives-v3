@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext'); */
 
 .results-block {
+  margin-left:1vw;
+  margin-right:1vw;
   padding: 4vw 0 14vw;
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
@@ -194,6 +196,8 @@
 
 @media (min-width: 1200px) {
   .results-block {
+    margin-left:12px;
+    margin-right:12px;
     padding: 48px 0 168px;
   }
   
