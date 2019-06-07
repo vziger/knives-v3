@@ -165,6 +165,9 @@
 .results-footer {
   display: flex;
   justify-content: space-between;
+  font-size: 1.6vw;
+  line-height: 2vw;
+  letter-spacing: -0.02vw;
 }
 
 .results-footer a {
@@ -304,6 +307,12 @@
     height: 27.6px;
   }
   
+  .results-footer {
+    font-size: 19.2px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+  }
+
   .results-footer a {
     font-size: 19.2px;
     line-height: 24px;
@@ -312,5 +321,214 @@
   
   .results-footer__school {
     padding-top: 22.8px;
+  }
+}
+
+@media (max-width: 414px) {
+  .results-block {
+    padding: 4vw 0 14vw;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+  }
+  
+  .results-title-image {
+    margin-bottom: 8.8vw;
+    width: calc(100% - 0.4vw);
+    margin-left: 0.1vw;
+  }
+  
+  .results-section_axes {
+    margin-bottom: 13.5vw;
+  }
+  
+  .results-section__header {
+    margin-bottom: 3.5vw;
+    display: block;
+  }
+  
+  .results-section__buttons {
+    display: flex;
+    height: 6.667vw;
+    margin-bottom: 6vw;
+  }
+  
+  .results-section__button {
+    display: block;
+    font-weight: 500;
+    font-size: 2.667vw;
+    line-height: 2vw;
+    width: 32%;
+    height: 6.667vw;
+    border: none;
+    cursor: pointer;
+    background-color: #ebebeb;
+  }
+  
+  .results-section__button:nth-child(2) {
+    border-left: 0.533vw solid #000;
+    border-right: 0.533vw solid #000;
+  }
+  
+  .results-section__button_active {
+    background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+  }
+  
+  .results-section__title {
+    font-size: 8vw;
+    line-height: 7.467vw;
+    font-weight: 800;
+  }
+  
+  .results-section_knives {
+    margin-bottom: 0.9vw;
+  }
+  
+  .results-section_knives .results-section__title {
+    position: relative;
+    left: -0.3vw;
+    margin-bottom: 4.7vw;
+  }
+  
+  .results-section_knives .results-section__row {
+    margin-bottom: 2.7vw;
+  }
+  
+  .results-section_knives .results-section__row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .results-section__row-title {
+    font-size: 5.333vw;
+    line-height: 6.133vw;
+    font-weight: 800;
+  }
+  
+  .results-section__row-content {
+    display: block;
+  }
+  
+  .results-section__col {
+    width: 100%;
+    margin-bottom: 7.8vw;
+  }
+  
+  .results-section__row:first-child .results-section__col:first-child {
+    background-image: url(/images/icon_female.svg);
+    background-repeat: no-repeat;
+    background-size: 24vw 43.733vw;
+    background-position: top -0.5vw right 26.5vw;
+  }
+  
+  .results-section__row:first-child .results-section__col:last-child {
+    background-image: url(/images/icon_male.svg);
+    background-repeat: no-repeat;
+    background-size: 41.6vw 43.733vw;
+    background-position: top 3.1vw right 19.1vw;
+  }
+
+  .results-section__row .results-section__col:first-child {
+    background-image: url(/images/icon_female.svg);
+    background-repeat: no-repeat;
+    background-size: 24vw 43.733vw;
+    background-position: top -0.5vw right 26.5vw;
+  }
+  
+  .results-section__row .results-section__col:last-child {
+    background-image: url(/images/icon_male.svg);
+    background-repeat: no-repeat;
+    background-size: 41.6vw 43.733vw;
+    background-position: top 3.1vw right 19.1vw;
+  }
+  
+  .results-item {
+    display: flex;
+    font-size: 2.5vw;
+    line-height: 2.9vw;
+    font-weight: 500;
+    margin-bottom: 2.7vw;
+  }
+  
+  .results-item__place {
+    width: 6vw;
+    line-height: 8vw;
+    font-size: 8vw;
+  }
+  
+  .results-item__name-team {
+    width: calc(100% - 18.667vw);
+    padding-left: 0.3vw;
+  }
+  
+  .results-item__name {
+    font-size: 5.333vw;
+    line-height: 10.133vw;
+  }
+  
+  .results-item__team {
+    font-size: 5.333vw;
+    line-height: 5.333vw;
+    font-weight: 300;
+  }
+  
+  .results-item__flag {
+    margin-left: 2.8vw;
+    position: relative;
+    top: -0.1vw;
+    width: 4.7vw;
+  }
+  
+  .results-item__score {
+    width: 9.667vw;
+    font-size: 5.867vw;
+    line-height: 9.867vw;
+  }
+  
+  .results-all-link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 5.333vw;
+    line-height: 5.6vw;
+    text-decoration: none;
+    color: #ffc100;
+    transition:all 100ms linear;
+    margin-left: 0.1vw;
+    margin-bottom: 38.933vw;
+  }
+  
+  .results-all-link:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0ms linear;
+  }
+  
+  .results-all-link__icon {
+    fill: #ffc100;
+    width: 5.333vw;
+    height: 5.6vw;
+  }
+  
+  .results-footer {
+    display: block;
+    font-size: 3.733vw;
+    line-height: 5.333vw;
+  }
+  
+  .results-footer a {
+    color: #ffc100;
+    transition: all 100ms linear;
+    font-size: 3.733vw;
+    line-height: 5.333vw;
+  }
+  
+  .results-footer a:hover {
+    color: #fff;
+    transition: all 100ms linear;
+  }
+  
+  .results-footer__contacts {
+    margin-bottom: 5.333vw;
+  }
+
+  .results-footer__school {
+    padding: 0;
   }
 }
