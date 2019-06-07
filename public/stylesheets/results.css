@@ -69,6 +69,11 @@
   margin-bottom: 0;
 }
 
+.results-section__content_common,
+.results-section__content_first {
+  display: none;
+}
+
 .results-section__row-title {
   font-size: 2.2vw;
   line-height: 3.4vw;
