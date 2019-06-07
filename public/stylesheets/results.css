@@ -1,12 +1,14 @@
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext'); */
 
 
-.hat{
-  height:80vw !important;
+.hat_results{
+  /* !!! другое значение для index.hbs */
+  height:80vw;
 }
 
-.div-form{
-  height:11vw !important;
+.div-form_results{
+  /* !!! другое значение для index.hbs */
+  height:11vw;
 }
 
 .results-block {
@@ -209,13 +211,23 @@ svg{
 }
 
 @media (min-width: 1200px) {
-  .hat{
+  .hat_results{
+    /* !!! другое значение для index.hbs */
+    height:960px
+  }
+  
+  .div-form_results{
+    /* !!! другое значение для index.hbs */
+    height:132px
+  }
+  
+  /* .hat{
     height:960px !important;
   }
 
   .div-form{
     height:132px !important;
-  }
+  } */
 
   .results-block {
     margin-left:12px;
