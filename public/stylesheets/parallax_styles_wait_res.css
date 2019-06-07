@@ -160,23 +160,23 @@ background-color: rgba(255,0,0,0.);
   #group1 {
     z-index: 5; /* slide over group 2 */
   }
-  #group1 .parallax__layer--base {
-    /*background: rgb(102,204,102);*/
-  }
+  /* #group1 .parallax__layer--base {
+    background: rgb(102,204,102);
+  } */
 
   #group2 {
     z-index: 3; /* slide under groups 1 */
   }
-  #group2 .parallax__layer--back {
-    /*background: rgb(123,210,102);*/
-  }
+  /* #group2 .parallax__layer--back {
+    background: rgb(123,210,102);
+  } */
 
   #group3 {
     z-index: 4; /* slide over group 2 and 4 */
   }
-  #group3 .parallax__layer--base {
-    /*background: rgb(153,216,101);*/
-  }
+  /* #group3 .parallax__layer--base {
+    background: rgb(153,216,101);
+  } */
 
 /*  #group4 {
     z-index: 2;
@@ -565,9 +565,9 @@ h2 span{
   height:44vw;
 }
 
-.floor_img_wrapper:nth-child(even){
+/* .floor_img_wrapper:nth-child(even){
   margin-left: -0.5vw;
-}
+} */
 
 
 .right_floor_img_parallax:first-child{
