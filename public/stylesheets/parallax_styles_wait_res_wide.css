@@ -328,6 +328,10 @@
   margin-top:-180px;
 }
 
+.left_floor_img_parallax{
+  transform: translateX(-1px);
+  -webkit-transform: translateX(4px);
+}
   
   .second_floor_img{
     top: 48px;

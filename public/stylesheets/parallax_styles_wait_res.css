@@ -661,8 +661,9 @@ h2 span{
     margin-bottom: 0px;
   }
 
-   .left_floor_img_parallax{
-    justify-content: flex-start;
+  .left_floor_img_parallax{
+    transform: translateX(-0.08vw);
+    -webkit-transform: translateX(0.33vw);
   }
 
 
