@@ -65,6 +65,7 @@
 
   .parallax__layer--back_right {
     right: 15px;
+    top:-1272px;
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);
     z-index: 3;
@@ -89,9 +90,9 @@
     width:100%;
     /* 106vw *12px */
     height:1272px;
-    background-size: 1180px auto;
+    /* background-size: 1180px auto;
     background-position-x:0;
-    background-position-y:202px; 
+    background-position-y:202px;  */
   }
 
   .content {
@@ -313,10 +314,14 @@
 }
 
   .floor_img_wrapper{
-  height:528px;
- 
-  margin:12px 0;
-}
+    height:528px;
+    margin:12px 0;
+  }
+
+  .img_hat_parallax{
+    height:1076px;
+  }
+
 .img_parallax_{
   height:528px;
 }

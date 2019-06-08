@@ -131,6 +131,7 @@ background-color: rgba(255,0,0,0.);
 
   .parallax__layer--back_right {
     right: 0.7vw;
+    top:-106vw;
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);
     z-index: 3;
@@ -227,14 +228,16 @@ background-color: rgba(255,0,0,0.);
 {
   width:100%;
   height:106vw;
-/*height: 1080px; /*fix*/
+
   position: relative;
-  background-color: #000;
-  background-image: url(../images/back_photo_1.png);
+  /* background-color: #000; */
+  /* background-image: url(../images/back_photo_1.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position-x:0;
-  background-position-y:16.8vw;  
+  background-position-y:16.8vw;   */
+
+
   /*background-position: bottom left;*/
   /*!!!*/
 /*  background-size: 71% auto;
@@ -517,10 +520,6 @@ input::-webkit-input-placeholder       {color:#cecece; opacity: 1; transition: o
 input::-moz-placeholder                {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
 input:-moz-placeholder                 {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
 input:-ms-input-placeholder            {color:#cecece; opacity: 1; transition: opacity 0.3s ease;}
-/* input:focus::-webkit-input-placeholder {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {color:#cecece; opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {color:#cecece; opacity: 0; transition: opacity 0.3s ease;} */
 
 
 h2{
@@ -554,12 +553,14 @@ h2 span{
   justify-content: flex-start;
   width:100%;
   height:44vw;
-  /*height: 571px;*/
-  /*57.1vw;  */
   background-color: rgba(255, 0, 0, 0.);
   /*background-repeat: no-repeat;*/
   background-size: auto 100%;
   margin:1vw 0;
+}
+
+.img_hat_parallax{
+  height:89.7vw;
 }
 .img_parallax_{
   height:44vw;
