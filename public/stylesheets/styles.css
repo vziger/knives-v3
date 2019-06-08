@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Helvetica, sans-serif;
   position: relative;
   margin: 0;
   padding: 0;
@@ -33,6 +33,11 @@ body {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
+
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform-style: preserve-3d;
 }
 
 div{
@@ -49,6 +54,7 @@ background-color: rgba(255,0,0,0.);
 .main {
   width:98vw;
   height:auto;
+/*  width: 1000px; /*fix*/
   margin: 0 auto;
   position: relative;
   overflow: visible; /*!@!@*/
@@ -57,7 +63,8 @@ background-color: rgba(255,0,0,0.);
 .hat
 {
   width:100%;
-  height:97.6vw;
+  height:106vw;
+/*height: 1080px; /*fix*/
   position: relative;
   background-color: #000;
   background-image: url(../images/back_photo_1.png);
@@ -173,7 +180,7 @@ a img {
   position: absolute;
   /*303px 367px*/
   width: 30.3vw; /*check html img for form*/
-  height: 28.3vw;
+  height: 36.7vw;
   /*background-color: rgba(250,120,0,0.1);;*/
   margin-left:1vw;
   bottom:0;
@@ -186,7 +193,7 @@ a img {
   /*236px*/
   width:23.6vw;
   /*252px*/
-  height: 16.6vw;
+  height: 25.2vw;
   /*!!! размер !!!*/
 }
 
@@ -385,18 +392,15 @@ h2 span{
 }
 
 /* высота блока с формой*/
-/* !!!@@@ */
 .third_floor_wrapper{
-  /* height:93.5vw;  */
-  height:0vw;
-  display:none;
+  height:93.5vw; 
 }
-/* !!!@@@ */
+
 .four_floor_wrapper{
-  /* margin-top:0vw; */
+  margin-top:5vw;
   overflow: visible;
-  background-image: url(../images/back_3a.png);
-  background-position:top right;
+  background-image: url(../images/back_3.png);
+  background-position:top left;
   height:57.1vw;
 }
 
@@ -501,7 +505,7 @@ h2 span{
 /*********************************************************  */
 
 
-/* !!!@@@ */
+
 .form_wrapper{
   color: #000;
   position:absolute;
@@ -512,8 +516,7 @@ h2 span{
   height:121vw;
   /* padding-bottom:8vw; */
   padding-left: 3vw;
-  
-  display:none;
+  /* visibility: {{form_css_visible}}; */
 }
 
 /* .form_wrapper *{transition: .1s linear} */
@@ -525,13 +528,11 @@ h2 span{
 
 .left_label_text{
   font: normal normal 1.6vw/2vw 'Montserrat';
-  /* font: normal normal 1.6vw/1.8vw 'Montserrat';
-  color: #000; */
   display: block;
 }
 
 .captions_in_form{
-  width:52vw;
+  width:61vw;
   margin-bottom: 2vw;
 }
 
@@ -543,6 +544,7 @@ h2 span{
 .captions_in_form p
 {
   font: normal normal 1.6vw/2.2vw 'Montserrat';
+  /* color: #000; */
   margin-bottom: 0.6vw;
 }
 .captions_in_form_minus_margin{
@@ -823,7 +825,6 @@ h2 span{
 
 /****** Gender *******/
  .genderfield {
-    padding: 0;
     margin:0;
     white-space: nowrap;
     position: relative;
@@ -845,11 +846,10 @@ h2 span{
     height: 3.4vw;
     max-width: 22vw;
     min-width: 13vw;
-    padding: 0.1vw 2vw 0;
     cursor: pointer;
     text-align: center;
-    color: #282828;
-    font: normal normal 1.6vw/1.6vw 'Montserrat';
+    color: #000;
+    font: normal normal 1.6vw/3.2vw 'Montserrat';
     text-decoration: none;
     white-space: nowrap;
     text-overflow: ellipsis;
