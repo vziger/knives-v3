@@ -65,7 +65,7 @@
 
   .parallax__layer--back_right {
     right: 15px;
-    top:-1272px;
+    /* top:-1272px; */
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);
     z-index: 3;
@@ -315,7 +315,7 @@
 
   .floor_img_wrapper{
     height:528px;
-    margin:12px 0;
+    margin:12px 0 0;
   }
 
   .img_hat_parallax{
@@ -621,7 +621,7 @@
   .footer_container{
     font-size: 19px;
     line-height: 24px;
-    margin:156px 0 24px 0;
+    margin:228px 0 24px 0;
   }
   
   .footer_link{

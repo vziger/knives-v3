@@ -131,7 +131,7 @@ background-color: rgba(255,0,0,0.);
 
   .parallax__layer--back_right {
     right: 0.7vw;
-    top:-106vw;
+    /* top:-106vw; */
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);
     z-index: 3;
@@ -542,7 +542,7 @@ h2 span{
   /*57.1vw;  */
   background-color: rgba(255, 0, 0, 0.);
   /*background-repeat: no-repeat;*/
-  background-size: auto 100%;
+  /* background-size: auto 100%; */
   margin:1vw 0;
 }
 
@@ -555,8 +555,8 @@ h2 span{
   height:44vw;
   background-color: rgba(255, 0, 0, 0.);
   /*background-repeat: no-repeat;*/
-  background-size: auto 100%;
-  margin:1vw 0;
+  /* background-size: auto 100%; */
+  margin:1vw 0 0;
 }
 
 .img_hat_parallax{
@@ -623,8 +623,8 @@ h2 span{
   width:50%;
   height: auto;
   overflow: visible; 
-  background-repeat: no-repeat;
-  background-size: auto 84%;
+  /* background-repeat: no-repeat;
+  background-size: auto 84%; */
 }
 
 
@@ -1242,7 +1242,7 @@ h2 span{
 
 .footer_container{
   font: normal normal 1.6vw/2vw 'HelveticaNeueCyr';
-  margin:13vw 0 2vw 0;
+  margin:19vw 0 2vw 0;
   position:relative;
   color:#fff;
   /*display: flex;
