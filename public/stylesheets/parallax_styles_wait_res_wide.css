@@ -107,8 +107,8 @@
 
   .logo {
     /*32px/24px*/
-    font-size: 37px;
-    line-height: 27px;
+    font-size: 36px;
+    line-height: 29px;
     margin:30px 0;
     /*25px*/
   }
@@ -456,7 +456,7 @@
 
   .text-notes{
     line-height: 15px;
-    font-size: 12px;
+    font-size: 14px;
     margin-right: 12px;
     margin-top: 2px;
     /* visibility: hidden; */
