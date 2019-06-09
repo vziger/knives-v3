@@ -21,6 +21,14 @@
 
 /*** **************** ***/
 
+.results-title{
+  font:normal normal 12vw/10vw 'Pitcrew';
+  margin-bottom: 2.5vw; 
+  margin-left: -0.5vw;
+}
+/* .results-title span{
+  
+} */
 
 .results-block {
   margin-left:1vw;
@@ -73,7 +81,7 @@
 }
 
 .results-section__button_active {
-  background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+  background: linear-gradient(0deg, #ffc100, #ffc100), #fff;
   cursor: default;
 }
 
@@ -229,6 +237,19 @@ svg{
   padding-top: 1.9vw;
 }
 
+.video_wide{
+  margin-top: 5vw;
+  display:none;
+} 
+.video_normal{
+  margin-top: 5vw;
+  display: block;
+} 
+.video_mobile{
+  margin-top: 5vw;
+  display:none;
+} 
+
 @media (min-width: 1200px) {
   .hat_results{
     /* !!! другое значение для index.hbs */
@@ -247,6 +268,12 @@ svg{
   .div-form{
     height:132px !important;
   } */
+
+  .results-title{
+    font:normal normal 144px/120px 'Pitcrew';
+    margin-bottom: 30px; 
+    margin-left: -6px;
+  }
 
   .results-block {
     margin-left:12px;
@@ -386,16 +413,34 @@ svg{
   .results-footer__school {
     padding-top: 22.8px;
   }
+
+  .video_wide{
+    margin-top: 5vw;
+    display:block;
+  } 
+  .video_normal{
+    margin-top: 5vw;
+    display: none;
+  } 
+  .video_mobile{
+    margin-top: 5vw;
+    display:none;
+  } 
 }
 
 @media (max-width: 414px) {
-
 
   .results-block {
     padding: 0vw 0 0;
     font-family: 'Montserrat', Helvetica, sans-serif;
   }
   
+  .results-title{
+    font:normal normal 13.2vw/12vw 'Pitcrew';
+    margin-bottom: 8vw; 
+    margin-left: -0.5vw;
+  }
+
   .results-title-image {
     margin-bottom: 8.8vw;
     width: calc(100% - 0.4vw);
@@ -407,26 +452,27 @@ svg{
   }
   
   .results-section__header {
-    margin-bottom: 3.5vw;
+    margin-bottom: 8.5vw;
     display: block;
   }
   
   .results-section__buttons {
     display: flex;
     height: 6.67vw;
-    margin-bottom: 6vw;
+    margin-bottom: 0vw;
+    margin-left: 0vw;
   }
   
   .results-section__button {
     display: block;
     font-weight: 500;
-    font-size: 2.67vw;
-    line-height: 2vw;
-    width: 32%;
-    height: 6.67vw;
+    font-size: 3.5vw;
+    line-height: 9.8vw;
+    width: 35%;
+    height: 9.2vw;
     border: none;
     cursor: pointer;
-    background-color: azure;
+    background-color: white;
   }
   
   .results-section__button:hover{
@@ -438,7 +484,7 @@ svg{
   } */
   
   .results-section__button_active {
-    background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+    background: linear-gradient(0deg, #ffc100, #ffc100), white;
     cursor: default;
   }
   
@@ -455,7 +501,7 @@ svg{
   .results-section_knives .results-section__title {
     position: relative;
     left: -0.3vw;
-    margin-bottom: 4.7vw;
+    margin-bottom: 2vw;
   }
   
   .results-section_knives .results-section__row {
@@ -540,9 +586,9 @@ svg{
   }
   
   .results-item__flag {
-    margin-left: 2.8vw;
+    margin-left: 0.4vw;
     position: relative;
-    top: -0.1vw;
+    top: 0.3vw;
     width: 4.7vw;
   }
   
@@ -601,4 +647,34 @@ svg{
   .results-footer__school {
     padding: 0;
   }
+
+  .footer_container{
+    font: normal normal 5vw/7vw 'Montserrat';
+    margin:15vw 0 2vw 1vw;
+  }
+  
+  .footer_contacts_2{
+    position: relative;
+    display: block;
+    margin:0 1vw 0vw 1vw;
+  }
+
+  .footer_contacts_2:last-child{
+    font: normal normal 3vw/5vw 'Montserrat';
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+  }
+
+  .video_wide{
+    margin-top: 5vw;
+    display:none;
+  } 
+  .video_normal{
+    margin-top: 5vw;
+    display: none;
+  } 
+  .video_mobile{
+    margin-top: 5vw;
+    display:block;
+  } 
 }

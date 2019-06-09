@@ -1,4 +1,17 @@
 @font-face {
+    font-family: 'Pitcrew';
+    src: url('../fonts/Pitcrew-Regular.eot');
+    src: local('Pitcrew Regular'), local('Pitcrew-Regular'),
+        url('../fonts/Pitcrew-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pitcrew-Regular.woff2') format('woff2'),
+        url('../fonts/Pitcrew-Regular.woff') format('woff'),
+        url('../fonts/Pitcrew-Regular.ttf') format('truetype'),
+        url('../fonts/Pitcrew-Regular.svg#Pitcrew-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Montserrat';
     src: url('../fonts/../fonts/../fonts/Montserrat-ExtraLight.eot');
     src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
