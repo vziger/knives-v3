@@ -1,5 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext'); */
-
+.img_dates{
+  display: none;
+}
 
 .hat_results{
   /* !!! другое значение для index.hbs */
@@ -10,6 +11,16 @@
   /* !!! другое значение для index.hbs */
   height:11vw;
 }
+
+.content_text_desktop{
+  display:block;
+}
+.content_text_mobile{
+  display: none;
+}
+
+/*** **************** ***/
+
 
 .results-block {
   margin-left:1vw;
@@ -49,7 +60,11 @@
   border: none;
   padding: 0 1.5vw;
   cursor: pointer;
-  background: #e8e8e8;
+  background:azure;
+}
+
+.results-section__button:hover{
+  background-color: #ffd453;
 }
 
 .results-section__button:nth-child(2) {
@@ -374,8 +389,10 @@ svg{
 }
 
 @media (max-width: 414px) {
+
+
   .results-block {
-    padding: 5vw 0 0;
+    padding: 0vw 0 0;
     font-family: 'Montserrat', Helvetica, sans-serif;
   }
   
@@ -409,9 +426,12 @@ svg{
     height: 6.67vw;
     border: none;
     cursor: pointer;
-    background-color: #ebebeb;
+    background-color: azure;
   }
   
+  .results-section__button:hover{
+    background-color: #ffd453;
+  }
   /* .results-section__button:nth-child(2) {
     border-left: 0.53vw solid #000;
     border-right: 0.53vw solid #000;

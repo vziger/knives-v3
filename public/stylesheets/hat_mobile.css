@@ -1,0 +1,161 @@
+@media (max-width: 414px) {
+    .main{
+        width: 100vw;
+    }
+
+    div{
+        background: rgba(255, 0, 0, 0);
+    }
+    .logo {
+        font-size: 8vw;
+        line-height: 6.3vw;
+        margin: 8vw 0 0;
+        width: 50%;
+        font-weight: 800;
+    }
+
+  .lead_text{
+    visibility: hidden;
+  }
+
+  .hat{
+    width:100%;
+    /* height:300vw; */
+    background-image: url(../images/back_photo_1_m.jpg);
+    background-size: 100% auto;
+    margin-bottom: 15vw;
+    background-position: bottom left;
+    /* padding-left: 5vw; */
+  }
+  .hat_results{
+    height: 292vw;
+  }
+
+  .content {
+    width: 100%;
+    /* height:150vw; */
+    margin:0;
+    /* !!! изменить паддинг */
+    padding:0 0 0 2vw;
+  }
+
+  .title {
+    top: 26vw;
+    right: 1vw;
+    width: 98vw;
+    height: 98vw;
+    margin-top:0;
+    background-image: url(../images/big_head_m.svg);
+    background-size: 98% 98%;
+  }
+
+  .text{
+    width:100%;
+    margin:-12vw 0 0;
+  }
+
+  .content_text{
+    font-size: 6vw;
+    line-height: 7vw;
+    margin:112vw 0 0;
+  }
+  .content_text_desktop{
+    display: none;
+  }
+  .content_text_mobile{
+    display: block;
+  }
+
+  /*** social buttons ***/
+  .social_buttons_container{
+      top: 213vw;
+  }
+  
+  .social_button {
+    width: 16.83vw;
+    height: 16.17vw;
+    margin-right: 1vw;
+  }
+  .icon{
+    width: 16.83vw;
+    height: 16.17vw;
+  }
+  /* *** *** *** *** */
+
+  /*** почтосборник ***/
+  .div-form_results{
+    height:38vw;
+  }
+
+  .div-form {
+    position: absolute;
+    width: 100vw; /*check html img for form*/
+    /*background-color: rgba(250,120,0,0.1);;*/
+    height: 36vw;
+    margin-left: 0vw;
+    padding-left: 2vw;
+    bottom:0;
+    left: 0;
+  }
+
+  .form-container{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .divEmailCaption{
+    margin:0;
+  }
+  .form-caption{
+    font-size: 6vw;
+    line-height: 7vw;
+  }
+
+  .form-caption:last-child{
+    margin-bottom: 3vw;
+  }
+
+  .input_mail {
+    font-size: 6vw;
+    line-height: 7vw;
+    padding-left: 2vw;
+    width: 100vw;
+    height: 15vw;
+    padding-right:16vw;
+    /* letter-spacing: -0.01em; */
+  }
+  
+  .btn_send_container{
+    width: 16vw;
+    height: 15vw;
+  }
+  
+  .btn_send {
+    margin: 0;
+    padding: 0;
+    width: 16vw;
+    height: 15vw;
+    top: 0.1vw;
+    left: -16.2vw;
+  }
+  
+
+/*** ****************  ***/
+
+/*** footer & link ***/
+.link_box{
+    font-size: 6vw;
+    line-height: 7vw;
+    /* width:95%; */
+    margin-top:3vw;
+  } 
+  
+  
+  .icon_slash{
+    margin-top: -1vw;
+    margin-right: -0.6vw;
+    width:6vw;
+  }
+/*** **********  ***/
+}
