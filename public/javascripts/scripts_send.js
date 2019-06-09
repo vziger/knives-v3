@@ -3,7 +3,7 @@ const div_button = document.getElementById('div_btn_send_container');
 
 const input_mail = document.getElementById('input_mail');
 const form_mail = document.getElementById('form-mail');
-var button_ok=0;
+let button_ok = 0;
 
 div_button.addEventListener('mouseover', function(){
   if(button_ok==0)

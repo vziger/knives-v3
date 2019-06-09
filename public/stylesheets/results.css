@@ -14,7 +14,7 @@
 .results-block {
   margin-left:1vw;
   margin-right:1vw;
-  padding: 4vw 0 0;
+  padding: 7vw 0 0;
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
@@ -31,32 +31,35 @@
 .results-section__header {
   margin-bottom: 2.8vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .results-section__buttons {
   display: flex;
   height: 3.3vw;
-  margin-top: 2vw;
+  margin-top: 2.2vw;
+  margin-left: 4vw;
 }
 
 .results-section__button {
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.5vw;
   line-height: 2vw;
   height: 3.3vw;
   border: none;
-  padding: 0 3vw;
+  padding: 0 1.5vw;
   cursor: pointer;
+  background: #e8e8e8;
 }
 
 .results-section__button:nth-child(2) {
-  border-left: 0.2vw solid #000;
-  border-right: 0.2vw solid #000;
+  border-left: 0.1px solid #000;
+  border-right: 0.1px solid #000;
 }
 
 .results-section__button_active {
   background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+  cursor: default;
 }
 
 .results-section__title {
@@ -88,7 +91,7 @@
 }
 
 .results-section__row-title {
-  font-size: 2.2vw;
+  font-size: 2.3vw;
   line-height: 3.4vw;
   font-weight: 800;
 }
@@ -96,37 +99,38 @@
 .results-section__row-content {
   padding-left: 0.4vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .results-section__col {
-  width: 43vw;
+  margin-right: 9vw;
+  width: 38vw;
 }
 
 .results-section__row:first-child .results-section__col:first-child {
   background-image: url(/images/icon_female.svg);
   background-repeat: no-repeat;
   background-size: 11.4vw 20.7vw;
-  background-position: top 0.5vw right 7vw;
+  background-position: top 0.5vw left 0vw;
 }
 
 .results-section__row:first-child .results-section__col:last-child {
   background-image: url(/images/icon_male.svg);
   background-repeat: no-repeat;
   background-size: 17vw 17.8vw;
-  background-position: top 2.1vw right 8.1vw;
+  background-position: top 2.1vw left 0vw;
 }
 
 .results-item {
   display: flex;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   line-height: 2.9vw;
   font-weight: 500;
   margin-bottom: 1.6vw;
 }
 
 .results-item__place {
-  width: 3vw;
+  width: 2.3vw;
   font-size: 3vw;
 }
 
@@ -136,7 +140,7 @@
 }
 
 .results-item__name {
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   line-height: 3.3vw;
 }
 
@@ -145,9 +149,9 @@
 }
 
 .results-item__flag {
-  margin-left: 1.1vw;
+  margin-left: 0.1vw;
   position: relative;
-  top: 0.3vw;
+  top: 0.2vw;
   width: 2.6vw;
 }
 
@@ -162,7 +166,7 @@ svg{
 .results-all-link {
   display: inline-block;
   font-weight: 500;
-  font-size: 2.2vw;
+  font-size: 2.3vw;
   line-height: 2.8vw;
   text-decoration: none;
   color: #ffc100;
@@ -232,7 +236,7 @@ svg{
   .results-block {
     margin-left:12px;
     margin-right:12px;
-    padding: 48px 0 0;
+    padding: 84px 0 0;
   }
   
   .results-title-image {
@@ -251,20 +255,21 @@ svg{
   
   .results-section__buttons {
     height: 39.6px;
-    margin-top: 24px;
+    margin-top: 26.4px;
+    margin-left: 48px;
   }
   
   .results-section__button {
-    font-size: 18vpx;
+    font-size: 18px;
     line-height: 24px;
     height: 39.6px;
-    padding: 0 36px;
+    padding: 0 18px;
   }
   
-  .results-section__button:nth-child(2) {
+  /* .results-section__button:nth-child(2) {
     border-left: 2.4px solid #000;
     border-right: 2.4px solid #000;
-  }
+  } */
   
   .results-section__title {
     font-size: 72px;
@@ -285,7 +290,7 @@ svg{
   }
 
   .results-section__row-title {
-    font-size: 26.4px;
+    font-size: 27.6px;
     line-height: 40.8px;
   }
   
@@ -294,27 +299,28 @@ svg{
   }
   
   .results-section__col {
-    width: 516px;
+    margin-right: 108px;
+    width: 456px;
   }
   
   .results-section__row:first-child .results-section__col:first-child {
     background-size: 136.8px 248.4px;
-    background-position: top 6px right 84px;
+    background-position: top 6px left 0px;
   }
   
   .results-section__row:first-child .results-section__col:last-child {
     background-size: 204px 213.6px;
-    background-position: top 25.2px right 97.2px;
+    background-position: top 25.2px left 0px;
   }
   
   .results-item {
-    font-size: 30px;
+    font-size: 27.6px;
     line-height: 34.8px;
     margin-bottom: 19.2px;
   }
   
   .results-item__place {
-    width: 36px;
+    width: 27.6px;
     font-size: 36px;
   }
   
@@ -324,13 +330,13 @@ svg{
   }
   
   .results-item__name {
-    font-size: 30px;
+    font-size: 27.6px;
     line-height: 39.6px;
   }
   
   .results-item__flag {
-    margin-left: 13.2px;
-    top: 3.6px;
+    margin-left: 1px;
+    top: 2.4px;
     width: 31.2px;
   }
   
@@ -339,7 +345,7 @@ svg{
   }
   
   .results-all-link {
-    font-size: 26.4px;
+    font-size: 27.6px;
     line-height: 33.6px;
     margin-left: 1.2px;
     /* margin-bottom: 230.4px; */
@@ -369,7 +375,7 @@ svg{
 
 @media (max-width: 414px) {
   .results-block {
-    padding: 4vw 0 0;
+    padding: 5vw 0 0;
     font-family: 'Montserrat', Helvetica, sans-serif;
   }
   
@@ -390,29 +396,30 @@ svg{
   
   .results-section__buttons {
     display: flex;
-    height: 6.667vw;
+    height: 6.67vw;
     margin-bottom: 6vw;
   }
   
   .results-section__button {
     display: block;
     font-weight: 500;
-    font-size: 2.667vw;
+    font-size: 2.67vw;
     line-height: 2vw;
     width: 32%;
-    height: 6.667vw;
+    height: 6.67vw;
     border: none;
     cursor: pointer;
     background-color: #ebebeb;
   }
   
-  .results-section__button:nth-child(2) {
-    border-left: 0.533vw solid #000;
-    border-right: 0.533vw solid #000;
-  }
+  /* .results-section__button:nth-child(2) {
+    border-left: 0.53vw solid #000;
+    border-right: 0.53vw solid #000;
+  } */
   
   .results-section__button_active {
     background: linear-gradient(0deg, #FFBE00, #FFBE00), #EBEBEB;
+    cursor: default;
   }
   
   .results-section__title {
@@ -440,8 +447,8 @@ svg{
   }
   
   .results-section__row-title {
-    font-size: 5.333vw;
-    line-height: 6.133vw;
+    font-size: 5.56vw;
+    line-height: 6.13vw;
     font-weight: 800;
   }
   
@@ -458,14 +465,14 @@ svg{
     background-image: url(/images/icon_female.svg);
     background-repeat: no-repeat;
     background-size: 24vw 43.733vw;
-    background-position: top -0.5vw right 26.5vw;
+    background-position: top -0.5vw left 0vw;
   }
   
   .results-section__row:first-child .results-section__col:last-child {
     background-image: url(/images/icon_male.svg);
     background-repeat: no-repeat;
     background-size: 41.6vw 43.733vw;
-    background-position: top 3.1vw right 19.1vw;
+    background-position: top 3.1vw left 0vw;
   }
 
   .results-section__row .results-section__col:first-child {
@@ -484,7 +491,7 @@ svg{
   
   .results-item {
     display: flex;
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     line-height: 2.9vw;
     font-weight: 500;
     margin-bottom: 2.7vw;
@@ -502,8 +509,8 @@ svg{
   }
   
   .results-item__name {
-    font-size: 5.333vw;
-    line-height: 10.133vw;
+    font-size: 5.33vw;
+    line-height: 10.13vw;
   }
   
   .results-item__team {
@@ -528,7 +535,7 @@ svg{
   .results-all-link {
     display: inline-block;
     font-weight: 500;
-    font-size: 5.333vw;
+    font-size: 5.33vw;
     line-height: 5.6vw;
     text-decoration: none;
     color: #ffc100;
@@ -545,7 +552,7 @@ svg{
   
   .results-all-link__icon {
     fill: #ffc100;
-    width: 5.333vw;
+    width: 5.33vw;
     height: 5.6vw;
   }
   
