@@ -23,7 +23,7 @@
 
 .results-title{
   font:normal normal 12vw/10vw 'Pitcrew';
-  margin-bottom: 2.5vw; 
+  margin-bottom: 6vw; 
   margin-left: -0.5vw;
 }
 /* .results-title span{
@@ -33,7 +33,7 @@
 .results-block {
   margin-left:1vw;
   margin-right:1vw;
-  padding: 7vw 0 0;
+  padding: 9.2vw 0 0;
   font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
@@ -146,8 +146,8 @@
 
 .results-item {
   display: flex;
-  font-size: 2.3vw;
-  line-height: 2.9vw;
+  font-size: 2.2vw;
+  line-height: 2.8vw;
   font-weight: 500;
   margin-bottom: 1.6vw;
 }
@@ -163,7 +163,7 @@
 }
 
 .results-item__name {
-  font-size: 2.3vw;
+  font-size: 2.2vw;
   line-height: 3.3vw;
 }
 
@@ -189,7 +189,7 @@ svg{
 .results-all-link {
   display: inline-block;
   font-weight: 500;
-  font-size: 2.3vw;
+  font-size: 2.2vw;
   line-height: 2.8vw;
   text-decoration: none;
   color: #ffc100;
@@ -238,15 +238,15 @@ svg{
 }
 
 .video_wide{
-  margin-top: 5vw;
+  margin-top: 10vw;
   display:none;
 } 
 .video_normal{
-  margin-top: 5vw;
+  margin-top: 10vw;
   display: block;
 } 
 .video_mobile{
-  margin-top: 5vw;
+  margin-top: 10vw;
   display:none;
 } 
 
@@ -271,14 +271,14 @@ svg{
 
   .results-title{
     font:normal normal 144px/120px 'Pitcrew';
-    margin-bottom: 30px; 
+    margin-bottom: 72px; 
     margin-left: -6px;
   }
 
   .results-block {
     margin-left:12px;
     margin-right:12px;
-    padding: 84px 0 0;
+    padding: 110px 0 0;
   }
   
   .results-title-image {
@@ -415,15 +415,15 @@ svg{
   }
 
   .video_wide{
-    margin-top: 5vw;
+    margin-top: 80px;
     display:block;
   } 
   .video_normal{
-    margin-top: 5vw;
+    margin-top: 80px;
     display: none;
   } 
   .video_mobile{
-    margin-top: 5vw;
+    margin-top: 80px;
     display:none;
   } 
 }
@@ -452,14 +452,14 @@ svg{
   }
   
   .results-section__header {
-    margin-bottom: 8.5vw;
+    margin-bottom: 2.5vw;
     display: block;
   }
   
   .results-section__buttons {
     display: flex;
     height: 6.67vw;
-    margin-bottom: 0vw;
+    margin-bottom: 7vw;
     margin-left: 0vw;
   }
   
@@ -530,34 +530,34 @@ svg{
   .results-section__row:first-child .results-section__col:first-child {
     background-image: url(/images/icon_female.svg);
     background-repeat: no-repeat;
-    background-size: 24vw 43.733vw;
-    background-position: top -0.5vw left 0vw;
+    background-size: 23.9vw 43.6vw;
+    background-position: top -0.1vw right 26.5vw;
   }
   
   .results-section__row:first-child .results-section__col:last-child {
     background-image: url(/images/icon_male.svg);
     background-repeat: no-repeat;
-    background-size: 41.6vw 43.733vw;
-    background-position: top 3.1vw left 0vw;
+    background-size: 37.3vw 41.4vw;
+    background-position: top 3.1vw right 19.1vw;
   }
 
   .results-section__row .results-section__col:first-child {
     background-image: url(/images/icon_female.svg);
     background-repeat: no-repeat;
-    background-size: 24vw 43.733vw;
-    background-position: top -0.5vw right 26.5vw;
+    background-size: 23.9vw 43.6vw;
+    background-position: top -0.1vw right 26.5vw;
   }
   
   .results-section__row .results-section__col:last-child {
     background-image: url(/images/icon_male.svg);
     background-repeat: no-repeat;
-    background-size: 41.6vw 43.733vw;
+    background-size: 37.3vw 41.4vw;
     background-position: top 3.1vw right 19.1vw;
   }
   
   .results-item {
     display: flex;
-    font-size: 2.3vw;
+    font-size: 2.2vw;
     line-height: 2.9vw;
     font-weight: 500;
     margin-bottom: 2.7vw;
@@ -649,7 +649,7 @@ svg{
   }
 
   .footer_container{
-    font: normal normal 5vw/7vw 'Montserrat';
+    font: normal normal 4vw/5vw 'Montserrat';
     margin:15vw 0 2vw 1vw;
   }
   
@@ -659,22 +659,22 @@ svg{
     margin:0 1vw 0vw 1vw;
   }
 
-  .footer_contacts_2:last-child{
-    font: normal normal 3vw/5vw 'Montserrat';
+  .mobile_footer_link{
+    font: normal normal 4vw/5vw 'Montserrat';
     margin-top: 3vw;
     margin-bottom: 4vw;
   }
 
   .video_wide{
-    margin-top: 5vw;
+    margin-top: 16vw;
     display:none;
   } 
   .video_normal{
-    margin-top: 5vw;
+    margin-top: 16vw;
     display: none;
   } 
   .video_mobile{
-    margin-top: 5vw;
+    margin-top: 16vw;
     display:block;
   } 
 }

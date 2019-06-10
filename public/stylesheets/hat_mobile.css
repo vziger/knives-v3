@@ -40,7 +40,7 @@
   }
 
   .title {
-    top: 26vw;
+    top: 28vw;
     right: 1vw;
     width: 98vw;
     height: 98vw;
@@ -57,7 +57,7 @@
   .content_text{
     font-size: 6vw;
     line-height: 7vw;
-    margin:112vw 0 0;
+    margin:116vw 0 0;
   }
   .content_text_desktop{
     display: none;
@@ -72,13 +72,13 @@
   }
   
   .social_button {
-    width: 16.83vw;
-    height: 16.17vw;
+    width: 14.83vw;
+    height: 14.17vw;
     margin-right: 1vw;
   }
   .icon{
-    width: 16.83vw;
-    height: 16.17vw;
+    width: 14.83vw;
+    height: 14.17vw;
   }
   /* *** *** *** *** */
 
@@ -107,6 +107,9 @@
   .divEmailCaption{
     margin:0;
   }
+  .email_box{
+      width:98vw;
+  }
   .form-caption{
     font-size: 6vw;
     line-height: 7vw;
@@ -120,7 +123,7 @@
     font-size: 6vw;
     line-height: 7vw;
     padding-left: 2vw;
-    width: 100vw;
+    width: 96vw;
     height: 15vw;
     padding-right:16vw;
     /* letter-spacing: -0.01em; */
@@ -148,7 +151,7 @@
     font-size: 6vw;
     line-height: 7vw;
     /* width:95%; */
-    margin-top:3vw;
+    margin-top:10vw;
   } 
   
   
