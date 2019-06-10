@@ -19,11 +19,17 @@
   display: none;
 }
 
+.link_box_results{
+  margin-top: 4vw;
+  font-size: 2.3vw;
+  font-family: 'Montserrat';
+}
+
 /*** **************** ***/
 
 .results-title{
   font:normal normal 12vw/10vw 'Pitcrew';
-  margin-bottom: 6vw; 
+  margin-bottom: 5vw; 
   margin-left: -0.5vw;
 }
 /* .results-title span{
@@ -50,9 +56,12 @@
 .results-section__header {
   margin-bottom: 2.8vw;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;;
 }
 
+.results-section__header:nth-child(1){
+  width: 86vw;
+}
 .results-section__buttons {
   display: flex;
   height: 3.3vw;
@@ -61,30 +70,39 @@
 }
 
 .results-section__button {
-  font-weight: 300;
-  font-size: 1.5vw;
-  line-height: 2vw;
-  height: 3.3vw;
+  font: normal 400 1.6vw/3.2vw 'Montserrat';
+  height: 3.4vw;
   border: none;
   padding: 0 1.5vw;
+  /* padding: 0 2.7vw 0 2.5vw; */
   cursor: pointer;
-  background:azure;
+  background:white;
+  /* transform: skewX(-40deg); */
+}
+
+.p_unskew{
+  /* transform: skew(40deg); */
 }
 
 .results-section__button:hover{
-  background-color: #ffd453;
+
+  background: rgb(250, 233, 157);
+  /* background: linear-gradient(180deg, #FFBE00 25%, #FFFFFF 100%); */
 }
 
 .results-section__button:nth-child(2) {
-  border-left: 0.1px solid #000;
-  border-right: 0.1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .results-section__button_active {
-  background: linear-gradient(0deg, #ffc100, #ffc100), #fff;
+  background: rgb(255, 193, 0);
   cursor: default;
 }
-
+.results-section__button_active:hover {
+  background: #ffc100;
+  cursor: default;
+}
 .results-section__title {
   font-size: 6vw;
   line-height: 6.6vw;
@@ -261,6 +279,11 @@ svg{
     height:132px
   }
   
+  .link_box_results{
+    margin-top: 48px;
+    font-size: 28px;
+  }
+
   /* .hat{
     height:960px !important;
   }
@@ -294,6 +317,9 @@ svg{
   .results-section__header {
     margin-bottom: 33.6px;
   }
+  .results-section__header:nth-child(1){
+    width: 1032px;
+  }
   
   .results-section__buttons {
     height: 39.6px;
@@ -302,10 +328,11 @@ svg{
   }
   
   .results-section__button {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 38px;
     height: 39.6px;
     padding: 0 18px;
+    /* padding: 0 33px 0 30px; */
   }
   
   /* .results-section__button:nth-child(2) {
@@ -431,12 +458,13 @@ svg{
 @media (max-width: 414px) {
 
   .results-block {
+    margin-left: 2vw;
     padding: 0vw 0 0;
     font-family: 'Montserrat', Helvetica, sans-serif;
   }
   
   .results-title{
-    font:normal normal 13.2vw/12vw 'Pitcrew';
+    font:normal normal 12.2vw/11vw 'Pitcrew';
     margin-bottom: 8vw; 
     margin-left: -0.5vw;
   }
@@ -465,14 +493,18 @@ svg{
   
   .results-section__button {
     display: block;
+    font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 3.5vw;
+    font-size: 3.7vw;
     line-height: 9.8vw;
-    width: 35%;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
     height: 9.2vw;
     border: none;
     cursor: pointer;
     background-color: white;
+    padding: 0px 2.4vw;
   }
   
   .results-section__button:hover{

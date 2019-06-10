@@ -992,7 +992,9 @@ h2 span{
 .fill_new_sportsman_link{
   margin-top:1.2vw;
   position: relative;
+  width: -moz-fit-content;
   width: fit-content;
+  width: -webkit-fit-content;
   text-decoration: none ;
   color: #005bbe;
   border-bottom: 1px dashed rgba(0, 91, 190, .3) ;

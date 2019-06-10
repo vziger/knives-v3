@@ -68,7 +68,7 @@ app.use('/rules', rulesRouter);
 app.use('/wait_results', waitResultsRouter);
 app.use('/unsubscribe', unsubscribeRouter);
 app.use('/results-page', resultsRouter);
-app.use('/', indexRouter);
+app.use('/', resultsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
