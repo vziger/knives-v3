@@ -27,7 +27,6 @@ async function mail(recepient) {
     text: 'Здравствуйте!\n\n\
     Вы подписались на рассылку онлайн-чемпионата метателей топоров и ножей &laquo;Метательные практики&raquo;.\n\
     Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации и&nbsp;расскажем о&nbsp;победителях.\n\n\
-    10 июня мы сообщим о победителях второго этапа и пришлём ссылку на турнирную таблицу.\n\n\
     Метательные практики\n\
     http://knifethrowing.online', // plain text body
     html: '<div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:10px 0 0 10px;">\
@@ -36,7 +35,6 @@ async function mail(recepient) {
     &laquo;Метательные практики&raquo;. <br/>\
     Мы сообщим вам о&nbsp;старте нового этапа, пришлём ссылку для регистрации.<br> \
     и&nbsp;расскажем о&nbsp;победителях. </p>\
-    <p>10 июня мы сообщим о победителях второго этапа и пришлём ссылку на турнирную таблицу.</p>\
     <p>Метательные практики<br/>\
     <a href="http://knifethrowing.online">knifethrowing.online</a></p></div>\
     <div style="font-family: Arial, Verdana, sans-serif; font-size:13px; padding:130px 0 0 10px;">\

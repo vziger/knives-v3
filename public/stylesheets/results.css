@@ -911,13 +911,13 @@ svg{
   } 
 
   .results-section__facts-floor_wrapper{
-    margin:2vw 2vw 0 2vw;
+    margin:2vw 0vw 0 0vw;
   }
   
   
   .results-section__facts-first_floor_wrapper{
     background-image: url(../images/back_1.png);
-    background-position:top 0 right -16vw;
+    background-position:top 0 right -7vw;
     height:82vw;
   }
   
@@ -940,14 +940,14 @@ svg{
   }
   
   .results-section__facts-first_floor_text{
-    padding-left: 1vw; 
+    padding-left: 3vw; 
   }
 
   .results-section__facts-first_floor_text:nth-child(1){
     margin-top: -7vw;
   }
   .results-section__facts-second_floor_text{
-    padding-left: 2vw;
+    padding-left: 3vw;
     padding-right: 0vw; 
   }
   
@@ -962,7 +962,8 @@ svg{
   }
 
   .factoid_text{
-    font:normal 400 5.5vw/6vw 'Montserrat';
+    margin-top:1.5vw;
+    font:normal 400 5.5vw/6.2vw 'Montserrat';
   }
   
   .results-section__facts-floor_img{
