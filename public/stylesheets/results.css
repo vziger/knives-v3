@@ -299,21 +299,21 @@ svg{
 
 
 .results-section__facts-first_floor_wrapper{
-  background-image: url(../images/back_1_notransp.png);
-  background-position:top 0 right -6vw;
+  background-image: url(../images/back_3_notransp.png);
+  background-position:top 0 left -7.7vw;
   height:57.1vw;
 }
 
 .results-section__facts-second_floor_wrapper{
   margin-top: 17vw;
   background-image: url(../images/back_2_notransp.png);
-  background-position:top 0 left -1.4vw;
+  background-position:top 0 right -1.4vw;
   height:57.1vw;
 }
 
 .results-section__facts-third_floor_wrapper{
-  background-image: url(../images/back_3_notransp.png);
-  background-position:top 0 left -8vw;
+  background-image: url(../images/back_1_notransp.png);
+  background-position:top 0 right -7.5vw;
   height:57.1vw;
 }
 
@@ -351,8 +351,8 @@ svg{
 .results-section__facts-first_floor_img{
   overflow: visible;
   position:absolute;
-  margin-top: -6vw;
-  margin-left:-9vw;
+  margin-top: -11vw;
+  margin-left:24vw;
   height:95%;
   width:auto;
 }
@@ -360,8 +360,8 @@ svg{
 .results-section__facts-second_floor_img{
   overflow: visible;
   position:absolute;
-  margin-top: -25vw;
-  margin-left:25vw;
+  margin-top: -5vw;
+  margin-left:-35vw;
   height:95%;
   width:auto;
 }
@@ -369,8 +369,8 @@ svg{
 .results-section__facts-third_floor_img{
   overflow: visible;
   position:absolute;
-  margin-top: -7vw;
-  margin-left:-37vw;
+  margin-top: -4vw;
+  margin-left:12vw;
   height:95%;
   width:auto;
 }
@@ -586,18 +586,18 @@ svg{
   
   
   .results-section__facts-first_floor_wrapper{
-    background-position:top 0 right -56px;
+    background-position:top 0 left -80px;
     height:685px;
   }
   
   .results-section__facts-second_floor_wrapper{
     margin-top: 204px;
-    background-position:top 0 left 0px;
+    background-position:top 0 right 0px;
     height:685px;
   }
   
   .results-section__facts-third_floor_wrapper{
-    background-position:top 0 left -80px;
+    background-position:top 0 right -74px;
     height:685px;
   }
   
@@ -617,18 +617,18 @@ svg{
   }
   
   .results-section__facts-first_floor_img{
-    margin-top: -72px;
-    margin-left:-108px;
+    margin-top: -132px;
+    margin-left:264px;
   }
   
   .results-section__facts-second_floor_img{
-    margin-top: -300px;
-    margin-left:300px;
+    margin-top: -55px;
+    margin-left:-385px;
   }
   
   .results-section__facts-third_floor_img{
-    margin-top: -84px;
-    margin-left:-444px;
+    margin-top: -44px;
+    margin-left:121px;
   }
 
 }
