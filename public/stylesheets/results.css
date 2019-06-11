@@ -908,4 +908,81 @@ svg{
     margin-top: 16vw;
     display:block;
   } 
+
+  .results-section__facts-floor_wrapper{
+    margin:2vw 2vw 0 2vw;
+  }
+  
+  
+  .results-section__facts-first_floor_wrapper{
+    background-position:top 0 right -16vw;
+    height:82vw;
+  }
+  
+  .results-section__facts-second_floor_wrapper{
+    margin-top: 30vw;
+    background-position:top left;
+    height:82vw;
+  }
+  
+  .results-section__facts-third_floor_wrapper{
+    background-position:top 0 left -7vw;
+    height:82vw;
+  }
+  
+  .results-section__facts-floor_text{
+    width: 46%;
+    padding-top: 5vw; 
+  }
+  
+  .results-section__facts-first_floor_text{
+    padding-left: 1vw; 
+  }
+
+  .results-section__facts-first_floor_text:nth-child(1){
+    margin-top: -7vw;
+  }
+  .results-section__facts-second_floor_text{
+    padding-left: 2vw;
+    padding-right: 0vw; 
+  }
+  
+  .results-section__facts-head{
+    font:normal 800 20vw/14vw 'Montserrat';
+    margin-bottom: 1vw;
+    
+  }
+  .minus_margin{
+    margin-left: -4.5vw;
+  }
+
+  .factoid_text{
+    font:normal 400 5.5vw/6vw 'Montserrat';
+  }
+  
+  .results-section__facts-floor_img{
+    width:75%;
+  }
+  
+  .results-section__facts-first_floor_img{
+    margin-top: -14vw;
+    margin-left:-11vw;
+    height: 85%;
+    visibility: hidden;
+  }
+  
+  .results-section__facts-second_floor_img{
+    margin-top: -17vw;
+    margin-left:-13vw;
+    height: 85%;
+    visibility: hidden;
+  }
+  
+  .results-section__facts-third_floor_img{
+    margin-top: 34vw;
+    margin-left:-41vw;
+    height: 85%;
+    visibility: hidden;
+  }
+
 }
