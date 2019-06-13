@@ -1,0 +1,257 @@
+@media (min-width: 1201px) {
+    html{
+        margin: 0;
+        padding: 0;
+      }
+      
+    body {
+        margin:0;
+        padding:0;
+    }
+
+
+  .main {
+    width:1200px;
+    height:auto;
+  }
+
+
+  .black_floor{
+    padding-left: 12px;
+  }
+
+  .white_floor{
+    padding-left: 12px;
+  }
+
+  .info_block_margin_bottom{
+    padding-bottom: 240px;
+  }
+
+  .logo {
+    font-size: 36px;
+    line-height: 29px;
+    margin:30px 0;
+    width:288px;
+    margin-bottom: 120px;
+  }
+
+  .rules_head{
+    font:normal normal 154px/120px 'Pitcrew';
+    margin-left: -5px;
+    margin-bottom: 96px;
+  }
+
+  h2{
+    font:normal 800 86px/72px 'Montserrat';
+    padding-top:120px;
+    margin-bottom: 75px;
+    margin-left: -6px;
+  }
+
+  .text_block{
+    width:692px;
+    margin-left: 374px;
+  }
+
+  .lead_rules_text{
+    font:normal normal 26px/36px 'Montserrat';
+  }
+
+  .main_rules_text{
+    font:normal normal 19px/29px 'Montserrat';
+  }
+
+  .target__aside{
+    left: 134px;
+    top: 325px;
+  }
+
+  .target-image {
+    width: 208px;
+    margin: 22px 0 34px 0;
+  }
+
+   .target-link {
+    font-size: 19px;
+    line-height: 46px;
+  }
+
+  .carousel {
+      width: 690px;
+      margin: 32px 0 0 377px;
+    }
+    .carousel__main-image {
+      height: 488px;
+    }
+    
+    .carousel__image {
+      width: 690px;
+      height: 488px;
+    }
+
+    .carousel__menu {
+      padding: 0;
+      margin-bottom: 11px;
+    }
+
+    .carousel__menu-button {
+      height: 96px;
+    }
+
+    .carousel__menu-button_active:before {
+      content: '';
+      height: 96px;
+    }
+
+    .carousel__caption {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+  .page-section-image_double{
+    margin: 36px 0 64px 204px;
+  }
+
+  .first_image{
+    width: 421px;
+    margin-right: 14px;
+  }
+ 
+  .second_image{
+    width: 456px;
+  }
+
+  .page-section-image__caption {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+  }
+
+  .page-section-image__caption_mobile{
+    display: none;
+  }
+
+  .img_misheni{
+    width:612px;
+    margin-left: -276px;
+  }
+
+  .img_dates{
+    margin-top: 48px;
+    width: 612px;
+  }
+
+  .page-section__list {
+    margin: 2px 0 0 0;
+  }
+
+  .page-section__list-item {
+    padding: 0 0 0 28px;
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .text_block_no-margin {
+    margin-bottom: 0;
+  }
+
+
+  .page-section__table {
+      width: 528px;
+      font-size: 19px;
+      line-height: 24px;
+      margin: 29px 0 0 0;
+    }
+    
+    .page-section__table-cell {
+        width: 114px;
+    }
+        
+    .page-section__table-row_first-cell{
+        padding-top:8px;
+    }
+        
+    .page-section__table-cell_first-col {
+        width: 204px;
+    }
+        
+    .page-section__table-cell_second-col {
+        width: 112px;
+    }
+        
+    .page-section__table-cell_third-col {
+        width: 112px;
+    }
+        
+    .page-section__table-cell_fourth-col {
+        width: 78px;
+    }
+
+    .page-section__table-cell_first-col_padding{
+      padding-top:0vw;
+    } 
+        
+    .page-section__table-row_first {
+        padding-bottom: 2px;
+        margin-bottom: 28px;
+    }
+        
+    .page-section__table-row_second {
+        margin-bottom: 23px;
+    }
+        
+    .page-section__table-row_third {
+        margin-bottom: 31px;
+    }
+        
+    .page-section__table-row_third .page-section__table-cell:not(.page-section__table-cell_first-col) {
+        padding-top: 16px;
+    }
+        
+    .page-section__table-row_fourth {
+        margin-bottom: 32px;
+    }
+        
+    .page-section__table-row_fourth .page-section__table-cell:not(.page-section__table-cell_first-col) {
+        margin-top: -7px;
+    }
+        
+    .page-section__table-row_fifth .page-section__table-cell:not(.page-section__table-cell_first-col) {
+        margin-top: -7px;
+    }
+        
+    .table-big {
+        font-size: 42px;
+    }
+        
+    .table-small {
+        font-size: 11px;
+    }
+
+
+    footer {
+      padding: 168px 0 0px 0;
+      margin-bottom: 60px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    
+    .footer-phone {
+      text-decoration: none;
+      margin: 0 0 1px 0;
+    }
+    
+
+     .page-cta-block__button {  
+      padding:0;
+      width: 349px;
+      height: 72px;
+      font-size: 24px;
+      line-height: 45px;
+      margin-left: 263px;
+      margin-top: 36px;
+    }
+}

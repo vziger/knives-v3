@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+
+  <meta property="og:image" content="http://knifethrowing.online/images/preview_fb.jpg">
+  <meta property="vk:image" content="http://knifethrowing.online/images/preview_vk.jpg">
+  <meta property="og:title" content="Результаты второго этапа">
+  <meta property="og:description" content="Онлайн турнир по метанию ножей и топоров">
+  <meta property="og:type" content="website">
+
+  <title>{{title}}</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  
+  <link rel="preload" href="/fonts/Montserrat-Black.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Montserrat-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin>
+
+  <link rel="stylesheet" href="/stylesheets/fonts.css">
+  <link rel="stylesheet" href="stylesheets/new_rules.css">
+  <link rel="stylesheet" href="stylesheets/new_rules_wide.css">
+  <link rel="stylesheet" href="stylesheets/new_rules_mobile.css">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(54003475, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/54003475" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<script>
+  let currentIndex = 1;
+
+  window.onresize = function() {
+    const imagesEl = document.querySelector('.carousel__images');
+    const viewPortWidth = window.innerWidth;
+
+    if (viewPortWidth < 1201) {
+      imagesEl.style = `left: ${57.5 - 57.5 * currentIndex}vw;`;
+    } 
+    if(viewPortWidth < 415){
+      imagesEl.style = `left: ${96 - 96 * currentIndex}vw;`;
+    } 
+    if (viewPortWidth > 1200){
+      imagesEl.style = `left: ${690 - 690 * currentIndex}px;`;
+    }
+
+  };
+
+  function setMainImage(index) {
+    const imagesEl = document.querySelector('.carousel__images');
+    const viewPortWidth = window.innerWidth;
+
+    currentIndex = index;
+
+    if (viewPortWidth < 1201) {
+      imagesEl.style = `left: ${57.5 - 57.5 * index}vw;`;
+    } 
+    if(viewPortWidth < 415){
+      imagesEl.style = `left: ${96 - 96 * currentIndex}vw;`;
+    } 
+    if (viewPortWidth > 1200){
+      imagesEl.style = `left: ${690 - 690 * index}px;`;
+    }
+
+    const oldActiveEl = document.querySelector('.carousel__menu-button_active');
+    oldActiveEl.classList.remove('carousel__menu-button_active');
+
+    const newActiveEl = document.querySelector(`.carousel__menu-button:nth-child(${index})`);
+    newActiveEl.classList.add('carousel__menu-button_active');
+  }
+</script>
+
+
+<body>
+    {{{body}}}
+</body>
+</html>
