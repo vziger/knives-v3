@@ -44,6 +44,8 @@ button.addEventListener('click', async (e) => {
   {
     document.getElementById('btn_send_svg').style.visibility='hidden';
     button.style.backgroundImage = "url('images/button_send_wait.gif')";
+    button.style.backgroundRepeat = "no-repeat";
+    button.style.backgroundSize = "16vw";
     button.style.cursor = "default";
     button.disabled = true; 
     
@@ -58,6 +60,9 @@ button.addEventListener('click', async (e) => {
 
     if (response.status = 200) {
       button.style.backgroundImage = "url('images/button_send_ok.svg')";
+      button.style.backgroundRepeat = "no-repeat";
+      button.style.backgroundSize = "16vw";
+      
       button_ok=1;      // раздизейблить кнопку !!!  
     } else {
         // button.disabled = false; 
