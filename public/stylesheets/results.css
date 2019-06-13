@@ -384,6 +384,9 @@ svg{
 }
 
 @media (min-width: 1200px) {
+  .img_dates_display_none{
+    display: none;
+  }
   .hat_results{
     /* !!! другое значение для index.hbs */
     height:984px
@@ -646,7 +649,9 @@ svg{
 }
 
 @media (max-width: 414px) {
-
+  .img_dates_display_none{
+    display: none;
+  }
   .results-block {
     margin-left: 2vw;
     margin-right: 2vw;
@@ -956,11 +961,12 @@ svg{
   }
 
   .results-section__facts-first_floor_text:nth-child(1){
-    margin-top: -7vw;
+    margin-top: 0vw;
   }
   .results-section__facts-second_floor_text{
     padding-left: 3vw;
     padding-right: 0vw; 
+    margin-left: -0.5%;
   }
   
   .results-section__facts-head{
