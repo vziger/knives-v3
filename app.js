@@ -7,7 +7,9 @@ require('dotenv').config();
 const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
-const indexRouter = require('./routes/index');
+
+const formRouter = require('./routes/form');
+
 const resultsRouter = require('./routes/results');
 const usersRouter = require('./routes/users');
 const rulesRouter = require('./routes/rules');
@@ -67,7 +69,7 @@ app.use('/users', usersRouter);
 app.use('/rules', rulesRouter);
 app.use('/wait_results', waitResultsRouter);
 app.use('/unsubscribe', unsubscribeRouter);
-app.use('/results-page', resultsRouter);
+app.use('/form', formRouter);
 app.use('/', resultsRouter);
 
 // catch 404 and forward to error handler

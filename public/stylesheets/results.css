@@ -1,4 +1,4 @@
-.img_dates{
+.img_dates_display_none{
   display: none;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .ico_f{
-  margin-top:0.2vw;
+  margin-top:0.9vw;
 }
 
 .results-section__col {
@@ -332,9 +332,10 @@ svg{
 }
 
 .results-section__facts-first_floor_text{
-  padding-left: 0vw; 
+  padding-left: 1vw; 
 }
 .results-section__facts-second_floor_text{
+  margin-left: 73.5%;
   padding-left: 0vw;
   padding-right: 0vw; 
 }
@@ -484,7 +485,7 @@ svg{
   }
   
   .ico_f{
-    margin-top: 6px;
+    margin-top: 12px;
   }
 
   .results-section__col {
@@ -613,7 +614,7 @@ svg{
   }
   
   .results-section__facts-first_floor_text{
-    padding-left: 0px; 
+    padding-left: 12px; 
   }
   
   .results-section__facts-head{

@@ -87,7 +87,7 @@
   
   .img_dates{
     /*margin:2px 0 4px -2px;*/
-    margin:2px 0 5px -2px;
+    margin:2px 0 8px -2px;
     /*236px*/
     width:283px;
     /*252px*/
@@ -462,7 +462,7 @@
   }
   .spasibo_otpravleno{
     font-size: 24px;
-    line-height: 28px;
+    line-height: 32px;
     /* font-size: 29px; */
     /* line-height: 34px; */
   }

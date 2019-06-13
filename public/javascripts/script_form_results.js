@@ -411,7 +411,8 @@ function loadLocalStorageToInput()
   if(lsLen > 0){
     for(let i = 0; i < lsLen; i++){
       let key = localStorage.key(i);
-      if (!key.includes('previous_pos') && !key.includes('previous_digit_field')){
+      if (!key.includes('previous_pos') && !key.includes('previous_digit_field') &&
+          !key.includes('_ym') ){
         let element = document.getElementById(key);
         if(!key.includes('toggle')){
           element.value = localStorage.getItem(key);

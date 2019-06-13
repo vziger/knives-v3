@@ -189,12 +189,16 @@ a img {
 
 .img_dates{
   /*margin:2px 0 4px -2px;*/
-  margin:0.2vw 0 0.4vw -0.2vw;
+  margin:0.2vw 0 1vw -0.2vw;
   /*236px*/
   width:23.6vw;
   /*252px*/
   height: 25.2vw;
   /*!!! размер !!!*/
+}
+
+.img_dates_display{
+  display:block;
 }
 
 .form-container{
@@ -946,7 +950,7 @@ h2 span{
 }
 
 .spasibo_otpravleno{
-  font: normal normal 2vw/2.4vw 'Montserrat';
+  font: normal normal 2vw/2.7vw 'Montserrat';
 }
 
 .spasibo_otpravleno span{

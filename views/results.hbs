@@ -50,7 +50,7 @@
           <source media="(max-width: 576px)" srcset="img.svg">
           <source media="(min-width: 577px)" srcset="images/dates.svg"> -->
           {{!-- <img class="img_dates" src="{{img_dates_src}}" alt="Второй этап с 20 мая по 2 июня"> --}}
-          <img class="img_dates" src="images/dates_wait_result.svg" alt="10 июня объявим результаты">
+          <img class="{{display_img}}" src="{{img_dates_src}}" alt="10 июня объявим результаты">
         <!-- </picture> -->
 
         <div class="form-container">
@@ -141,6 +141,19 @@
 
               <img class="gender_ico" src="/images/ico_male_small.svg" alt="Мужчины">
               <div class="results-section__col">
+                
+                <div class="results-item">
+                  <p class="results-item__place">1</p>
+                  <p class="results-item__name-team">
+                    <span class="results-item__name">Денис Сидорин</span><br>
+                    <span class="results-item__team">
+                      Сварог
+                      <img class="results-item__flag" src="/images/flag_ru.png" alt="Россия">
+                    </span>
+                  </p>
+                  <p class="results-item__score">185</p>
+                </div>
+
                 <div class="results-item">
                   <p class="results-item__place">1</p>
                   <p class="results-item__name-team">
@@ -152,6 +165,7 @@
                   </p>
                   <p class="results-item__score">180</p>
                 </div>
+
                 <div class="results-item">
                   <p class="results-item__place">2</p>
                   <p class="results-item__name-team">
@@ -163,6 +177,7 @@
                   </p>
                   <p class="results-item__score">175</p>
                 </div>
+
                 <div class="results-item">
                   <p class="results-item__place">3</p>
                   <p class="results-item__name-team">
@@ -266,7 +281,7 @@
                 <div class="results-item">
                   <p class="results-item__place">3</p>
                   <p class="results-item__name-team">
-                    <span class="results-item__name">Павел Чеботарёв</span><br>
+                    <span class="results-item__name">Павел Чеботарев</span><br>
                     <span class="results-item__team">
                       Гюрза
                       <img class="results-item__flag" src="/images/flag_ru.png" alt="Россия">
@@ -325,7 +340,7 @@
                 <div class="results-item">
                   <p class="results-item__place">1</p>
                   <p class="results-item__name-team">
-                    <span class="results-item__name">Павел Чеботарёв</span><br>
+                    <span class="results-item__name">Павел Чеботарев</span><br>
                     <span class="results-item__team">
                       Гюрза
                       <img class="results-item__flag" src="/images/flag_ru.png" alt="Россия">
@@ -417,7 +432,7 @@
                 <div class="results-item">
                   <p class="results-item__place">2</p>
                   <p class="results-item__name-team">
-                    <span class="results-item__name">Павел Чеботарёв</span><br>
+                    <span class="results-item__name">Павел Чеботарев</span><br>
                     <span class="results-item__team">
                       Гюрза
                       <img class="results-item__flag" src="/images/flag_ru.png" alt="Россия">
@@ -962,24 +977,25 @@
 
     </div>    {{!-- results_block --}}
 
-    
+    {{!-- <div class="results-section__facts-floor_wrapper results-section__facts-first_floor_wrapper"></div> --}}
+    {{!-- <img src = "/images/back_2_notransp.png"> --}}
 
     <div class="results-section__facts-floor_wrapper results-section__facts-second_floor_wrapper">
       
       <div class = "results-section__facts-floor_text results-section__facts-first_floor_text">
           <h3 class="results-section__facts-head minus_margin">1675</h3>
           <p class = "factoid_text minus_margin">
-             баллов — максимальный результат по сумме всех&nbsp;дистанций в&nbsp;ножах показал&nbsp;Павел&nbsp;Чеботарёв,<br> Гюрза</p>
+             баллов — максимальный результат по сумме всех&nbsp;дистанций в&nbsp;ножах показал&nbsp;Павел&nbsp;Чеботарев,<br> Гюрза</p>
       </div>
-      <div class = "results-section__facts-floor_img">
+      {{!-- <div class = "results-section__facts-floor_img">
         <img class="results-section__facts-first_floor_img" src="images/i.svg">
-      </div>
+      </div> --}}
     </div>
 
     <div class = "results-section__facts-floor_wrapper results-section__facts-first_floor_wrapper">
-      <div class = "results-section__facts-floor_img">
+      {{!-- <div class = "results-section__facts-floor_img">
         <img class="results-section__facts-second_floor_img" src="images/ii_.svg">
-      </div>
+      </div> --}}
       
       <div class="results-section__facts-floor_text results-section__facts-second_floor_text">
         <h3 class="results-section__facts-head">580</h3>
@@ -999,10 +1015,12 @@
              </p>
       </div>
 
-      <div class = "results-section__facts-floor_img">
+      {{!-- <div class = "results-section__facts-floor_img">
         <img class="results-section__facts-third_floor_img" src="images/iii_.svg">
-      </div>
+      </div> --}}
     </div>
+
+
 
     {{!-- <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
       <img src="my_thumbnail.png" style="cursor:pointer" />

@@ -3,10 +3,11 @@ const Emails = require('../models/emails');
 const mail = require('../controller/email');
 const router = express.Router();
 
-
+// Выводим результаты второго этапа!!!
 router.get('/', (req, res,next) => {
     try {
-      res.render('results', { title: 'Результаты второго этапа' });
+      res.render('results', { title: 'Результаты второго этапа',
+      display_img: 'img_dates img_dates_display_none' });
     } catch (error) {
       console.log(error.message);
       next(error);

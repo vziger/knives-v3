@@ -9,7 +9,7 @@ const router = express.Router();
 // const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
-router.post('/results', async (req, res, next) => {
+router.post('/results_send', async (req, res, next) => {
   try {
     console.log('FETCh mufucka');
     console.log(req.body);
@@ -182,8 +182,9 @@ router.get('/all_results', async (req, res) => {
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Метательные практики',
+  res.render('form', { title: 'Метательные практики',
   img_dates_src:'/images/dates_helv.svg',
+  display_img: 'img_dates img_dates_display',
   text_send_results:'За\u00A0каждый бросок начисляется столько баллов, сколько указано \
   на\u00A0мишени, куда\u00A0попал\u00A0топор или\u00A0нож. Результаты принимаем \
   с\u00A000:00 20\u00A0мая \

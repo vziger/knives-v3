@@ -81,7 +81,7 @@ form.addEventListener('submit', async (event) => {
       btn.disabled = true;
 
 
-      const response = await fetch('/results', {
+      const response = await fetch('/form/results_send', {
         method: 'POST',
         headers: {
           Accept: 'application/json, text/plain, */*',
