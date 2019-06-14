@@ -4,3 +4,5 @@ tmp/
 _old/
 google.json
 google/
+ggl_local_creds.json
+token.json

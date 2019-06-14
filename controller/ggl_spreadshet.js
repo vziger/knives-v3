@@ -17,7 +17,6 @@ class GoogleOperations{
   saveNewResults(auth) {
     let sheets = google.sheets('v4');
     const sheetID = process.env.googleSheetID;
-    // const sheetID = '1YoKdnk0ltH9rnjK8GZtCyApRouVx33qG0cUrnrAYZtY';
     const range ='Второй этап!A1:B';
 
     sheets.spreadsheets.values.get({
