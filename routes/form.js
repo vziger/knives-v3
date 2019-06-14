@@ -4,6 +4,8 @@ const Emails = require('../models/emails');
 const mail = require('../controller/email');
 const mail_results = require('../controller/email_results');
 const Player = require('../models/Player');
+const GoogleOperations = require('../controller/ggl_spreadshet');
+
 const router = express.Router();
 
 // const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -97,6 +99,8 @@ router.post('/results_send', async (req, res, next) => {
     await newPlayer.save();
 
     mail_results(EmailRes, newPlayer).catch(console.error);
+
+    GoogleOperations.save2Google(newPlayer).catch(console.error);
 
     console.log('-----^^-----');
     res.status(200).send();
