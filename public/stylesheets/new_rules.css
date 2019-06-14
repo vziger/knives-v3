@@ -31,8 +31,6 @@ body {
   padding:0;
 }
 
-
-
 h1 span{
   display:block;
 }
@@ -84,6 +82,32 @@ h3 span{
   color: #000;
 }
 
+.main-title_link{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+  
+.main-title_link:visited{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+  
+.main-title_hover{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
 
 .info_block_margin_bottom{
   padding-bottom: 20vw;
