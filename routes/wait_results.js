@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     try {
       res.render('wait_results_parallax', { title: 'Правила участия', 
-      layout: 'layout_counting_results'});
+      layout: 'layout_wait_results'});
     } catch (error) {
       console.log(error.message);
       next(error);

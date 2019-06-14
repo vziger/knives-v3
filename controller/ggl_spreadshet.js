@@ -57,7 +57,7 @@ class GoogleOperations{
 
       let approved =  (sum > KNIVES_APPROVED_LIMIT) ? -1 : 1;
 
-      values_kn3 = [playerData.last_name, playerData.first_name, gender, '3', 
+      values_kn3 = [playerData.first_name, playerData.last_name, gender, '3', 
       playerData.knife_3M[0], playerData.knife_3M[1], playerData.knife_3M[2], 
       playerData.knife_3M[3], playerData.knife_3M[4], playerData.knife_3M[5], 
       playerData.knife_3M[6], playerData.knife_3M[7], playerData.knife_3M[8],
@@ -75,7 +75,7 @@ class GoogleOperations{
 
       let approved =  (sum > KNIVES_APPROVED_LIMIT) ? -1 : 1;
 
-      values_kn4 = [playerData.last_name, playerData.first_name, gender, '4', 
+      values_kn4 = [playerData.first_name, playerData.last_name, gender, '4', 
       playerData.knife_4M[0], playerData.knife_4M[1], playerData.knife_4M[2], 
       playerData.knife_4M[3], playerData.knife_4M[4], playerData.knife_4M[5], 
       playerData.knife_4M[6], playerData.knife_4M[7], playerData.knife_4M[8],
@@ -93,7 +93,7 @@ class GoogleOperations{
 
       let approved =  (sum > KNIVES_APPROVED_LIMIT) ? -1 : 1;
 
-      values_kn5 = [playerData.last_name, playerData.first_name, gender, '5', 
+      values_kn5 = [playerData.first_name, playerData.last_name, gender, '5', 
       playerData.knife_5M[0], playerData.knife_5M[1], playerData.knife_5M[2], 
       playerData.knife_5M[3], playerData.knife_5M[4], playerData.knife_5M[5], 
       playerData.knife_5M[6], playerData.knife_5M[7], playerData.knife_5M[8],
@@ -111,7 +111,7 @@ class GoogleOperations{
 
       let approved =  (sum > AXE_APPROVED_LIMIT) ? -1 : 1;
 
-      values_axe = [playerData.last_name, playerData.first_name, gender, 'Т', 
+      values_axe = [playerData.first_name, playerData.last_name, gender, 'Т', 
       playerData.axe_4M[0], playerData.axe_4M[1], playerData.axe_4M[2], 
       playerData.axe_4M[3], playerData.axe_4M[4], playerData.axe_4M[5], 
       playerData.axe_4M[6], playerData.axe_4M[7], playerData.axe_4M[8],

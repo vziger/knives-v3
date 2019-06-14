@@ -229,6 +229,13 @@ background-color: rgba(255,0,0,0.);
   /*padding:0 0 0 10px;*/
 }
 
+.content_text_desktop{
+  display:block;
+}
+.content_text_mobile{
+  display: none;
+}
+
 .logo {
   /*32px/24px*/
   font:normal 900 3vw/2.4vw 'Montserrat';
@@ -241,7 +248,8 @@ background-color: rgba(255,0,0,0.);
   /*15px/18px*/
   font: normal normal 1.5vw/1.8vw 'Montserrat';
   color: #FFFFFF;
-  margin:-1.1vw 0;
+  margin: -1.1vw 0;
+  display: block;
 }
 
 .text{
@@ -601,6 +609,7 @@ h2 span{
 .img_i_absolute{
   z-index:10; 
   position:absolute; 
+  display: block;
   top: 117vw; 
   left:42.5vw; 
   /*width:57.5vw; */
@@ -654,6 +663,13 @@ h2 span{
   font: normal normal 2.2vw/2.8vw 'Montserrat';
   color: #fff;
   margin:2.4vw 0; /*24px*/
+}
+
+.show_desktop{
+  display: block;
+}
+.show_mobile{
+  display: none;
 }
 
  .link_box{
