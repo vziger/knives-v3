@@ -110,7 +110,7 @@ h3 span{
 }
 
 .info_block_margin_bottom{
-  padding-bottom: 20vw;
+  padding-bottom: 13.3vw;
 }
 .logo {
   /*32px/24px*/
@@ -125,13 +125,16 @@ h3 span{
 .rules_head{
   font:normal normal 12.8vw/10vw 'Pitcrew';
   margin-left: -0.4vw;
-  margin-bottom: 8vw;
+  margin-bottom: 6vw;
+  display: block;
 }
-
+.rules_head_mobile{
+  display: none;
+}
 h2{
   font:normal 800 7.2vw/6vw 'Montserrat';
-  padding-top:10vw;
-  margin-bottom: 6vw;
+  padding-top:1.67vw;
+  margin-bottom: 5vw;
   margin-left: -0.5vw;
 }
 .text_block{
@@ -188,12 +191,12 @@ h2{
 .target__aside{
   position: absolute;
   left: 11.2vw;
-  top: 27.1vw;
+  top: 17.6vw;
 }
 
 .target-image {
-  width: 16.8vw;
-  margin: 1.3vw 0 2.6vw 0;
+  width: 17vw;
+  margin: 1.3vw 0 2.9vw 0;
 }
 
  .target-link {
@@ -304,7 +307,7 @@ h2{
   }
 
 .page-section-image_double{
-  margin: 3vw 0 5.3vw 17vw;
+  margin: 3vw 0 5.3vw 10.3vw;
 }
 .div_flex_option{
   display: flex;
@@ -312,14 +315,15 @@ h2{
 }
 
 .first_image{
-  width:35.1vw;
+  width: 40.1vw;
   margin-right: 1.2vw;
+  margin-top: 0.25px;
 }
 .first_image img{
   width:100%;
 }
 .second_image{
-  width:38vw;
+  width: 43.8vw;
 }
 .second_image img{
   width:100%;
@@ -457,7 +461,7 @@ h2{
 
   footer {
     padding: 14vw 0 0 0;
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
     font-size: 1.5vw;
     line-height: 2vw;
     background-color: #fff;

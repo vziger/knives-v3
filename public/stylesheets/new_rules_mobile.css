@@ -28,27 +28,30 @@
 
 
   .info_block_margin_bottom{
-    padding-bottom: 30vw;
+    padding-bottom: 20vw;
   }
 
   .logo {
-        font-size: 8vw;
-        line-height: 6.3vw;
-        margin: 8vw 0 0;
-        width: 50%;
-        font-weight: 800;
-    }
-
+    font-size: 8vw;
+    line-height: 6.3vw;
+    margin: 8vw 0 0;
+    width: 50%;
+    font-weight: 800;
+  }
 
   .rules_head{
-    font:normal normal 12.8vw/10vw 'Pitcrew';
+    display: none;
+  }
+  .rules_head_mobile{
+    font:normal normal 21vw/17vw 'Pitcrew';
     margin-left: -0.4vw;
     margin: 24vw 0 10vw;
+    display: block;
   }
 
   h2{
     font:normal 800 10vw/8vw 'Montserrat';
-    padding-top:10vw;
+    padding-top:4vw;
     margin-bottom: 6vw;
     margin-left: -0.5vw;
   }
@@ -211,7 +214,7 @@
   }
   .second_image{
     width:95vw;
-    margin-bottom: 10vw;
+    margin-bottom: 8vw;
   }
   .second_image img{
     width:100%;
@@ -229,9 +232,10 @@
     font-size: 3.5vw;
     line-height: 4.5vw;
     display: block;
+  }
+  .page-section-image__caption_mobile_margin{
     margin-bottom: 7vw;
   }
-
 
   .page-section-image__caption span{
     display: block;
@@ -349,11 +353,15 @@
     .table-small {
       font-size: 2.6vw;
     }
-
+     h1 span{
+      font-family: 'Montserrat';
+      font-weight: 800;
+      display: inline;
+     }
     
     footer {
-      padding: 14vw 0 5vw 0;
-      margin-bottom: 5vw;
+      padding: 14vw 0 3vw 0;
+      margin-bottom: 0vw;
       font: normal normal 4vw/5vw 'Montserrat';
       background-color: #fff;
     }

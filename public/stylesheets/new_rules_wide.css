@@ -25,7 +25,7 @@
   }
 
   .info_block_margin_bottom{
-    padding-bottom: 240px;
+    padding-bottom: 160px;
   }
 
   .logo {
@@ -39,13 +39,13 @@
   .rules_head{
     font:normal normal 154px/120px 'Pitcrew';
     margin-left: -5px;
-    margin-bottom: 96px;
+    margin-bottom: 72px;
   }
 
   h2{
     font:normal 800 86px/72px 'Montserrat';
-    padding-top:120px;
-    margin-bottom: 75px;
+    padding-top:20px;
+    margin-bottom: 60px;
     margin-left: -6px;
   }
 
@@ -64,12 +64,12 @@
 
   .target__aside{
     left: 134px;
-    top: 325px;
+    top: 207px;
   }
 
   .target-image {
     width: 208px;
-    margin: 22px 0 34px 0;
+    margin: 25px 0 34px 0;
   }
 
    .target-link {
@@ -110,16 +110,17 @@
     }
 
   .page-section-image_double{
-    margin: 36px 0 64px 204px;
+    margin: 36px 0 64px 122px;
   }
 
   .first_image{
-    width: 421px;
+    width: 480px;
     margin-right: 14px;
+    margin-top: 3px;
   }
  
   .second_image{
-    width: 456px;
+    width: 527px;
   }
 
   .page-section-image__caption {
@@ -234,7 +235,7 @@
 
     footer {
       padding: 168px 0 0px 0;
-      margin-bottom: 60px;
+      margin-bottom: 24px;
       font-size: 18px;
       line-height: 24px;
     }
