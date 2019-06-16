@@ -30,7 +30,15 @@
   .hat_results{
     height: 292vw;
   }
-
+  .rules_hat{
+    position: absolute;
+    bottom: 170vw;
+    right:2vw;
+    font: normal normal 6vw/2.8vw 'Montserrat';
+  }
+  .rules_hat.icon_slash{
+    margin-top: 0;
+  }
   .content {
     width: 100%;
     /* height:150vw; */
@@ -56,7 +64,7 @@
   .content_text{
     font-size: 6vw;
     line-height: 7.2vw;
-    margin:116vw 0 0;
+    margin:124vw 0 0;
   }
   .content_text_desktop{
     display: none;
@@ -67,7 +75,7 @@
 
   /*** social buttons ***/
   .social_buttons_container{
-      top: 218vw;
+      top: 222vw;
   }
   
   .social_button {
@@ -152,6 +160,7 @@
     line-height: 7vw;
     /* width:95%; */
     margin-top:10vw;
+    margin-left: 0vw;
   } 
   
   

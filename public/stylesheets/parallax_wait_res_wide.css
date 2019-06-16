@@ -65,6 +65,7 @@
 
   .parallax__layer--back_right {
     right: 15px;
+    left:-24px;
     /* top:-1272px; */
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1px) scale(2);

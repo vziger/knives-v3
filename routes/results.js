@@ -4,15 +4,26 @@ const mail = require('../controller/email');
 const router = express.Router();
 
 // Выводим результаты второго этапа!!!
+// router.get('/', (req, res,next) => {
+//     try {
+//       res.render('results', { title: 'Результаты второго этапа',
+//       display_img: 'img_dates img_dates_display_none' });
+//     } catch (error) {
+//       console.log(error.message);
+//       next(error);
+//     }
+//   });
+
 router.get('/', (req, res,next) => {
-    try {
-      res.render('results', { title: 'Результаты второго этапа',
-      display_img: 'img_dates img_dates_display_none' });
-    } catch (error) {
-      console.log(error.message);
-      next(error);
-    }
-  });
+  try {
+    res.render('results_parallax', { title: 'Результаты второго этапа',
+    layout: 'layout_results_parallax',
+    display_img: 'img_dates img_dates_display_none' });
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+});
 
   router.post('/subscribe', async (req, res, next) => {
     try {

@@ -207,8 +207,11 @@
   }
   
   .social_buttons_container{
-    position: absolute;
-    top: 218vw;
+    /* position: absolute;
+    top: 218vw; */
+
+    margin-top: 8vw;
+    position: relative;
   }
   
   svg{
