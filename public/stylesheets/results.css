@@ -399,7 +399,7 @@ svg{
   width:auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .img_dates_display_none{
     display: none;
   }
@@ -423,7 +423,7 @@ svg{
   .link_box_results{
     margin-top: 48px;
     font-size: 28px;
-    margin-left: 300px;
+    margin-left: 313px;
   }
 
   /* .hat{
@@ -452,6 +452,11 @@ svg{
     margin-left: 1.2px;
   }
   
+  .results-section {
+    margin-left: 284px;
+    margin-right: -12px;
+  }
+
   .results-section_axes {
     margin-bottom: 50px;
   }
