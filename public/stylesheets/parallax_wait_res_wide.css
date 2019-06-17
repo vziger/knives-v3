@@ -620,9 +620,9 @@
   }
 
   footer{
-    margin: 24px;
+    margin-bottom: 24px;
   }
-  
+
   .footer_container{
     font-size: 19px;
     line-height: 24px;
