@@ -53,10 +53,13 @@
 	.results-block_parallax_mobile{
 		margin-top: 24vw;
 	}
+	.div-form{
+		top:260vw;
+	}
 
 	.rules_hat_link{
     position: absolute;
-    bottom: 170vw;
+    top: 115vw;
     right:2vw;
     font: normal normal 6vw/2.8vw 'Montserrat';
 	}
@@ -70,7 +73,7 @@
 	}
 
 	.results-block {
-		margin-top: 32vw;
+		margin-top: 248vw;
 	}
 
 	.link_box_results {
