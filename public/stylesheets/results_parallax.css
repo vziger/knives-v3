@@ -83,4 +83,8 @@
 	.parallax__layer--back_right {
 		top: 94vw;
 	}
+
+	.footer_contacts_2.show_desktop{
+		display: none;
+	}
 }

@@ -1259,6 +1259,9 @@ footer{
   bottom: 2.5vw;*/
 }
 
+.footer_contacts_2.show_desktop{
+  display: none;
+}
 
 
 @media (min-height:1010px)
@@ -1271,3 +1274,8 @@ footer{
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {     
+  ::i-block-chrome,.footer_contacts_2.show_desktop {
+   display: block;
+  }
+}
