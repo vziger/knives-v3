@@ -419,10 +419,24 @@ input, textarea, select, button{
   left: -4.5vw; /* calc !!!*/
   cursor: pointer;
   outline: none;
-  /* background-image: url(../images/button_send.svg);
+  background-image: '';
+  /*background-image: url(../images/button_send_ok.svg);
   background-repeat: no-repeat;
   background-position:top left;
   background-size: 100% 100%; */
+}
+
+.btn_send_back_ok{
+  background-image: url(../images/button_send_ok.svg);
+  background-repeat: no-repeat;
+  background-size: 4.6vw 4.1vw;
+  cursor: default;
+}
+.btn_send_back_wait{
+  background-image: url(../images/button_send_wait.gif);
+  background-repeat: no-repeat;
+  background-size: 4.6vw 4.1vw;
+  cursor: default;
 }
 
 .btn_send_svg_b{

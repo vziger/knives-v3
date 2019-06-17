@@ -30,7 +30,9 @@ input_mail.addEventListener('input', function(){
   button_ok = 0;
   document.getElementById('btn_send_svg').style.visibility='visible';
   // button.style.backgroundImage = "url('/images/button_send.svg')";
-  button.style.backgroundImage = "";
+  button.classList.remove('btn_send_back_ok');
+  button.classList.remove('btn_send_back_wait');
+  // button.style.backgroundImage = "";
   button.style.cursor = "pointer";
 })
 
@@ -43,10 +45,12 @@ button.addEventListener('click', async (e) => {
   if (input_mail.value!="" && pattern.test(input_mail.value.trim()))
   {
     document.getElementById('btn_send_svg').style.visibility='hidden';
-    button.style.backgroundImage = "url('/images/button_send_wait.gif')";
-    button.style.backgroundRepeat = "no-repeat";
-    button.style.backgroundSize = "16vw";
-    button.style.cursor = "default";
+    button.classList.remove('btn_send_back_ok');
+    button.classList.add('btn_send_back_wait');
+    // button.style.backgroundImage = 'url(images/button_send_wait.gif)';
+    // button.style.backgroundRepeat = 'no-repeat';
+    // button.style.backgroundSize = '16vw';
+    // button.style.cursor = 'default';
     button.disabled = true; 
     
     const response = await fetch('/subscribe', {
@@ -59,9 +63,11 @@ button.addEventListener('click', async (e) => {
       });
 
     if (response.status = 200) {
-      button.style.backgroundImage = "url('/images/button_send_ok.svg')";
-      button.style.backgroundRepeat = "no-repeat";
-      button.style.backgroundSize = "16vw";
+      button.classList.remove('btn_send_back_wait');
+      button.classList.add('btn_send_back_ok');
+      // button.style.backgroundImage = "url(../images/button_send_ok.svg)";
+      // button.style.backgroundRepeat = 'no-repeat';
+      // button.style.backgroundSize = "16vw";
       
       button_ok=1;      // раздизейблить кнопку !!!  
     } else {

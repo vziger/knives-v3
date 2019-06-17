@@ -225,6 +225,13 @@
     background-size: 100% 100%;
   }
   
+  .btn_send_back_ok{
+    background-size: 55px 49px;
+  }
+  .btn_send_back_wait{
+    background-size: 4.6vw 4.1vw;
+  }
+  
   .img_arrow{
     margin: 0;
     /*46px*/

@@ -311,7 +311,7 @@
     font-size: 6vw;
     line-height: 7vw;
 
-    padding-left: 0vw;
+    padding-left: 2vw;
     width: 96vw;
     height: 15vw;
     padding-right: 16vw;
@@ -331,6 +331,13 @@
     height: 15vw;
     top: 0.1vw;
     left: -16.2vw;
+  }
+
+  .btn_send_back_ok{
+    background-size: 16vw;
+  }
+  .btn_send_back_wait{
+    background-size: 16vw;
   }
   
   .btn_send_svg_b{
