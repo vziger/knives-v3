@@ -5,8 +5,9 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     try {
-      res.render('wait_results_parallax', { title: 'Правила участия', 
-      layout: 'layout_wait_results'});
+      res.render('wait_results_parallax', { title: '10 июня объявим результаты', 
+      layout: 'layout_wait_results',
+      og_title:'<meta property="og:title" content="10 июня объявим результаты второго этапа">'});
     } catch (error) {
       console.log(error.message);
       next(error);

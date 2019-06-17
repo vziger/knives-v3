@@ -18,6 +18,7 @@ router.get('/', (req, res,next) => {
   try {
     res.render('results_parallax', { title: 'Результаты второго этапа',
     layout: 'layout_results_parallax',
+    og_title:'<meta property="og:title" content="Результаты второго этапа">',
     display_img: 'img_dates img_dates_display_none' });
   } catch (error) {
     console.log(error.message);

@@ -199,10 +199,11 @@ router.get('/all_results', async (req, res) => {
 router.get('/', (req, res, next) => {
   res.render('form_parallax', { title: 'Метательные практики',
   layout: 'layout_wait_results',
-
+  og_title:'<meta property="og:title" content="Результаты второго этапа">',
   scripts_form: '<script type="text/javascript" src="/javascripts/script_form_results.js"></script>\
                 <script type="text/javascript" src="/javascripts/script_page_results.js"></script>',
-  css_form: '<link rel="stylesheet" href="stylesheets/form_parallax.css">',              
+  css_form: '<link rel="stylesheet" href="stylesheets/form_parallax.css">',      
+          
   img_dates_src: 'src="images/dates_helv.svg"',
   display_img: 'img_dates img_dates_display',
   text_send_results:'За\u00A0каждый бросок начисляется столько баллов, сколько указано \
