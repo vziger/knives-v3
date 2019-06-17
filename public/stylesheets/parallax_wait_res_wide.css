@@ -619,6 +619,10 @@
     padding: 0 72px 0 72px;
   }
 
+  footer{
+    margin: 24px;
+  }
+  
   .footer_container{
     font-size: 19px;
     line-height: 24px;

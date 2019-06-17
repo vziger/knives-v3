@@ -1221,6 +1221,9 @@ h2 span{
   transition:all 0ms linear;
 }
 
+footer{
+  margin: 2vw;
+}
 
 .footer_container{
   font: normal normal 1.6vw/2vw 'Montserrat';
