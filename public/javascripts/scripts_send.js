@@ -11,7 +11,7 @@ div_button.addEventListener('mouseover', function(){
     // alert('div_button');
     document.getElementById('btn_send_svg').classList.add('btn_send_svg_y');
     document.getElementById('btn_send_svg').classList.remove('btn_send_svg_b');
-    // button.style.backgroundImage = "url('images/button_send_y.svg')";
+    // button.style.backgroundImage = "url('/images/button_send_y.svg')";
   }
 })
 
@@ -20,7 +20,7 @@ div_button.addEventListener('mouseout', function(){
   {
     document.getElementById('btn_send_svg').classList.add('btn_send_svg_b');
     document.getElementById('btn_send_svg').classList.remove('btn_send_svg_y');
-    // button.style.backgroundImage = "url('images/button_send.svg')";
+    // button.style.backgroundImage = "url('/images/button_send.svg')";
   }
 })
 
@@ -29,7 +29,7 @@ input_mail.addEventListener('input', function(){
   button.disabled = false;
   button_ok = 0;
   document.getElementById('btn_send_svg').style.visibility='visible';
-  // button.style.backgroundImage = "url('images/button_send.svg')";
+  // button.style.backgroundImage = "url('/images/button_send.svg')";
   button.style.backgroundImage = "";
   button.style.cursor = "pointer";
 })
@@ -43,7 +43,7 @@ button.addEventListener('click', async (e) => {
   if (input_mail.value!="" && pattern.test(input_mail.value.trim()))
   {
     document.getElementById('btn_send_svg').style.visibility='hidden';
-    button.style.backgroundImage = "url('images/button_send_wait.gif')";
+    button.style.backgroundImage = "url('/images/button_send_wait.gif')";
     button.style.backgroundRepeat = "no-repeat";
     button.style.backgroundSize = "16vw";
     button.style.cursor = "default";
@@ -59,7 +59,7 @@ button.addEventListener('click', async (e) => {
       });
 
     if (response.status = 200) {
-      button.style.backgroundImage = "url('images/button_send_ok.svg')";
+      button.style.backgroundImage = "url('/images/button_send_ok.svg')";
       button.style.backgroundRepeat = "no-repeat";
       button.style.backgroundSize = "16vw";
       
