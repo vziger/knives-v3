@@ -1,5 +1,9 @@
 function result_fields_generate(div_id) {
   // "knife_3m"
+  // let scr_w=screen.width;
+  // alert(scr_w);
+
+
   const div = document.getElementById(div_id);
   for (let i = 1; i < 11; i += 1) {
     var input = document.createElement('input');
@@ -11,14 +15,7 @@ function result_fields_generate(div_id) {
     input.id = `text_${div_id}_${i}`;
     // input.id = 'text_' + div_id + '_' + i;
     input.name = `name_${div_id}_${i}`;
-    input.className = 'form_results_digitsinput form_results_border_neutral';
-
-    // if (div_id == 'axe_4m') {
-    //   input.max = '20';
-    //   // input.className = 'form_results_digitsinput_center form_results_border_neutral';
-    // } else {
-    //   input.max = '60';
-    // }
+    input.className = 'form_results_digitsinput form_results_border_neutral show_desktop_inline';
 
     input.onchange = function () {
       sum_results(div_id);
@@ -116,11 +113,22 @@ function result_fields_generate(div_id) {
   input.autocomplete='off';
   input.autocorrect='off';
 
+  const scr_w = screen.width;
   if (div_id == 'axe_4m') {
-    input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color';
+    input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color form_results_digitsinput_sum_collapsed';
     input.style.fontWeight="bold";
   }
-  else input.className = 'form_results_digitsinput form_results_digitsinput_sum';
+  else {
+    if (scr_w > 414)
+      input.className = 'form_results_digitsinput form_results_digitsinput_sum';
+    else
+      input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color form_results_digitsinput_sum_collapsed';
+  }
+
+
+  
+
+
 
   input.id = `text_${div_id}_SUM`;
   input.name = `name_${div_id}_SUM`;
@@ -333,6 +341,7 @@ function show_submit_button() {
 
   const club = document.getElementById('textClub').value;
   const mail = document.getElementById('textEmail').value;
+  const country = document.getElementById('textCountry').value;
 
   document.getElementById('idFormResults').reset();
   
@@ -343,6 +352,7 @@ function show_submit_button() {
 
   document.getElementById('textClub').value = club;
   document.getElementById('textEmail').value = mail;
+  document.getElementById('textCountry').value = country;
 
   const allElem = document.forms[1].elements;
   for(let i=0;i<allElem.length;i++)
@@ -718,7 +728,69 @@ function validateLink(discipline, flag_button_send) {
   }
 }
 
+function show_digits(discipline)
+{
+  const link_id  = 'div_link_' + discipline; 
+  const notes_id = 'div_notes_' + discipline;
+  const el_id = 'text_' + discipline + '_';
 
+  const block = document.getElementById(discipline);
+  const link = document.getElementById(link_id);
+  const notes = document.getElementById(notes_id);
+
+  const el_1 = document.getElementById(el_id + '1');
+  const el_2 = document.getElementById(el_id + '2');
+  const el_3 = document.getElementById(el_id + '3');
+  const el_4 = document.getElementById(el_id + '4');
+  const el_5 = document.getElementById(el_id + '5');
+  const el_6 = document.getElementById(el_id + '6');
+  const el_7 = document.getElementById(el_id + '7');
+  const el_8 = document.getElementById(el_id + '8');
+  const el_9 = document.getElementById(el_id + '9');
+  const el_10 = document.getElementById(el_id + '10');
+  const el_sum = document.getElementById(el_id + 'SUM');
+  const el_All_sum = document.getElementById(el_id + 'ALL_SUM');
+  
+  el_sum.classList.toggle('form_results_digitsinput_sum_collapsed');
+
+  el_1.classList.toggle('show_desktop_inline');
+  el_1.classList.toggle('show_mobile');
+
+  el_2.classList.toggle('show_desktop_inline');
+  el_2.classList.toggle('show_mobile');
+
+  el_3.classList.toggle('show_desktop_inline');
+  el_3.classList.toggle('show_mobile');
+  
+  el_4.classList.toggle('show_desktop_inline');
+  el_4.classList.toggle('show_mobile');
+  
+  el_5.classList.toggle('show_desktop_inline');
+  el_5.classList.toggle('show_mobile');
+
+  el_6.classList.toggle('show_desktop_inline');
+  el_6.classList.toggle('show_mobile');
+
+  el_7.classList.toggle('show_desktop_inline');
+  el_7.classList.toggle('show_mobile');
+
+  el_8.classList.toggle('show_desktop_inline');
+  el_8.classList.toggle('show_mobile');
+
+  el_9.classList.toggle('show_desktop_inline');
+  el_9.classList.toggle('show_mobile');
+
+  el_10.classList.toggle('show_desktop_inline');
+  el_10.classList.toggle('show_mobile');
+  // block.classList.toggle('show_desktop');
+  // block.classList.toggle('show_mobile');
+
+  link.classList.toggle('show_desktop');
+  link.classList.toggle('show_mobile');
+
+  notes.classList.toggle('show_desktop');
+  notes.classList.toggle('show_mobile');
+}
 
 
 

@@ -81,7 +81,7 @@ h3 span{
   background-clip: padding-box;
 }
   
-.main-title_hover{
+.main-title_link_hover{
   margin: 0;
   text-decoration: none;
   border: 0;

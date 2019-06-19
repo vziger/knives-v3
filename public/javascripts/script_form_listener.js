@@ -65,6 +65,15 @@ form.addEventListener('submit', async (event) => {
     console.log('Валидируем');
     document.getElementById('checkFormTextWrong').style.visibility = 'hidden';
 
+    document.getElementById('div_mobile_border_axe_4m').classList.remove('discipline_border_wrong');
+    document.getElementById('div_mobile_border_axe_4m').classList.add('discipline_border');
+    document.getElementById('div_mobile_border_knife_3m').classList.remove('discipline_border_wrong');
+    document.getElementById('div_mobile_border_knife_3m').classList.add('discipline_border');
+    document.getElementById('div_mobile_border_knife_4m').classList.remove('discipline_border_wrong');
+    document.getElementById('div_mobile_border_knife_4m').classList.add('discipline_border');
+    document.getElementById('div_mobile_border_knife_5m').classList.remove('discipline_border_wrong');
+    document.getElementById('div_mobile_border_knife_5m').classList.add('discipline_border');
+
     try {
       const formData = new FormData(document.getElementById('idFormResults'));
       // console.log(formData);
@@ -142,6 +151,50 @@ form.addEventListener('submit', async (event) => {
     }
   } else {
     console.log('НЕ Валидируем');
+
+    const scr_w=screen.width;
+    if (scr_w <= 414)
+    {
+      if(!boolAxe)
+      {
+        document.getElementById('div_mobile_border_axe_4m').classList.add('discipline_border_wrong');
+        document.getElementById('div_mobile_border_axe_4m').classList.remove('discipline_border');
+      }
+      else{
+        document.getElementById('div_mobile_border_axe_4m').classList.remove('discipline_border_wrong');
+        document.getElementById('div_mobile_border_axe_4m').classList.add('discipline_border');
+      }
+
+      if(!boolKn3)
+      {
+        document.getElementById('div_mobile_border_knife_3m').classList.add('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_3m').classList.remove('discipline_border');
+      }
+      else{
+        document.getElementById('div_mobile_border_knife_3m').classList.remove('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_3m').classList.add('discipline_border');
+      }
+
+      if(!boolKn4)
+      {
+        document.getElementById('div_mobile_border_knife_4m').classList.add('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_4m').classList.remove('discipline_border');
+      }
+      else{
+        document.getElementById('div_mobile_border_knife_4m').classList.remove('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_4m').classList.add('discipline_border');
+      }
+
+      if(!boolKn5)
+      {
+        document.getElementById('div_mobile_border_knife_5m').classList.add('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_5m').classList.remove('discipline_border');
+      }
+      else{
+        document.getElementById('div_mobile_border_knife_5m').classList.remove('discipline_border_wrong');
+        document.getElementById('div_mobile_border_knife_5m').classList.add('discipline_border');
+      }
+    }
 
     if(!boolFirstName || !boolLastName || !boolClub || !boolCountry || !boolMail){
       if(!boolAllDis) 

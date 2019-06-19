@@ -245,6 +245,33 @@ background-color: rgba(255,0,0,0.);
   /*25px*/
 }
 
+.main-title_link{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+  
+.main-title_link:visited{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+  
+.main-title_link_hover{
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
 .lead_text{
   /*15px/18px*/
   font: normal normal 1.5vw/1.8vw 'Montserrat';
@@ -597,7 +624,7 @@ h2 span{
 
 .floor_text{
   display: block;
-  width:50%;
+  width:52%;
   height: auto;
   padding-top: 5vw; 
 }
@@ -682,6 +709,9 @@ h2 span{
 
 .show_desktop{
   display: block;
+}
+.show_desktop_inline{
+  display: inline;
 }
 .show_mobile{
   display: none;

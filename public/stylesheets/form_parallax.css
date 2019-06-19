@@ -51,10 +51,79 @@
 
 @media (max-width: 414px){
 	.first_floor_wrapper {
-    margin-top: 88vw;
+    margin-top: 124vw;
 	}
 
 	.footer_contacts_2.show_desktop{
 		display: none;
+	}
+
+	.form_wrapper {
+		position: relative;
+		padding-top: 1px;
+		/* top: 0vw; */
+	}
+
+	.form_wrapper h2 {
+		padding: 0vw 0 4vw 0vw;
+		margin-top: 10vw;
+	}
+
+	.gender_text_margin_mobile{
+		margin-top: 1.5vw;
+	}
+
+	.four_floor_wrapper {
+		margin-top: 0vw;
+	}
+	.floor_wrapper.third_floor_wrapper{
+		margin-bottom: 8vw;
+	}
+
+	.show_desktop{
+		display: none;
+	}
+
+	.show_desktop_inline{
+		display: none;
+	}
+	.show_mobile{
+		display: block;
+	}
+	
+	.form_results_digitsinput_sum_collapsed {
+		width: 16vw;
+    margin: -8.5vw 0 0 80vw;
+		height: 9vw;
+		font: normal normal 5vw/5vw 'Montserrat';
+	}
+
+	.discipline_border{
+		min-height: 3px;
+		border-bottom: 1px solid #BAB5B5;
+    width: 96vw;
+	}
+
+	.discipline_border_wrong{
+		min-height: 3px;
+		border-bottom: 1px solid #ff7777;
+		width: 96vw;
+	}
+
+	.knives_margin_mobile{
+		margin-top: 6vw;
+	}
+
+	#text_knife_ALL_SUM.form_results_digitsinput_sum_collapsed{
+		margin-top: -4vw;
+	}
+
+	.container-discipline.show_mobile{
+		margin-top: 4vw;
+	}
+
+	#div_notes_knife_5m.text-notes.show_mobile{
+		margin-top: -4.8vw;
+		margin-bottom: 6vw;
 	}
 }

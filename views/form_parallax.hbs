@@ -18,7 +18,8 @@
         <div class="main">
           <div class = "hat">
               <div class = "content">
-                <div class = "logo">Метательные практики
+                <div class = "logo">
+                  <a class="main-title_link" href="/"> Метательные практики </a>
                 </div>
                   <div class = "lead_text">
                     Соревнуйтесь с&nbsp;чемпионами из&nbsp;любой точки мира
@@ -180,7 +181,7 @@
       </div>
 
       <div class="wrap_input_text_2_string">
-        <div class="bblock-label bblock-label-personal left_label_text">Пол</div> 
+        <div class="bblock-label bblock-label-personal left_label_text gender_text_margin_mobile">Пол</div> 
         <div class="bblock-2"> 
           <div class="genderfield">
             <span id="toggle_male" name="nameToggleMale" class="inactivestyle genderfield activestyle" data-component="Tab" onclick=swapStyle_1()>мужской</span><span id="toggle_female" 
@@ -234,20 +235,22 @@
         </label>
       </div> --}}
       <div class="container-discipline-caption">
-        <div class="bblock-label-caption bold_caption">Топоры</div>
+        <div class="bblock-label-caption bold_caption show_desktop">Топоры</div>
       </div>
 
       <div class="container-discipline">
         <label class = "left_label_text">
-          <div class="bblock-label bblock-label-digits">4 метра</div></label>
-          <div class="block-discipline-digits" id="axe_4m">
+          <div class="bblock-label bblock-label-digits show_desktop">4 метра</div>
+          <div class="bblock-label show_mobile" onclick="show_digits('axe_4m')"><span>Топоры</span>, 4 метра </div>
+        </label>
+          <div class="block-discipline-digits " id="axe_4m">
               <script language="JavaScript" type="text/javascript">
                   result_fields_generate('axe_4m');
               </script>
           </div>
       </div>
 
-      <div class="container-discipline">
+      <div class="container-discipline show_desktop" id="div_link_axe_4m">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
@@ -256,30 +259,32 @@
               onblur="validateLink('axe_4m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
-      <div class="container-notes " id="div_notes_axe_4m">
+      <div class="container-notes show_desktop" id="div_notes_axe_4m">
         <div class="text-notes">
           <p id="notes_axe_4m"></p>
         </div>
       </div>
+      <div id = "div_mobile_border_axe_4m" class="discipline_border show_mobile"></div>
 
       <div class="container-discipline-caption">
-          <div class="bblock-label-caption bblock-label-digits">Ножи </div>
+          <div class="bblock-label-caption bblock-label-digits show_desktop">Ножи </div>
       </div>
       <div class="sum_background"></div>
       
       
-      <div class="container-discipline">    
+      <div class="container-discipline knives_margin_mobile">    
             <label class = "left_label_text">
-              <div class="bblock-label bblock-label-digits">3 метра</div>
+              <div class="bblock-label bblock-label-digits show_desktop">3 метра</div>
+              <div class="bblock-label show_mobile" onclick="show_digits('knife_3m')"><span>Ножи</span>, 3 метра </div>
             </label> 
-            <div class="block-discipline-digits" id="knife_3m">
+            <div class="block-discipline-digits " id="knife_3m">
                 <script language="JavaScript" type="text/javascript">
                     result_fields_generate('knife_3m');
                 </script>
             </div>
       </div>
 
-      <div class="container-discipline">
+      <div class="container-discipline show_desktop" id="div_link_knife_3m">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
@@ -290,25 +295,27 @@
         </label>
       </div>
 
-      <div class="container-notes " id="div_notes_knife_3m">
+      <div class="container-notes show_desktop" id="div_notes_knife_3m">
         <div class="text-notes">
           <p id="notes_knife_3m"></p>
           {{!-- <p id="notes_knife_3m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p> --}}
         </div>
       </div>
+      <div id = "div_mobile_border_knife_3m" class="discipline_border show_mobile"></div>
 
-      <div class="container-discipline">
+      <div class="container-discipline knives_margin_mobile">
           <label class = "left_label_text">
-            <div class="bblock-label bblock-label-digits">4 метра</div>
+            <div class="bblock-label bblock-label-digits show_desktop">4 метра</div>
+            <div class="bblock-label show_mobile" onclick="show_digits('knife_4m')"><span>Ножи</span>, 4 метра </div>
           </label>
-          <div class="block-discipline-digits" id="knife_4m">
+          <div class="block-discipline-digits " id="knife_4m">
               <script language="JavaScript" type="text/javascript">
                   result_fields_generate('knife_4m');
               </script>
           </div>
       </div>
 
-      <div class="container-discipline">
+      <div class="container-discipline show_desktop" id="div_link_knife_4m">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
@@ -318,25 +325,27 @@
         </label>
       </div>
 
-      <div class="container-notes " id="div_notes_knife_4m">
+      <div class="container-notes show_desktop" id="div_notes_knife_4m">
         <div class="text-notes">
           <p id="notes_knife_4m"></p>
           {{!-- <p id="notes_knife_4m">Ведите число от 0 до 60 кратное 5 и укажите ссылку на видео</p> --}}
         </div>
       </div>
+      <div id = "div_mobile_border_knife_4m" class="discipline_border show_mobile"></div>
 
-      <div class="container-discipline">
+      <div class="container-discipline knives_margin_mobile">
           <label class = "left_label_text">
-            <div class="bblock-label bblock-label-digits">5 метров</div>
+            <div class="bblock-label bblock-label-digits show_desktop">5 метров</div>
+            <div class="bblock-label show_mobile" onclick="show_digits('knife_5m')"><span>Ножи</span>, 5 метров</div>
           </label>
-          <div class="block-discipline-digits" id="knife_5m">
+          <div class="block-discipline-digits " id="knife_5m">
               <script type="text/javascript">
                   result_fields_generate('knife_5m');
               </script>
           </div>
       </div>
 
-      <div class="container-discipline">
+      <div class="container-discipline show_desktop" id="div_link_knife_5m">
         <label class = "left_label_text">
           <div class="bblock-label bblock-label-digits">Ссылка</div>
           <div class="bblock-links">
@@ -345,16 +354,19 @@
               onblur="validateLink('knife_5m',0)" autocomplete="off" autocorrect="off" autocapitalize="off"/></div>
         </label>
       </div>
-      
+       <div id = "div_mobile_border_knife_5m" class="discipline_border show_mobile"></div>
       <div class="container-discipline">
           <div class="bblock-label bblock-label-digits">&nbsp;</div>
           <div class="block-discipline-digits">
             <div class="block-discipline-allsum">
-              <div class="text-notes">
+              <div class="text-notes show_desktop" id="div_notes_knife_5m">
                 <p id="notes_knife_5m"></p>
                 {{!-- <p id="notes_knife_5m">Ведите число от 0 до 60 кратное 5 и вставьте ссылку на видео</p> --}}
               </div>
-              <input type="text" class="form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color block-discipline-axe-sum" 
+              
+              <input type="text" class="form_results_digitsinput form_results_digitsinput_sum 
+              form_results_digitsinput_sum_color block-discipline-axe-sum
+              form_results_digitsinput_sum_collapsed" 
               id="text_knife_ALL_SUM" style="font-weight:bold;" name="name_knife_ALL_SUM" placeholder="0" 
               autocorrect="off" autocapitalize="off" autocomplete="off" disabled="">
             </div>

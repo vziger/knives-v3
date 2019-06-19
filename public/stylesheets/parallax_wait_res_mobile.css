@@ -269,8 +269,8 @@
   }
   
   .img_dates{
-    margin:0.2vw 0 0.4vw -0.2vw;
-    width:79.1%;
+    margin:0 0 0 -0.2vw;
+    width:100%;
     height: auto;
   }
   
@@ -341,9 +341,11 @@
   }
   
   .btn_send_svg_b{
+    margin-top: 1vw;
     fill:#000;
   } 
   .btn_send_svg_y{
+    margin-top: 1vw;
     fill:#ffc100;
   } 
   
@@ -388,7 +390,7 @@
   h2{
     font:normal 900 9vw/10vw 'Montserrat';
     color: #fff;
-    margin-top:16vw;
+    margin-top:0vw;
     margin-bottom: 3vw;
   }
   h2 span{
@@ -400,8 +402,8 @@
     display: block;
     width:100%;
     height:auto;
-    background-color: rgba(255, 0, 0, 0.);
-    margin:1vw 0 16vw;
+    /* background-color: rgba(255, 0, 0, 0); */
+    margin: 32vw 0 16vw;
   }
   
   .floor_img_wrapper{
@@ -433,7 +435,7 @@
     margin-top:-15vw;
   }
   .first_floor_wrapper{
-    margin-top:60vw;
+    margin-top:124vw;
   }
   
   .second_floor_wrapper{
@@ -446,11 +448,11 @@
   
   /* высота блока с формой*/
   .third_floor_wrapper{
-    height:93.5vw; 
+    height:auto; 
   }
   
   .four_floor_wrapper{
-    margin-top:5vw;
+    margin-top:0vw;
   /*  overflow: visible;
     background-image: url(../images/back_3.png);
     background-position:top left;
@@ -591,16 +593,11 @@
   
   
   .form_wrapper{
-    color: #000;
-    position:absolute;
-    background-color: #fff;
     right:0;
-    top:-23.5vw;
-    width: 76.4vw;
-    height:121vw;
-    /* padding-bottom:8vw; */
-    padding-left: 3vw;
-    /* visibility: {{form_css_visible}}; */
+    top:0vw;
+    width: 100vw;
+    height:auto;
+    padding:0 0 18vw 2vw;
   }
   
   /* .form_wrapper *{transition: .1s linear} */
@@ -611,27 +608,27 @@
   }
   
   .left_label_text{
-    font: normal normal 1.6vw/2vw 'Montserrat';
-    /* font: normal normal 1.6vw/1.8vw 'Montserrat';
-    color: #000; */
-    display: block;
+    font: normal normal 5vw/6.2vw 'Montserrat';
+    display: flex;
+    justify-content: flex-start;
   }
   
   .captions_in_form{
-    width:52vw;
-    margin-bottom: 2vw;
+    width: 100vw;
+    padding-right: 11vw;
+    margin-bottom: 4vw;
+    
   }
   
   .captions_in_form h3{
-    font: normal 900 2.4vw/2.4vw 'Montserrat';
-    margin: 4vw 0 1vw 0;
+    font: normal 900 6vw/7.2vw 'Montserrat';
+    margin: 8vw 0 4vw 0;
   }
   
   .captions_in_form p
   {
-    font: normal normal 1.6vw/2.2vw 'Montserrat';
-    /* color: #000; */
-    margin-bottom: 0.6vw;
+    font: normal normal 5vw/6.4vw 'Montserrat';
+    margin-bottom: 2vw;
   }
   .captions_in_form_minus_margin{
     margin-top: -2vw !important;
@@ -640,61 +637,66 @@
   /**** div-ы для формы ***/
   .wrap_input_text_1_string {
     /* width: 65vw; */
-    width:auto;
-    height: 3.2vw;
-    margin-bottom: 1vw;
+    width:100vw;
+    height: 6.2vw;
+    margin-bottom: 4vw;
   }
   .wrap_input_text_2_string {
-    width: 40vw;
-    height: 3.4vw;
-    margin-bottom: 1vw;
+    width: 100vw;
+    height: 6.4vw;
+    margin-bottom: 6vw;
+    display: flex;
+    justify-content: flex-start;
   }
   .bblock-label{
-    float: left;
-    line-height: 3.2vw;
-    font-size: 1.6vw;
-    margin-right: 1vw;
+    float: none;
+    font-size: 5vw;
+    line-height: 6.2vw;
+    margin-right: 0vw;
     margin-top: 0;
     text-align: left; 
   }
+  .bblock-label span{
+    font-weight: 900;
+  }
   .bblock-label-personal{
-    width: 9.2vw; 
+    width: 28vw; 
   }
   .bblock-label-digits{
-    width: 9.2vw; 
+    width: 23vw; 
   }
   .bblock-label-caption{
     position: absolute;
     bottom:0;
-    line-height: 1.6vw;
-    font-size: 1.6vw;
+    line-height: 6.2vw;
+    font-size: 5vw;
     font-weight: 900;
-    margin-right: 1vw;
+    margin-right: 0vw;
     text-align: left;
     /* margin-top: 1.5vw; */
   }
   
   .bblock-2{
-    float: left; 
-    line-height: 3.2vw;
-    font-size: 1.4vw;
-    width: 27vw; /*Фиксируем ширину блока*/
-    margin-right: 1vw;
+    float: none; 
+    font-size: 5vw;
+    line-height: 6.2vw;
+    width: 68vw; /*Фиксируем ширину блока*/
+    margin-right: 0vw;
     text-align: left; 
   }
   
   .bblock-links{
     /* background-color: rgba(255, 0, 0, .1); */
-    float: left; 
-    line-height: 3.2vw;
-    font-size: 1.4vw;
+    float: none; 
+    line-height: 6.2vw;
+    font-size: 5vw;
     width: auto;
     margin-right: 1vw;
     text-align: left; 
   }
   .text-notes{
-    float: left; 
-    font: normal normal 1.2vw/1.3vw 'Montserrat';
+    float: none; 
+    font: normal normal 4vw/5vw 'Montserrat';
     width: auto;
     margin-top: 0.2vw;
     margin-right: 1vw;
@@ -717,14 +719,14 @@
   .container-discipline {
     position:relative;
     width: auto;
-    height: 3.25vw;
+    height: auto;
     padding:0;
   }
   
   .container-discipline-caption{
     position:relative;
     width: auto;
-    height: 1.6vw;
+    height: 6.2vw;
     padding:0;
   }
   
@@ -734,7 +736,7 @@
   
   .block-discipline-digits{
     /* background-color: rgba(255,0,0,0.1); */
-    float: left;
+    float: none;
     line-height: 3.2vw;
     font-size: 1.6vw;
     width:59vw; 
@@ -743,9 +745,8 @@
   }
   
   .block-discipline-allsum{
-    display: flex;
-    justify-content: space-between;
-    width: 58.6vw;
+    display: block;
+    width: 96vw;
     /* font-weight:bold; */
   }
   .block-discipline-axe-sum{
@@ -755,9 +756,9 @@
   .container-notes{
     position:relative;
     /* width: auto; */
-    width: 61vw;
-    height: 2vw;
-    padding:0 0 0 10.2vw;
+    width: 96vw;
+    height: auto;
+    padding: 1vw 0 2vw 0;
     background-color: rgba(0,0,255,0.)
   }
   
@@ -765,10 +766,10 @@
   
   
   .form_results_textinput{
-    font: normal normal 1.6vw/2vw 'Montserrat';
-    width:26vw;
-    height: 2.4vw;
-    padding-right:0.5vw;
+    font: normal normal 5vw/6.2vw 'Montserrat';
+    width:66vw;
+    height: 6.2vw;
+    padding-right:0vw;
     border:0;
   }
   
@@ -781,37 +782,39 @@
   }
   
   .form_results_digitsinput{
-    font: normal normal 1.6vw/2vw 'Montserrat';
-    width:3.7vw;
-    height: 2.4vw;
-    text-align: left;
-    margin-right:1.4vw;
-    border:0;
+    font: normal normal 10vw/10vw 'Montserrat';
+    width: 20vw;
+    height: 12vw;
+    margin: 2vw 0 0 76vw;
+    padding-right: 2vw;
+    border: 0;
+    text-align: right;
+    display: block;
   }
   
   .form_results_digitsinput:disabled{
     background-color: white;
   }
   
-  .form_results_digitsinput_center{
+  /* .form_results_digitsinput_center{
     font: normal normal 1.6vw/2vw 'Montserrat';
     width:3.7vw;
     height: 2.4vw;
     text-align: center;
     margin-right:1.4vw;
     border:0;
-  }
+  } */
   
   .form_results_digitsinput_sum{
     position:relative;
-    width:6.6vw;
-    margin:0 0 0 1vw;
-    height: 3.25vw;
+    width: 25vw;
+    margin: 4vw 0 0 71vw;
+    height: 14vw;
     background-color: transparent;
     /* background-color: #F3F0F0; */
     color:#000;
     text-align: right !important;
-    padding-right: 1.3vw;
+    padding-right: 2vw;
     border:0;
     z-index: 1;
   }
@@ -841,6 +844,7 @@
   }
   
   .sum_background{
+    display: none;
     position:absolute;
     right:4.6vw;
     width:6.6vw;
@@ -853,10 +857,10 @@
   }
   
   .form_results_linkinput{
-    font: normal normal 1.6vw/2vw 'Montserrat';
-    width: 49.6vw;
-    height: 2.5vw;
-    margin-right: 1vw;
+    font: normal normal 5vw/6.2vw 'Montserrat';
+    width: 73vw;
+    height: 6.2vw;
+    margin-right: 0vw;
     /* background-color: rgba(233, 233, 233, 0.1); */
     border: 0;
   }
@@ -911,14 +915,12 @@
   
   /****** Gender *******/
    .genderfield {
-      /*font: normal normal 1.6vw/1.8vw 'Montserrat';*/
       padding: 0;
       margin:0;
       white-space: nowrap;
       position: relative;
       z-index: 0;
       display:table;
-      /* background:rgba(255,0,0,0.1); */
   }
   
   .genderfield.inactivestyle.activestyle {
@@ -928,25 +930,23 @@
   }
   
   .genderfield.inactivestyle {
-      position: relative;
-      display: inline-block;
-      vertical-align: top;
-      height: 3.4vw;
-      max-width: 22vw;
-      min-width: 13vw;
-      padding: 0.1vw 2vw 0;
-      cursor: pointer;
-      text-align: center;
-      color: #282828;
-      font-size: 1.6vw;
-      line-height: 3.2vw;
-      font-family: 'Montserrat';
-      text-decoration: none;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      background: #F3F0F0;
-      z-index: 2;
+    font: normal normal 4vw/6.2vw 'Montserrat';  
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 9.2vw;
+    max-width: 33vw;
+    min-width: 33vw;
+    padding: 1.5vw 5.3vw 0;
+    cursor: pointer;
+    text-align: center;
+    color: #282828;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #F3F0F0;
+    z-index: 2;
   }
   /*****************/
   
@@ -1006,12 +1006,13 @@
   }
   .div_btn_table{
     display:table;
+    margin-bottom: 3vw;
   }
   
   .hidden_text_wrong{
-    font:normal normal 1.6vw/1.6vw 'Montserrat';
-    height:5.6vw;
-    width:34.5vw;
+    font:normal normal 2.6vw/3.6vw 'Montserrat';
+    height: 5.6vw;
+    width: 46.5vw;
     color:#E70000;
     visibility: hidden;
   }
@@ -1025,18 +1026,18 @@
   }
   
   .hidden_text_correct{
-    font:normal normal 1.6vw/1.8vw 'Montserrat';
+    font:normal normal 4.6vw/1.8vw 'Montserrat';
     position:absolute;
     left:0;
     top:0;
-    height:5.6vw;
-    width:62vw;
+    height:auto;
+    width:96vw;
     color:#000;
     visibility: hidden;
   }
   
   .spasibo_otpravleno{
-    font: normal normal 2vw/2.4vw 'Montserrat';
+    font: normal normal 5vw/6.2vw 'Montserrat';
   }
   
   .spasibo_otpravleno span{
@@ -1053,14 +1054,14 @@
   }
   
   .button_send_results{
-    font:normal 900 2.0vw/2.0vw 'Montserrat';
+    font:normal 900 5vw/13vw 'Montserrat';
     width:auto;
-    height: 5.6vw;
-    padding:0 6vw 0 6vw;
+    height: 12.6vw;
+    padding:0 10vw 0 ;
     cursor:default;
     border: 0;
     display:table-cell!important;
-      vertical-align:middle;
+    vertical-align:middle;
   }
   
   .button_sendresults_ok{ 
@@ -1081,7 +1082,7 @@
   /* !!! сдедать стиль, когда нажалась */
   
   .fill_new_sportsman_link{
-    margin-top:1.2vw;
+    margin-top:3.2vw;
     position: relative;
     width: fit-content;
     text-decoration: none ;
@@ -1089,6 +1090,7 @@
     border-bottom: 1px dashed rgba(0, 91, 190, .3) ;
     cursor:pointer;
     transition:all 100ms linear;
+    height:3.5vw;
   }
   .fill_new_sportsman_link:hover{
     text-decoration: none ;
