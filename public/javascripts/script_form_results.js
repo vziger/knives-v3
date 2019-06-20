@@ -3,11 +3,16 @@ function result_fields_generate(div_id) {
   // let scr_w=screen.width;
   // alert(scr_w);
 
-
+  const scr_w = screen.width;
   const div = document.getElementById(div_id);
   for (let i = 1; i < 11; i += 1) {
     var input = document.createElement('input');
-    input.type = 'text';
+    
+    if(scr_w>414)
+      input.type = 'text';
+    else
+      input.type= "number";
+
     input.autocapitalize='off';
     input.autocomplete='off';
     input.autocorrect='off';
@@ -37,8 +42,17 @@ function result_fields_generate(div_id) {
       { return false; }
       
       if (this.value.length == 2 && (parseInt(this.selectionEnd - this.selectionStart)==0 )) return false;
+      
+      if (event.keyCode == 190 || event.keyCode == 110) return false;
 
     };
+
+    // input.oninput = function(event) {
+    //   event = event || window.event;
+    //   var keyCode = event.originalEvent.data.charCodeAt(0);
+    //   alert(keyCode);
+    //   // keyCode is ASCII of character entered.
+    // };
 
     input.onkeydown = function(event){
       event = event || window.event;
@@ -113,7 +127,6 @@ function result_fields_generate(div_id) {
   input.autocomplete='off';
   input.autocorrect='off';
 
-  const scr_w = screen.width;
   if (div_id == 'axe_4m') {
     input.className = 'form_results_digitsinput form_results_digitsinput_sum form_results_digitsinput_sum_color form_results_digitsinput_sum_collapsed';
     input.style.fontWeight="bold";
@@ -320,9 +333,10 @@ function validateDigits(el) {
   const val = isNaN(parseInt(el.value)) ? NaN : parseInt(el.value);
   const axe_id_ptrn = /axe/;
 
+  // alert(val);
   const right_border = (axe_id_ptrn.test(el.id)) ? 20 : 60;
 
-  if (val >= 0 && val <= right_border && (val % 5) == 0) {
+  if (val >= 0 && val <= right_border && (val % 5) == 0  && isInteger(val)) {
     el.classList.remove('form_results_border_wrong');
     el.classList.add('form_results_border_neutral');
     return true;

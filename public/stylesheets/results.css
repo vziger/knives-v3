@@ -35,10 +35,14 @@
 /*** **************** ***/
 
 .results-title{
-  font:normal normal 12vw/10vw 'Pitcrew';
+  font:normal normal 12vw/9.6vw 'Pitcrew';
   margin-bottom: 5vw; 
   margin-left: -0.5vw;
 }
+.results-title_margin{
+  margin-left: 8vw;
+}
+
 /* .results-title span{
   
 } */
@@ -435,9 +439,13 @@ svg{
   } */
 
   .results-title{
-    font:normal normal 144px/120px 'Pitcrew';
+    font:normal normal 144px/113px 'Pitcrew';
     margin-bottom: 72px; 
     margin-left: -6px;
+  }
+
+  .results-title_margin{
+    margin-left: 123px;
   }
 
   .results-block {
@@ -696,6 +704,10 @@ svg{
     font:normal normal 12.2vw/11vw 'Pitcrew';
     margin-bottom: 8vw; 
     margin-left: -0.5vw;
+  }
+
+  .results-title_margin {
+    margin-left: 7vw;
   }
 
   .results-title-image {
