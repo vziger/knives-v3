@@ -94,7 +94,7 @@ async function mail_results(recepient, Player) {
       <div>' + capitalizeFirstLetter(Player.country) + '</div>\
     </div>\
     <div style = "display: flex; margin-top:2px;justify-content: flex-start;">\
-      <div style="margin-top:0px;	width:120px;">Эл. почта:</div>\
+      <div style="margin-top:0px;	width:120px;">Эл. почта</div>\
       <div><a href="/compose?To=' + Player.email + '" rel="noopener">' + Player.email + '</a></div>\
     </div>' + str_axe + str_knives + allSumStr +'\
     <p style="margin-bottom:5px;">&nbsp;</p>\
